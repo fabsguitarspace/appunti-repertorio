@@ -45,11 +45,17 @@ Ascolti guidati
 
 .. BEGIN ascolti: generato da scripts/generate_standards.py, non modificare a mano
 
-- **Erroll Garner** — Contrasts (EmArcy), registrazione del 1954 (riferimento).
+- **Erroll Garner** — Contrasts (EmArcy), registrazione del 1954 (versione di riferimento).
+
+  `Ascolta su YouTube <https://www.youtube.com/watch?v=UOLEEkYO4MA>`__
 
   **Compito.** Ascolta la prima esposizione del tema e segna dove respira ogni frase. Nota come il pianoforte lascia risuonare gli accordi lunghi delle prime battute.
 
-Le versioni per chitarra e i collegamenti YouTube ufficiali saranno aggiunti dopo la verifica delle pubblicazioni (ADR 0002).
+- **Joe Pass** — Virtuoso #2, chitarra sola (versione per chitarra).
+
+  `Ascolta su YouTube <https://www.youtube.com/watch?v=HBRI3_RMQkE>`__
+
+  **Compito.** Senza accompagnamento la chitarra suona insieme tema, basso e accordi: ascolta come li alterna e come usa il tempo con libertà. Individua i punti in cui torna a un tempo regolare.
 
 .. END ascolti
 

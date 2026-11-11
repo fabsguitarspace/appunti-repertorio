@@ -45,11 +45,17 @@ Ascolti guidati
 
 .. BEGIN ascolti: generato da scripts/generate_standards.py, non modificare a mano
 
-- **Ethel Merman** — Girl Crazy, musical di Broadway (1930) (riferimento).
+- **Ethel Waters** — incisione del 1930, dall'anno del musical Girl Crazy (versione di riferimento).
 
-  **Compito.** Ascolta la canzone nella sua forma originale: individua le sezioni A e il bridge e cerca il punto in cui l'ultima A si allunga rispetto alle altre.
+  **Compito.** Ascolta la canzone nella sua forma originale: individua le sezioni A e il bridge e confronta la lunghezza dell'ultima sezione con la forma jazz di 32 battute.
 
-Le versioni per chitarra e i collegamenti YouTube ufficiali saranno aggiunti dopo la verifica delle pubblicazioni (ADR 0002).
+- **Django Reinhardt e il Quintette du Hot Club de France** — registrazione dell'ottobre 1935 (versione per chitarra).
+
+  `Ascolta su YouTube <https://www.youtube.com/watch?v=sb1Ra_Xlqso>`__
+
+  **Compito.** Ascolta le chitarre ritmiche che scandiscono ogni movimento e il solo di Django: in quale battuta senti arrivare il bridge? Prova ad accompagnare la registrazione con gli shell della scheda.
+
+Per le versioni senza collegamento non è ancora disponibile una pubblicazione ufficiale verificata su YouTube (ADR 0002): cercale nei servizi di ascolto o in un'edizione su disco.
 
 .. END ascolti
 

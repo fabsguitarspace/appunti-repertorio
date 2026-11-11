@@ -23,7 +23,16 @@ battute = ["Bb7", "Eb7", "Bb7", "Bb7", "Eb7", "Edim7", "Bb7", "G7", "Cm7", "F7",
 ruolo = "riferimento"
 artista = "Thelonious Monk Trio"
 versione = "Thelonious Monk Trio (Prestige), registrazione del 1954"
+youtube = "https://www.youtube.com/watch?v=WZcTZycaBdg"
 compito = "Conta i chorus del tema e dell'assolo di pianoforte. Segna in quale battuta ogni chorus ricomincia e ascolta come il pianoforte sottolinea il passaggio alla quinta battuta."
+
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Wes Montgomery con Johnny Griffin e Martial Solal"
+versione = "registrazione dal vivo ad Amburgo, 30 aprile 1965"
+youtube = "https://www.youtube.com/watch?v=6S-EKAEVGxI"
+compito = "Conta i chorus dell'assolo di chitarra e osserva se cambia la densità da un chorus all'altro: note singole, ottave, accordi. Segna in quale chorus avviene ogni cambiamento."
 
 [[collegati]]
 slug = "i-got-rhythm"

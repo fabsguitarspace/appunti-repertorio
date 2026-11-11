@@ -33,7 +33,16 @@ battute = ["Am7b5", "D7", "Gm7 C7", "Fm7 Bb7", "Ebmaj7", "Am7b5 D7", "Gm6", "Gm6
 ruolo = "riferimento"
 artista = "Cannonball Adderley con Miles Davis"
 versione = "Somethin' Else (Blue Note), registrazione del 1958"
+youtube = "https://www.youtube.com/watch?v=CpB7-8SGlJ0"
 compito = "Ascolta la lunga introduzione e individua il punto in cui entra il tema. Poi conta le sezioni del primo chorus e riconosci quando la forma ricomincia durante gli assoli."
+
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Jim Hall e Ron Carter"
+versione = "Alone Together, registrazione dal vivo in duo chitarra e contrabbasso"
+youtube = "https://www.youtube.com/watch?v=mQVe4nCzCQw"
+compito = "Senza pianoforte né batteria la chitarra deve far sentire da sola l'armonia: ascolta come alterna linee e accordi. Riconosci a orecchio i II–V minori verso Sol minore?"
 
 [[collegati]]
 slug = "there-will-never-be-another-you"

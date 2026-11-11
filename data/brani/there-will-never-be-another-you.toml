@@ -35,6 +35,14 @@ artista = "Chet Baker"
 versione = "Chet Baker Sings (Pacific Jazz), registrazione del 1954"
 compito = "Confronta la parte cantata con l'assolo di tromba: senti come l'improvvisazione segue gli stessi punti di arrivo della forma."
 
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Tal Farlow"
+versione = "The Interpretations of Tal Farlow"
+youtube = "https://www.youtube.com/watch?v=iq5jL4kX35w"
+compito = "A tempo veloce le linee della chitarra sono lunghe e continue: riesci a seguire la forma ABAC durante l'assolo e a riconoscere la cadenza backdoor della sezione B?"
+
 [[collegati]]
 slug = "all-of-me"
 motivo = "stessa forma ABAC di 32 battute"

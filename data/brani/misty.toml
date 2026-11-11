@@ -33,7 +33,16 @@ battute = ["Ebmaj7", "Bbm7 Eb7", "Abmaj7", "Abm7 Db7", "Ebmaj7 Cm7", "Fm7 Bb7", 
 ruolo = "riferimento"
 artista = "Erroll Garner"
 versione = "Contrasts (EmArcy), registrazione del 1954"
+youtube = "https://www.youtube.com/watch?v=UOLEEkYO4MA"
 compito = "Ascolta la prima esposizione del tema e segna dove respira ogni frase. Nota come il pianoforte lascia risuonare gli accordi lunghi delle prime battute."
+
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Joe Pass"
+versione = "Virtuoso #2, chitarra sola"
+youtube = "https://www.youtube.com/watch?v=HBRI3_RMQkE"
+compito = "Senza accompagnamento la chitarra suona insieme tema, basso e accordi: ascolta come li alterna e come usa il tempo con libertà. Individua i punti in cui torna a un tempo regolare."
 
 [[collegati]]
 slug = "there-will-never-be-another-you"

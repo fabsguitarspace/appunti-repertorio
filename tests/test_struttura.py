@@ -89,6 +89,19 @@ def test_catalogo_e_schede():
         assert f"brani/{t['slug']}" in family, (t['slug'], t['famiglia'])
 
 
+def test_ascolti():
+    # ADR 0002: collegamento testuale nella forma standard; un compito per ogni ascolto.
+    g = generator()
+    for t in g.load_catalogue():
+        assert t.get('ascolti'), t['slug']
+        for a in t['ascolti']:
+            assert a['ruolo'] in g.ROLES and a['compito'].strip(), (t['slug'], a['artista'])
+            if a.get('youtube'):
+                assert re.fullmatch(r'https://www\.youtube\.com/watch\?v=[\w-]{11}', a['youtube']), a['youtube']
+                card = (DOCS / 'brani' / (t['slug'] + '.rst')).read_text()
+                assert a['youtube'] in card, (t['slug'], a['youtube'])
+
+
 def test_ordine_alfabetico():
     g = generator()
     tunes = g.load_catalogue()
@@ -132,5 +145,5 @@ if __name__ == '__main__':
     for name, test in list(globals().items()):
         if name.startswith('test_'):
             test()
-    print('PASS: indice, marcatori, nessuna melodia, navigazione e libreria, catalogo e schede, '
+    print('PASS: indice, marcatori, nessuna melodia, navigazione e libreria, catalogo e schede, ascolti, '
           'ordine alfabetico, voicing, generatore stabile')

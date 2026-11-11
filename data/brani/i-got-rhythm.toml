@@ -29,11 +29,21 @@ battute = ["D7", "D7", "G7", "G7", "C7", "C7", "F7", "F7"]
 nome = "A"
 battute = ["Bb6 G7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb7", "Eb6 Edim7", "Bb6/F F7", "Bb6"]
 
+
+
 [[ascolti]]
 ruolo = "riferimento"
-artista = "Ethel Merman"
-versione = "Girl Crazy, musical di Broadway (1930)"
-compito = "Ascolta la canzone nella sua forma originale: individua le sezioni A e il bridge e cerca il punto in cui l'ultima A si allunga rispetto alle altre."
+artista = "Ethel Waters"
+versione = "incisione del 1930, dall'anno del musical Girl Crazy"
+compito = "Ascolta la canzone nella sua forma originale: individua le sezioni A e il bridge e confronta la lunghezza dell'ultima sezione con la forma jazz di 32 battute."
+
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Django Reinhardt e il Quintette du Hot Club de France"
+versione = "registrazione dell'ottobre 1935"
+youtube = "https://www.youtube.com/watch?v=sb1Ra_Xlqso"
+compito = "Ascolta le chitarre ritmiche che scandiscono ogni movimento e il solo di Django: in quale battuta senti arrivare il bridge? Prova ad accompagnare la registrazione con gli shell della scheda."
 
 [[collegati]]
 slug = "blue-monk"

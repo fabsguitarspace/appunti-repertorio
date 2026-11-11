@@ -45,11 +45,17 @@ Ascolti guidati
 
 .. BEGIN ascolti: generato da scripts/generate_standards.py, non modificare a mano
 
-- **Chet Baker** — Chet Baker Sings (Pacific Jazz), registrazione del 1954 (riferimento).
+- **Chet Baker** — Chet Baker Sings (Pacific Jazz), registrazione del 1954 (versione di riferimento).
 
   **Compito.** Confronta la parte cantata con l'assolo di tromba: senti come l'improvvisazione segue gli stessi punti di arrivo della forma.
 
-Le versioni per chitarra e i collegamenti YouTube ufficiali saranno aggiunti dopo la verifica delle pubblicazioni (ADR 0002).
+- **Tal Farlow** — The Interpretations of Tal Farlow (versione per chitarra).
+
+  `Ascolta su YouTube <https://www.youtube.com/watch?v=iq5jL4kX35w>`__
+
+  **Compito.** A tempo veloce le linee della chitarra sono lunghe e continue: riesci a seguire la forma ABAC durante l'assolo e a riconoscere la cadenza backdoor della sezione B?
+
+Per le versioni senza collegamento non è ancora disponibile una pubblicazione ufficiale verificata su YouTube (ADR 0002): cercale nei servizi di ascolto o in un'edizione su disco.
 
 .. END ascolti
 

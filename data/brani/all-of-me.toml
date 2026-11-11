@@ -35,6 +35,13 @@ artista = "Billie Holiday"
 versione = "incisione per Okeh del 1941"
 compito = "Ascolta come la voce anticipa e ritarda le frasi rispetto al tempo. Conta le quattro sezioni e riconosci il momento in cui la seconda metà del brano prende una strada diversa dalla prima."
 
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Django Reinhardt con Hubert Rostaing"
+versione = "registrazione di Parigi del 17 dicembre 1940"
+compito = "Segui la forma durante l'assolo di chitarra: riesci a sentire quando inizia la sezione C senza contare le battute? Confronta poi l'accompagnamento ritmico con il tuo livello 1."
+
 [[collegati]]
 slug = "there-will-never-be-another-you"
 motivo = "stessa forma ABAC di 32 battute"

@@ -45,11 +45,17 @@ Ascolti guidati
 
 .. BEGIN ascolti: generato da scripts/generate_standards.py, non modificare a mano
 
-- **Cannonball Adderley con Miles Davis** — Somethin' Else (Blue Note), registrazione del 1958 (riferimento).
+- **Cannonball Adderley con Miles Davis** — Somethin' Else (Blue Note), registrazione del 1958 (versione di riferimento).
+
+  `Ascolta su YouTube <https://www.youtube.com/watch?v=CpB7-8SGlJ0>`__
 
   **Compito.** Ascolta la lunga introduzione e individua il punto in cui entra il tema. Poi conta le sezioni del primo chorus e riconosci quando la forma ricomincia durante gli assoli.
 
-Le versioni per chitarra e i collegamenti YouTube ufficiali saranno aggiunti dopo la verifica delle pubblicazioni (ADR 0002).
+- **Jim Hall e Ron Carter** — Alone Together, registrazione dal vivo in duo chitarra e contrabbasso (versione per chitarra).
+
+  `Ascolta su YouTube <https://www.youtube.com/watch?v=mQVe4nCzCQw>`__
+
+  **Compito.** Senza pianoforte né batteria la chitarra deve far sentire da sola l'armonia: ascolta come alterna linee e accordi. Riconosci a orecchio i II–V minori verso Sol minore?
 
 .. END ascolti
 

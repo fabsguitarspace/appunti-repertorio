@@ -476,14 +476,20 @@ def block_identita(t):
     return f'.. list-table::\n   :widths: 25 75\n   :class: scheda-identita\n\n{body}'
 
 
+ROLES = {'riferimento': 'versione di riferimento', 'chitarra': 'versione per chitarra'}
+
+
 def block_ascolti(t):
     out = []
     for a in t.get('ascolti', []):
-        title = f"**{a['artista']}** — {a['versione']}"
+        title = f"**{a['artista']}** — {a['versione']} ({ROLES.get(a['ruolo'], a['ruolo'])})."
         link = f"\n\n  `Ascolta su YouTube <{a['youtube']}>`__" if a.get('youtube') else ''
-        out.append(f"- {title} ({a['ruolo']}).{link}\n\n  **Compito.** {a['compito']}")
-    out.append('Le versioni per chitarra e i collegamenti YouTube ufficiali saranno aggiunti dopo la '
-               'verifica delle pubblicazioni (ADR 0002).')
+        out.append(f"- {title}{link}\n\n  **Compito.** {a['compito']}")
+    if any(not a.get('youtube') for a in t.get('ascolti', [])):
+        out.append('Per le versioni senza collegamento non è ancora disponibile una pubblicazione ufficiale '
+                   'verificata su YouTube (ADR 0002): cercale nei servizi di ascolto o in un\'edizione su disco.')
+    if not any(a['ruolo'] == 'chitarra' for a in t.get('ascolti', [])):
+        out.append('Una versione per chitarra sarà aggiunta in seguito.')
     return '\n\n'.join(out)
 
 

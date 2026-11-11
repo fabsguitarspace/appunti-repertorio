@@ -45,11 +45,17 @@ Ascolti guidati
 
 .. BEGIN ascolti: generato da scripts/generate_standards.py, non modificare a mano
 
-- **Thelonious Monk Trio** — Thelonious Monk Trio (Prestige), registrazione del 1954 (riferimento).
+- **Thelonious Monk Trio** — Thelonious Monk Trio (Prestige), registrazione del 1954 (versione di riferimento).
+
+  `Ascolta su YouTube <https://www.youtube.com/watch?v=WZcTZycaBdg>`__
 
   **Compito.** Conta i chorus del tema e dell'assolo di pianoforte. Segna in quale battuta ogni chorus ricomincia e ascolta come il pianoforte sottolinea il passaggio alla quinta battuta.
 
-Le versioni per chitarra e i collegamenti YouTube ufficiali saranno aggiunti dopo la verifica delle pubblicazioni (ADR 0002).
+- **Wes Montgomery con Johnny Griffin e Martial Solal** — registrazione dal vivo ad Amburgo, 30 aprile 1965 (versione per chitarra).
+
+  `Ascolta su YouTube <https://www.youtube.com/watch?v=6S-EKAEVGxI>`__
+
+  **Compito.** Conta i chorus dell'assolo di chitarra e osserva se cambia la densità da un chorus all'altro: note singole, ottave, accordi. Segna in quale chorus avviene ogni cambiamento.
 
 .. END ascolti
 
