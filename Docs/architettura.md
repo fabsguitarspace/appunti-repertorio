@@ -45,7 +45,7 @@ Come in Pratica, RTD non esegue la pipeline musicale: le risorse vanno generate 
 ## Punti di attenzione
 
 1. **Pipeline comune.** Deciso con l'ADR 0004: libreria in un repository dedicato, usata come sottomodulo dai tre progetti. Un clone richiede `--recurse-submodules`. Il piano di migrazione è nell'analisi 002.
-2. **Navigazione a tre.** Questo progetto ha già i `nav_links` verso Teoria e Pratica. I `nav_links` di Teoria e Pratica vanno estesi con Repertorio solo dopo la creazione del progetto su RTD, per non pubblicare un collegamento che non funziona.
+2. **Navigazione a tre.** Dall'11 novembre 2026 i `nav_links` dei tre `conf.py` sono uniformi: Teoria, Pratica, Repertorio, poi il canale YouTube. Ogni sito usa `index` per sé stesso. Una modifica all'elenco va riportata in tutti e tre.
 3. **iframe nei PDF ed ePub.** Nelle uscite non HTML l'iframe non viene reso, quindi il collegamento testuale è obbligatorio.
 4. **Collegamenti YouTube instabili.** I video possono essere rimossi. Va previsto un controllo periodico (`sphinx-build -b linkcheck`) che non blocchi la build HTML.
 5. **Politica melodie.** Il divieto dell'ADR 0002 va reso verificabile da test automatici: nessun campo melodia nel catalogo, nessuna risorsa `*-melodia-*`. La correttezza degli studi originali richiede invece una revisione editoriale.

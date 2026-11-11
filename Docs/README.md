@@ -12,7 +12,7 @@ Prima di proporre interventi, leggere questa pagina e [architettura](architettur
 
 - Titolo: **Appunti di Repertorio per Chitarra Jazz**. Cartella e repository: `appunti-repertorio`.
 - Repository: https://github.com/fabsguitarspace/appunti-repertorio
-- Indirizzo Read the Docs previsto, da creare: `https://appunti-di-repertorio-per-chitarra-jazz.readthedocs.io`. Lo slug va confermato alla creazione del progetto su RTD.
+- Read the Docs: https://appunti-di-repertorio-per-chitarra-jazz.readthedocs.io/it/latest/ (progetto creato l'11 novembre 2026).
 - Argomento: gli standard jazz studiati sulla chitarra, con una scheda monografica per ogni brano. Ogni scheda tratta forma, armonia, accompagnamento, linee per improvvisare e una base audio.
 
 Progetti fratelli:

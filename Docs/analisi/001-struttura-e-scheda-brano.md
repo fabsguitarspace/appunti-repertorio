@@ -128,12 +128,12 @@ Criteri di accettazione: quelli dell'ADR 0003, più la verifica dei collegamenti
    Verifiche: `tests/test_struttura.py` passa; `sphinx-build -b html -W --keep-going` termina senza avvisi; `./build-lilypond.sh` raggiunge la libreria e si ferma, come atteso, con «No LilyPond sources found». Non verificati: build PDF/ePub e build su RTD (progetto RTD non ancora creato).
 3. `generate_standards.py` e test: contratto della scheda, politica melodie, risorse, indici.
 4. Le tre schede pilota e le loro risorse; build HTML con `-W`; ascolto delle basi.
-5. Progetto RTD, `nav_links` nei tre progetti, `linkcheck`.
+5. Progetto RTD ✓ e `nav_links` uniformi nei tre progetti ✓ (2026-11-11); `linkcheck` ancora da configurare.
 
 ## Punti aperti
 
 1. ~~Conferma dei tre brani pilota~~: confermati il 2026-11-11.
 2. ~~Riuso della pipeline~~: libreria comune ai tre progetti, ADR 0004 del 2026-11-11. Annulla la raccomandazione «copia da Pratica» della sezione Alternative.
 3. ~~Estensione dell'ADR 0001~~: accettata con l'ADR 0004.
-4. Slug RTD definitivo.
+4. ~~Slug RTD definitivo~~: `appunti-di-repertorio-per-chitarra-jazz`, creato l'11 novembre 2026.
 5. Lista del primo blocco (25–30 brani) e assegnazione alle famiglie.

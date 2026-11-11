@@ -25,16 +25,16 @@ html_logo = "_static/logo_256.png"
 html_theme_options = {
     "nav_links": [
         {
-            "title": "Appunti di Repertorio",
-            "url": "index"
-        },
-        {
             "title": "Appunti di Teoria",
             "url": "https://appunti-di-teoria-e-armonia-per-chitarra-jazz.readthedocs.io"
         },
         {
             "title": "Appunti di Pratica",
             "url": "https://appunti-pratica-per-chitarra-jazz.readthedocs.io"
+        },
+        {
+            "title": "Appunti di Repertorio",
+            "url": "index"
         },
         {
             "title": "Fabrizio's Guitar Space",
