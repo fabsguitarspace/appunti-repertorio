@@ -12,4 +12,5 @@ if [ -x "$PROJECT_DIR/.venv/bin/python" ]; then
 else
     PYTHON=python3
 fi
-exec "$PYTHON" "$BUILDER" --project "$PROJECT_DIR" "$@"
+# MP3 a 64 kbps mono: circa 5 MB per brano invece di 9 (analisi 001, peso dell'audio).
+exec "$PYTHON" "$BUILDER" --project "$PROJECT_DIR" --mp3-options "-m m -b 64" "$@"
