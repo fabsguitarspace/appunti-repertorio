@@ -1,7 +1,8 @@
 Appunti di Repertorio per Chitarra Jazz
 =======================================
 
-.. image:: _static/logo.*
+.. image:: _static/logo-repertorio.png
+   :alt: Logo degli Appunti di Repertorio
 
 .. toctree::
   :maxdepth: 2

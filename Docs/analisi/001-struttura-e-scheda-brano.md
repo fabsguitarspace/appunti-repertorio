@@ -110,13 +110,15 @@ Raccomandazione: avviare con una **copia** da Pratica, che è la versione più r
 
 ## Pilota
 
-Tre schede, una per forma, confermate dall'utente il 2026-11-11:
+Cinque schede: le prime tre confermate dall'utente il 2026-11-11, le ultime due aggiunte su sua richiesta lo stesso giorno.
 
 | Brano | Forma | Famiglia | Motivo |
 |---|---|---|---|
 | Blue Monk | blues 12 | 5-blues | forma più breve; prova catalogo, griglia e base |
 | I Got Rhythm | AABA 32 (34 nella versione originale, da verificare) | 9-bebop-contrafact | radice dei rhythm changes; prova sezioni ripetute e collegamenti ai contrafact |
 | All of Me | ABAC 32 | 6-swing-medium | dominanti secondarie; prova la lettura armonica e i rimandi a Teoria |
+| Misty | AABA 32 | 7-ballad | aggiunto su richiesta (2026-11-11); prima ballad: tempo lento, comping ballad, base a due velocità molto diverse |
+| There Will Never Be Another You | ABAC 32 | 6-swing-medium | aggiunto su richiesta (2026-11-11); secondo ABAC: prova i collegamenti fra brani con la stessa forma e l'ordine alfabetico nella famiglia |
 
 Criteri di accettazione: quelli dell'ADR 0003, più la verifica dei collegamenti YouTube secondo l'ADR 0002.
 
@@ -127,7 +129,7 @@ Criteri di accettazione: quelli dell'ADR 0003, più la verifica dei collegamenti
 
    Verifiche: `tests/test_struttura.py` passa; `sphinx-build -b html -W --keep-going` termina senza avvisi; `./build-lilypond.sh` raggiunge la libreria e si ferma, come atteso, con «No LilyPond sources found». Non verificati: build PDF/ePub e build su RTD (progetto RTD non ancora creato).
 3. `generate_standards.py` e test: contratto della scheda, politica melodie, risorse, indici.
-4. Le tre schede pilota e le loro risorse; build HTML con `-W`; ascolto delle basi.
+4. Le cinque schede pilota e le loro risorse; build HTML con `-W`; ascolto delle basi.
 5. Progetto RTD ✓ e `nav_links` uniformi nei tre progetti ✓ (2026-11-11); `linkcheck` ancora da configurare.
 
 ## Punti aperti

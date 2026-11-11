@@ -21,7 +21,7 @@ src/docs/
   index.rst
   N-capitolo.rst          capitoli di metodo e di famiglia
   brani/<slug>.rst        schede monografiche
-  _static/                logo, custom.css (classe .yt-video), music/
+  _static/                logo.png e logo_256.png (comuni), logo-repertorio.png (homepage, da appunti-musica), custom.css (.yt-video), music/
 src/lilypond/
   (macro e soundfont provengono da tools/appunti-musica: -I e ricerca nella libreria)
   <slug>-<sezione>-<n>.ly sorgenti generati o manuali

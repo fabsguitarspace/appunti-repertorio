@@ -24,7 +24,7 @@ Pratica usa già una sottocartella di pagine monografiche (`src/docs/autori/`) r
 2. Indice composto da capitoli di metodo, capitoli per famiglia e indici trasversali (forma, tonalità, tempo, livello). La proposta di indice è nell'analisi 001.
 3. Ogni standard ha una scheda monografica `src/docs/brani/<slug>.rst`, con un modello fisso di sezioni. Il capitolo di famiglia la presenta e la include nel proprio toctree.
 4. Dentro ogni famiglia i brani sono ordinati **alfabeticamente**. Il livello di difficoltà è indicato nella carta d'identità della scheda e negli indici, e il percorso progressivo è affidato al capitolo dei piani di studio.
-5. Pilota: tre schede per validare modello e generatore prima di estendere il catalogo: *Blue Monk* (blues), *I Got Rhythm* (AABA, rhythm changes) e *All of Me* (ABAC). Brani confermati il 2026-11-11.
+5. Pilota: schede per validare modello e generatore prima di estendere il catalogo: *Blue Monk* (blues), *I Got Rhythm* (AABA, rhythm changes) e *All of Me* (ABAC), confermati il 2026-11-11; aggiunti lo stesso giorno su richiesta dell'utente *Misty* (ballad) e *There Will Never Be Another You* (ABAC, swing medium). Cinque schede in tutto.
 
 ## Conseguenze
 
