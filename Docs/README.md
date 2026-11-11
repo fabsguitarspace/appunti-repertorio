@@ -4,6 +4,8 @@ Aggiornamento: 11 novembre 2026. Esiste lo **scheletro** del progetto: configura
 
 I capitoli 1–4 e i testi delle schede pilota sono bozze scritte con assistenza e vanno rilette dall'autore. La prefazione riprende quella di Pratica.
 
+Versione: **0.1** (`release` in `src/docs/conf.py`). Per decisione dell'utente dell'11 novembre 2026 verrà incrementata ai prossimi rilasci; Teoria e Pratica sono passati alla 1.0.
+
 ## Modalità di lavoro
 
 Prima di proporre interventi, leggere questa pagina e [architettura](architettura.md). In modalità ARCHITECT si producono analisi, alternative e ADR dentro `Docs`, senza modificare i sorgenti. Una proposta non equivale a una decisione approvata. Usare il [modello di analisi](analisi/TEMPLATE.md) e il [modello ADR](adr/TEMPLATE.md).
