@@ -36,7 +36,7 @@ Layout, stile didattico e pipeline musicale riprendono quelli di Pratica.
 ## Decisioni registrate
 
 - [ADR 0001 — LilyPond diretto e generazione Python](adr/0001-lilypond-diretto-e-generazione-python.md): copia dell'ADR comune, Accettato il 2026-11-08. L'estensione a questo progetto è stata accettata il 2026-11-11 con l'ADR 0004.
-- [ADR 0002 — Nessuna melodia degli standard; ascolti tramite YouTube](adr/0002-nessuna-melodia-ascolti-youtube.md): Accettato, 2026-11-11.
+- [ADR 0002 — Nessuna melodia degli standard; ascolti tramite YouTube](adr/0002-nessuna-melodia-ascolti-youtube.md): Accettato, 2026-11-11; modificato lo stesso giorno: ammessi anche caricamenti YouTube di terzi.
 - [ADR 0003 — Struttura per famiglie e schede monografiche](adr/0003-struttura-famiglie-schede-monografiche.md): Accettato, 2026-11-11.
 - [ADR 0004 — Libreria musicale comune ai tre progetti](adr/0004-libreria-musicale-comune.md): Accettato, 2026-11-11. Copia comune ai tre repository.
 

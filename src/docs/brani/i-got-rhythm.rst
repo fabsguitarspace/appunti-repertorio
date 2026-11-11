@@ -47,6 +47,8 @@ Ascolti guidati
 
 - **Ethel Waters** — incisione del 1930, dall'anno del musical Girl Crazy (versione di riferimento).
 
+  `Ascolta su YouTube <https://www.youtube.com/watch?v=1eVSsxo6umo>`__
+
   **Compito.** Ascolta la canzone nella sua forma originale: individua le sezioni A e il bridge e confronta la lunghezza dell'ultima sezione con la forma jazz di 32 battute.
 
 - **Django Reinhardt e il Quintette du Hot Club de France** — registrazione dell'ottobre 1935 (versione per chitarra).
@@ -54,8 +56,6 @@ Ascolti guidati
   `Ascolta su YouTube <https://www.youtube.com/watch?v=sb1Ra_Xlqso>`__
 
   **Compito.** Ascolta le chitarre ritmiche che scandiscono ogni movimento e il solo di Django: in quale battuta senti arrivare il bridge? Prova ad accompagnare la registrazione con gli shell della scheda.
-
-Per le versioni senza collegamento non è ancora disponibile una pubblicazione ufficiale verificata su YouTube (ADR 0002): cercale nei servizi di ascolto o in un'edizione su disco.
 
 .. END ascolti
 

@@ -47,13 +47,15 @@ Ascolti guidati
 
 - **Billie Holiday** — incisione per Okeh del 1941 (versione di riferimento).
 
+  `Ascolta su YouTube <https://www.youtube.com/watch?v=vjN9WiUkpvY>`__
+
   **Compito.** Ascolta come la voce anticipa e ritarda le frasi rispetto al tempo. Conta le quattro sezioni e riconosci il momento in cui la seconda metà del brano prende una strada diversa dalla prima.
 
 - **Django Reinhardt con Hubert Rostaing** — registrazione di Parigi del 17 dicembre 1940 (versione per chitarra).
 
-  **Compito.** Segui la forma durante l'assolo di chitarra: riesci a sentire quando inizia la sezione C senza contare le battute? Confronta poi l'accompagnamento ritmico con il tuo livello 1.
+  `Ascolta su YouTube <https://www.youtube.com/watch?v=hT82Ezo6-1I>`__
 
-Per le versioni senza collegamento non è ancora disponibile una pubblicazione ufficiale verificata su YouTube (ADR 0002): cercale nei servizi di ascolto o in un'edizione su disco.
+  **Compito.** Segui la forma durante l'assolo di chitarra: riesci a sentire quando inizia la sezione C senza contare le battute? Confronta poi l'accompagnamento ritmico con il tuo livello 1.
 
 .. END ascolti
 

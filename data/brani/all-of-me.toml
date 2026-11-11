@@ -33,6 +33,7 @@ battute = ["F6", "Fm6", "Em7", "A7", "Dm7", "G7", "C6", "Dm7 G7"]
 ruolo = "riferimento"
 artista = "Billie Holiday"
 versione = "incisione per Okeh del 1941"
+youtube = "https://www.youtube.com/watch?v=vjN9WiUkpvY"
 compito = "Ascolta come la voce anticipa e ritarda le frasi rispetto al tempo. Conta le quattro sezioni e riconosci il momento in cui la seconda metà del brano prende una strada diversa dalla prima."
 
 
@@ -40,6 +41,7 @@ compito = "Ascolta come la voce anticipa e ritarda le frasi rispetto al tempo. C
 ruolo = "chitarra"
 artista = "Django Reinhardt con Hubert Rostaing"
 versione = "registrazione di Parigi del 17 dicembre 1940"
+youtube = "https://www.youtube.com/watch?v=hT82Ezo6-1I"
 compito = "Segui la forma durante l'assolo di chitarra: riesci a sentire quando inizia la sezione C senza contare le battute? Confronta poi l'accompagnamento ritmico con il tuo livello 1."
 
 [[collegati]]

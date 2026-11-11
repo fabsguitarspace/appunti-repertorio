@@ -33,10 +33,10 @@ I progetti fratelli usano già solo materiale originale. Le analisi 014 e 016 di
 
 ## Criteri per i collegamenti YouTube
 
-- Si collegano soltanto caricamenti legittimi: canali ufficiali di artisti ed etichette, canali «Topic» generati da YouTube, il canale @fabsguitarspace. Niente caricamenti di terzi non autorizzati.
+- Si possono collegare sia caricamenti ufficiali (canali di artisti ed etichette, canali «Topic» generati da YouTube, il canale @fabsguitarspace) sia caricamenti di terzi. Il vincolo iniziale dei soli caricamenti ufficiali è stato tolto dall'utente il 2026-11-11 (vedi Modifiche). Se della stessa registrazione esistono entrambi, si preferisce quello ufficiale, che ha meno probabilità di essere rimosso.
 - Ogni ascolto riporta il collegamento testuale (artista, album o versione, anno). L'iframe `.yt-video` è un'aggiunta facoltativa solo per HTML, perché PDF ed ePub non lo rendono.
-- Se non c'è un caricamento legittimo, si citano album ed etichetta senza collegamento.
-- I collegamenti vengono verificati periodicamente con `linkcheck`. Un video rimosso si sostituisce o si toglie, senza ricorrere a copie non ufficiali.
+- Se non si trova alcun caricamento, si citano album ed etichetta senza collegamento.
+- I collegamenti vengono verificati periodicamente con `linkcheck`. Un video rimosso si sostituisce con un altro caricamento della stessa registrazione oppure si toglie.
 
 ## Conseguenze
 
@@ -53,3 +53,7 @@ Test automatici come sopra, più una revisione editoriale di ogni scheda prima d
 
 - Nessun ADR precedente superato.
 - Legge 633/1941 (diritto d'autore italiano), art. 70: citazione per critica e insegnamento. Non usata come base della decisione.
+
+## Modifiche
+
+- **2026-11-11**, decisa dall'utente: tolta la regola che ammetteva soltanto caricamenti ufficiali. Restano invariati il divieto di qualunque forma di melodia e l'obbligo del collegamento testuale. Al momento della modifica 8 collegamenti su 12 erano su canali ufficiali (verificati con oEmbed) e 4 su canali di terzi.

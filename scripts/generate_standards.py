@@ -486,8 +486,8 @@ def block_ascolti(t):
         link = f"\n\n  `Ascolta su YouTube <{a['youtube']}>`__" if a.get('youtube') else ''
         out.append(f"- {title}{link}\n\n  **Compito.** {a['compito']}")
     if any(not a.get('youtube') for a in t.get('ascolti', [])):
-        out.append('Per le versioni senza collegamento non è ancora disponibile una pubblicazione ufficiale '
-                   'verificata su YouTube (ADR 0002): cercale nei servizi di ascolto o in un\'edizione su disco.')
+        out.append('Per le versioni senza collegamento cerca la registrazione nei servizi di ascolto '
+                   'o in un\'edizione su disco.')
     if not any(a['ruolo'] == 'chitarra' for a in t.get('ascolti', [])):
         out.append('Una versione per chitarra sarà aggiunta in seguito.')
     return '\n\n'.join(out)
