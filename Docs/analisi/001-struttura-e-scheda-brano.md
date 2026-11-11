@@ -120,10 +120,12 @@ Tre schede, una per forma, confermate dall'utente il 2026-11-11:
 
 Criteri di accettazione: quelli dell'ADR 0003, più la verifica dei collegamenti YouTube secondo l'ADR 0002.
 
-## Piano di attuazione (modalità DEVELOPER, non avviato)
+## Piano di attuazione (modalità DEVELOPER; passi 1–2 eseguiti il 2026-11-11)
 
-1. Scheletro del repository copiato da Pratica: config, build, pipeline, macro, soundfont, CSS, logo.
-2. Capitoli 1–4 in bozza, capitoli di famiglia vuoti con toctree.
+1. ✓ Scheletro del repository: configurazione, build, CSS e logo da Pratica; pipeline, macro e soundfont tramite il sottomodulo `tools/appunti-musica` (ADR 0004).
+2. ✓ Capitoli 1–4 in bozza; capitoli di famiglia, piani di studio e indici con marcatori BEGIN/END al posto dei toctree. Un toctree vuoto o un glob senza corrispondenze produrrebbe avvisi con `-W`, quindi il generatore inserirà il toctree fra i marcatori.
+
+   Verifiche: `tests/test_struttura.py` passa; `sphinx-build -b html -W --keep-going` termina senza avvisi; `./build-lilypond.sh` raggiunge la libreria e si ferma, come atteso, con «No LilyPond sources found». Non verificati: build PDF/ePub e build su RTD (progetto RTD non ancora creato).
 3. `generate_standards.py` e test: contratto della scheda, politica melodie, risorse, indici.
 4. Le tre schede pilota e le loro risorse; build HTML con `-W`; ascolto delle basi.
 5. Progetto RTD, `nav_links` nei tre progetti, `linkcheck`.

@@ -1,0 +1,2 @@
+# Pipeline musicale locale (tools/appunti-musica); non serve a Read the Docs.
+pdfCropMargins==2.2.1

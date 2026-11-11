@@ -1,6 +1,6 @@
 # Architettura prevista e punti di attenzione
 
-Stato: architettura **prevista**. Il repository contiene soltanto questa KB. La struttura riprende quella osservata in `../appunti-pratica` l'11 novembre 2026: Sphinx 8.2.3, tema Shibuya 2026.1.9, RTD su Ubuntu 24.04 con Python 3.12, formati PDF ed ePub.
+Stato: **scheletro implementato** l'11 novembre 2026. Ci sono configurazione, script di build, sottomodulo, capitoli e `tests/test_struttura.py`. Sono ancora previsti `data/brani/*.yaml`, `scripts/generate_standards.py`, le schede e i sorgenti LilyPond. La struttura riprende quella osservata in `../appunti-pratica` l'11 novembre 2026: Sphinx 8.2.3, tema Shibuya 2026.1.9, RTD su Ubuntu 24.04 con Python 3.12, formati PDF ed ePub.
 
 ## Albero previsto
 
@@ -15,7 +15,7 @@ data/brani/<slug>.yaml    catalogo dati di ogni standard (vedi analisi 001)
 tools/appunti-musica/     sottomodulo git della libreria comune (ADR 0004): build, macro, soundfont, moduli Python
 scripts/
   generate_standards.py   catalogo → sezioni generate delle schede e sorgenti .ly
-tests/                    pytest: catalogo, schede, risorse, politica melodie
+tests/test_struttura.py   indice, marcatori, politica melodie, navigazione, sottomodulo (eseguibile senza pytest)
 src/docs/
   conf.py                 lingua it, Shibuya, nav_links verso i tre progetti, LuaLaTeX
   index.rst
@@ -34,7 +34,7 @@ src/lilypond/
 3. `build-lilypond.sh` produce SVG/PDF e MP3 in `src/docs/_static/music/`.
 4. `build.sh` produce l'HTML in `out/`, mentre RTD costruisce HTML, PDF ed ePub.
 
-Come in Pratica, RTD non esegue la pipeline musicale: le risorse vanno generate in locale e versionate.
+Come in Pratica, RTD non esegue la pipeline musicale: le risorse vanno generate in locale e versionate. `.readthedocs.yaml` dichiara `submodules: exclude: all`.
 
 ## Convenzioni
 
@@ -45,7 +45,7 @@ Come in Pratica, RTD non esegue la pipeline musicale: le risorse vanno generate 
 ## Punti di attenzione
 
 1. **Pipeline comune.** Deciso con l'ADR 0004: libreria in un repository dedicato, usata come sottomodulo dai tre progetti. Un clone richiede `--recurse-submodules`. Il piano di migrazione è nell'analisi 002.
-2. **Navigazione a tre.** I `nav_links` di `conf.py` di Teoria e Pratica vanno estesi con il nuovo progetto. È una modifica ai sorgenti dei fratelli e richiede la modalità DEVELOPER.
+2. **Navigazione a tre.** Questo progetto ha già i `nav_links` verso Teoria e Pratica. I `nav_links` di Teoria e Pratica vanno estesi con Repertorio solo dopo la creazione del progetto su RTD, per non pubblicare un collegamento che non funziona.
 3. **iframe nei PDF ed ePub.** Nelle uscite non HTML l'iframe non viene reso, quindi il collegamento testuale è obbligatorio.
 4. **Collegamenti YouTube instabili.** I video possono essere rimossi. Va previsto un controllo periodico (`sphinx-build -b linkcheck`) che non blocchi la build HTML.
 5. **Politica melodie.** Il divieto dell'ADR 0002 va reso verificabile da test automatici: nessun campo melodia nel catalogo, nessuna risorsa `*-melodia-*`. La correttezza degli studi originali richiede invece una revisione editoriale.

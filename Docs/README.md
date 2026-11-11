@@ -1,6 +1,8 @@
 # KB ARCHITECT — Appunti di Repertorio
 
-Aggiornamento: 11 novembre 2026. Il repository è nuovo: non esistono ancora sorgenti Sphinx, LilyPond o script. Questa KB registra le decisioni prese e l'architettura prevista. Non descrive un'implementazione esistente.
+Aggiornamento: 11 novembre 2026. Esiste lo **scheletro** del progetto: configurazione Sphinx e Read the Docs, la libreria `tools/appunti-musica` come sottomodulo, i capitoli 1–4 in bozza, i capitoli di famiglia, i piani di studio e gli indici con i soli marcatori del generatore, e i test di struttura. Non esistono ancora schede, catalogo dati, generatore né sorgenti LilyPond.
+
+I capitoli 1–4 sono bozze scritte con assistenza e vanno rilette dall'autore. La prefazione riprende quella di Pratica.
 
 ## Modalità di lavoro
 
@@ -20,6 +22,16 @@ Progetti fratelli:
 - Repertorio porta entrambi dentro i brani e rimanda ai due progetti invece di ripeterne le spiegazioni.
 
 Layout, stile didattico e pipeline musicale riprendono quelli di Pratica.
+
+## Mappa dei capitoli
+
+- `src/docs/1-introduzione.rst`: prefazione, organizzazione, modello di scheda, assenza delle melodie, convenzioni.
+- `src/docs/2-imparare-uno-standard.rst`: metodo in sette passi.
+- `src/docs/3-leggere-una-griglia.rst`: battute, sezioni, sigle, varianti, intro e finali.
+- `src/docs/4-le-forme.rst`: blues, blues minore, AABA, rhythm changes, ABAC, altre forme, forme modali.
+- `src/docs/5-blues.rst` … `10-modale-moderno.rst`: famiglie; schede fra `.. BEGIN brani` ed `.. END brani`.
+- `src/docs/11-piani-di-studio.rst`, `12-indici.rst`: contenuto generato fra marcatori.
+- `src/docs/brani/`: schede monografiche (vuota).
 
 ## Decisioni registrate
 
