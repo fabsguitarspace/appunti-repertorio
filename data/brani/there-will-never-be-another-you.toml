@@ -1,0 +1,44 @@
+slug = "there-will-never-be-another-you"
+titolo = "There Will Never Be Another You"
+autori = [{ nome = "Harry Warren", ruolo = "musica" }, { nome = "Mack Gordon", ruolo = "testo" }]
+anno = 1942
+origine = "film Iceland"
+famiglia = "6-swing-medium"
+forma = "ABAC 32"
+livello = 2
+tonalita = "Mi♭ maggiore"
+chiave = "ef major"
+feel = "medium swing"
+bpm_uso = 140
+bpm_studio = 60
+versione = "griglia d'uso più diffusa in Mi♭. Da confrontare con la registrazione di riferimento."
+
+[[sezioni]]
+nome = "A"
+battute = ["Ebmaj7", "Ebmaj7", "Dm7b5", "G7", "Cm7", "Cm7", "Bbm7", "Eb7"]
+
+[[sezioni]]
+nome = "B"
+battute = ["Abmaj7", "Db7", "Ebmaj7", "Cm7", "F7", "F7", "Fm7", "Bb7"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Ebmaj7", "Ebmaj7", "Dm7b5", "G7", "Cm7", "Cm7", "Bbm7", "Eb7"]
+
+[[sezioni]]
+nome = "C"
+battute = ["Abmaj7", "Db7", "Gm7", "C7", "Fm7", "Bb7", "Eb6", "Fm7 Bb7"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Chet Baker"
+versione = "Chet Baker Sings (Pacific Jazz), registrazione del 1954"
+compito = "Confronta la parte cantata con l'assolo di tromba: senti come l'improvvisazione segue gli stessi punti di arrivo della forma."
+
+[[collegati]]
+slug = "all-of-me"
+motivo = "stessa forma ABAC di 32 battute"
+
+[[collegati]]
+slug = "misty"
+motivo = "stessa tonalità di Mi♭"

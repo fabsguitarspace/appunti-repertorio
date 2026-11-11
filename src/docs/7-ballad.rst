@@ -11,6 +11,22 @@ Brani
 
 .. BEGIN brani: generato da scripts/generate_standards.py, non modificare a mano
 
-*Le schede di questa famiglia sono in preparazione.*
+.. list-table::
+   :header-rows: 1
+   :widths: 40 20 25 15
+
+   * - Brano
+     - Forma
+     - Tonalità
+     - Livello
+   * - :doc:`brani/misty`
+     - AABA 32
+     - Mi♭ maggiore
+     - 2
+
+.. toctree::
+   :hidden:
+
+   brani/misty
 
 .. END brani

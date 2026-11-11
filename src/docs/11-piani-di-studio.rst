@@ -11,6 +11,21 @@ accompagnamento di tutti i brani del livello, con la base, in due tonalità.
 
 .. BEGIN piani: generato da scripts/generate_standards.py, non modificare a mano
 
-*I piani di studio saranno compilati quando le prime schede saranno pronte.*
+Livello 1
+---------
+
+- :doc:`brani/all-of-me` — ABAC 32, medium swing
+- :doc:`brani/blue-monk` — blues 12, medium swing
+
+Livello 2
+---------
+
+- :doc:`brani/misty` — AABA 32, ballad
+- :doc:`brani/there-will-never-be-another-you` — ABAC 32, medium swing
+
+Livello 3
+---------
+
+- :doc:`brani/i-got-rhythm` — AABA 32, up swing
 
 .. END piani

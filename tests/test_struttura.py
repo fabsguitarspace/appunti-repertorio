@@ -58,8 +58,79 @@ def test_navigazione_e_libreria():
     assert 'tools/appunti-musica/appunti_musica/build.py' in (ROOT / 'build-lilypond.sh').read_text()
 
 
+SCHEDA = ['Perché studiarlo', 'Storia e contesto', 'Ascolti guidati', 'Imparare la melodia a orecchio',
+          'Mappa della forma', 'Lettura armonica', 'Accompagnamento', 'Linee per improvvisare',
+          'Base per suonare', 'Piano di studio', 'Brani collegati']
+SUFFIXES = {'griglia': ('svg',), 'shell': ('svg', 'mp3'), 'guide-tones': ('svg', 'mp3'),
+            'base-studio': ('mp3',), 'base': ('mp3',)}
+
+
+def generator():
+    import sys
+    sys.path.insert(0, str(ROOT / 'scripts'))
+    import generate_standards
+    return generate_standards
+
+
+def test_catalogo_e_schede():
+    g = generator()
+    tunes = g.load_catalogue()      # valida famiglie, battute e campi vietati
+    assert tunes
+    for t in tunes:
+        card = (DOCS / 'brani' / (t['slug'] + '.rst')).read_text()
+        headings = [h for h in re.findall(r'^(.+)\n-+$', card, re.MULTILINE)]
+        assert headings == SCHEDA, (t['slug'], headings)
+        assert '*Da scrivere.*' not in card, t['slug']
+        for stem, exts in SUFFIXES.items():
+            for ext in exts:
+                path = DOCS / '_static/music' / f"{t['slug']}-{stem}.{ext}"
+                assert path.is_file() and path.stat().st_size, path
+        family = (DOCS / (t['famiglia'] + '.rst')).read_text()
+        assert f"brani/{t['slug']}" in family, (t['slug'], t['famiglia'])
+
+
+def test_ordine_alfabetico():
+    g = generator()
+    tunes = g.load_catalogue()
+    for family in g.FAMILIES:
+        text = (DOCS / (family + '.rst')).read_text()
+        listed = re.findall(r'^   brani/(\S+)$', text, re.MULTILINE)
+        expected = [t['slug'] for t in sorted((t for t in tunes if t['famiglia'] == family), key=g.sort_key)]
+        assert listed == expected, (family, listed)
+
+
+def test_voicing():
+    g = generator()
+    for t in g.load_catalogue():
+        chords = [c for c, _ in g.flat_chords(g.bars_of(t))]
+        for chord, voicing in zip(chords, g.voice_lead(chords)):
+            strings = tuple(s for s, n, p in voicing)
+            if chord.quality in g.FOUR_NOTE:
+                assert len(strings) == 4, chord.symbol
+            else:
+                assert strings in ((6, 4, 3), (5, 4, 3)), (chord.symbol, strings)
+            assert voicing[0][1] == chord.root, chord.symbol           # fondamentale al basso
+            pcs = {n.pc for s, n, p in voicing}
+            assert {chord.tone('3')[0].pc, chord.tone('7')[0].pc} <= pcs, chord.symbol
+            assert all(p % 12 == n.pc for s, n, p in voicing), chord.symbol
+
+
+def test_generatore_stabile():
+    # Rieseguire il generatore non deve cambiare sorgenti né schede.
+    g = generator()
+    paths = list((ROOT / 'src/lilypond').glob('*.ly')) + list(DOCS.rglob('*.rst'))
+    before = {p: p.read_bytes() for p in paths}
+    tunes = g.load_catalogue()
+    for t in tunes:
+        g.write_sources(t)
+    g.write_docs(tunes)
+    changed = [p.name for p in paths if p.read_bytes() != before[p]]
+    assert not changed, changed
+
+
 if __name__ == '__main__':
     for name, test in list(globals().items()):
         if name.startswith('test_'):
             test()
-    print('PASS: indice, marcatori generati, nessuna melodia, navigazione e libreria')
+    print('PASS: indice, marcatori, nessuna melodia, navigazione e libreria, catalogo e schede, '
+          'ordine alfabetico, voicing, generatore stabile')

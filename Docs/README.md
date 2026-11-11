@@ -1,8 +1,8 @@
 # KB ARCHITECT — Appunti di Repertorio
 
-Aggiornamento: 11 novembre 2026. Esiste lo **scheletro** del progetto: configurazione Sphinx e Read the Docs, la libreria `tools/appunti-musica` come sottomodulo, i capitoli 1–4 in bozza, i capitoli di famiglia, i piani di studio e gli indici con i soli marcatori del generatore, e i test di struttura. Non esistono ancora schede, catalogo dati, generatore né sorgenti LilyPond.
+Aggiornamento: 11 novembre 2026. Esiste lo **scheletro** del progetto: configurazione Sphinx e Read the Docs, la libreria `tools/appunti-musica` come sottomodulo, i capitoli 1–4 in bozza, i capitoli di famiglia, i piani di studio e gli indici con i soli marcatori del generatore, e i test di struttura. Dal 2026-11-11 esistono anche il catalogo `data/brani/*.toml`, il generatore `scripts/generate_standards.py` e le **cinque schede pilota** (Blue Monk, I Got Rhythm, All of Me, Misty, There Will Never Be Another You), con griglie, shell, guide tones e basi audio.
 
-I capitoli 1–4 sono bozze scritte con assistenza e vanno rilette dall'autore. La prefazione riprende quella di Pratica.
+I capitoli 1–4 e i testi delle schede pilota sono bozze scritte con assistenza e vanno rilette dall'autore. La prefazione riprende quella di Pratica.
 
 ## Modalità di lavoro
 
@@ -31,7 +31,7 @@ Layout, stile didattico e pipeline musicale riprendono quelli di Pratica.
 - `src/docs/4-le-forme.rst`: blues, blues minore, AABA, rhythm changes, ABAC, altre forme, forme modali.
 - `src/docs/5-blues.rst` … `10-modale-moderno.rst`: famiglie; schede fra `.. BEGIN brani` ed `.. END brani`.
 - `src/docs/11-piani-di-studio.rst`, `12-indici.rst`: contenuto generato fra marcatori.
-- `src/docs/brani/`: schede monografiche (vuota).
+- `src/docs/brani/`: schede monografiche; le parti fra marcatori sono generate dal catalogo, il resto è scritto a mano.
 
 ## Decisioni registrate
 

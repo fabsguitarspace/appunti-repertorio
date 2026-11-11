@@ -128,8 +128,10 @@ Criteri di accettazione: quelli dell'ADR 0003, più la verifica dei collegamenti
 2. ✓ Capitoli 1–4 in bozza; capitoli di famiglia, piani di studio e indici con marcatori BEGIN/END al posto dei toctree. Un toctree vuoto o un glob senza corrispondenze produrrebbe avvisi con `-W`, quindi il generatore inserirà il toctree fra i marcatori.
 
    Verifiche: `tests/test_struttura.py` passa; `sphinx-build -b html -W --keep-going` termina senza avvisi; `./build-lilypond.sh` raggiunge la libreria e si ferma, come atteso, con «No LilyPond sources found». Non verificati: build PDF/ePub e build su RTD (progetto RTD non ancora creato).
-3. `generate_standards.py` e test: contratto della scheda, politica melodie, risorse, indici.
-4. Le cinque schede pilota e le loro risorse; build HTML con `-W`; ascolto delle basi.
+3. ✓ `generate_standards.py` e test (2026-11-11): catalogo TOML invece di YAML, per non aggiungere dipendenze. Il generatore produce griglia, shell di livello 1 con scelta automatica del voicing più vicino, guide tones con corde esplicite, basi con walking bass (due movimenti nelle ballad), ride swing e shell; aggiorna schede, capitoli di famiglia, piani di studio e indici. I test verificano sezioni della scheda, risorse, ordine alfabetico, voicing (corde, fondamentale al basso, terza e settima presenti) e stabilità del generatore.
+4. ✓ Le cinque schede pilota e le loro risorse (25 sorgenti, build in circa 50 s); build HTML con `-W` pulita; pagine controllate nel browser locale (tabella, immagini, quattro audio per scheda).
+
+   **Non fatto o non verificato:** ascolto delle basi e degli audio; confronto delle griglie con le registrazioni (dichiarato in ogni scheda); studio originale di un chorus; esempi dei livelli 2 e 3 dell'accompagnamento; versioni per chitarra e collegamenti YouTube negli ascolti; revisione dei testi da parte dell'autore; resa degli SVG con il tema scuro.
 5. Progetto RTD ✓ e `nav_links` uniformi nei tre progetti ✓ (2026-11-11); `linkcheck` ancora da configurare.
 
 ## Punti aperti

@@ -1,0 +1,40 @@
+slug = "misty"
+titolo = "Misty"
+autori = [{ nome = "Erroll Garner", ruolo = "musica" }, { nome = "Johnny Burke", ruolo = "testo" }]
+anno = 1954
+origine = "brano strumentale jazz, poi canzone con il testo del 1955"
+famiglia = "7-ballad"
+forma = "AABA 32"
+livello = 2
+tonalita = "Mi♭ maggiore"
+chiave = "ef major"
+feel = "ballad"
+bpm_uso = 60
+bpm_studio = 50
+versione = "griglia d'uso più diffusa in Mi♭. Da confrontare con la registrazione di riferimento."
+
+[[sezioni]]
+nome = "A"
+battute = ["Ebmaj7", "Bbm7 Eb7", "Abmaj7", "Abm7 Db7", "Ebmaj7 Cm7", "Fm7 Bb7", "Gm7 C7", "Fm7 Bb7"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Ebmaj7", "Bbm7 Eb7", "Abmaj7", "Abm7 Db7", "Ebmaj7 Cm7", "Fm7 Bb7", "Fm7 Bb7", "Eb6"]
+
+[[sezioni]]
+nome = "B"
+battute = ["Bbm7", "Eb7", "Abmaj7", "Abmaj7", "Am7", "D7", "Gm7 C7", "Fm7 Bb7"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Ebmaj7", "Bbm7 Eb7", "Abmaj7", "Abm7 Db7", "Ebmaj7 Cm7", "Fm7 Bb7", "Fm7 Bb7", "Eb6"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Erroll Garner"
+versione = "Contrasts (EmArcy), registrazione del 1954"
+compito = "Ascolta la prima esposizione del tema e segna dove respira ogni frase. Nota come il pianoforte lascia risuonare gli accordi lunghi delle prime battute."
+
+[[collegati]]
+slug = "there-will-never-be-another-you"
+motivo = "stessa tonalità di Mi♭ e lo stesso passaggio verso il IV (Abmaj7)"

@@ -1,6 +1,6 @@
 # Architettura prevista e punti di attenzione
 
-Stato: **scheletro implementato** l'11 novembre 2026. Ci sono configurazione, script di build, sottomodulo, capitoli e `tests/test_struttura.py`. Sono ancora previsti `data/brani/*.yaml`, `scripts/generate_standards.py`, le schede e i sorgenti LilyPond. La struttura riprende quella osservata in `../appunti-pratica` l'11 novembre 2026: Sphinx 8.2.3, tema Shibuya 2026.1.9, RTD su Ubuntu 24.04 con Python 3.12, formati PDF ed ePub.
+Stato: **pilota implementato** l'11 novembre 2026: configurazione, sottomodulo, capitoli, catalogo TOML, generatore, cinque schede con risorse e `tests/test_struttura.py`. La struttura riprende quella osservata in `../appunti-pratica` l'11 novembre 2026: Sphinx 8.2.3, tema Shibuya 2026.1.9, RTD su Ubuntu 24.04 con Python 3.12, formati PDF ed ePub.
 
 ## Albero previsto
 
@@ -11,7 +11,7 @@ requirements.txt          sphinx, shibuya (versioni fissate come nei fratelli)
 requirements-music.txt    dipendenze della pipeline musicale locale
 build.sh                  sphinx-build -b html -W --keep-going src/docs out
 build-lilypond.sh         richiama la build di tools/appunti-musica
-data/brani/<slug>.yaml    catalogo dati di ogni standard (vedi analisi 001)
+data/brani/<slug>.toml    catalogo dati di ogni standard (TOML: letto con tomllib, nessuna dipendenza)
 tools/appunti-musica/     sottomodulo git della libreria comune (ADR 0004): build, macro, soundfont, moduli Python
 scripts/
   generate_standards.py   catalogo → sezioni generate delle schede e sorgenti .ly
@@ -29,8 +29,8 @@ src/lilypond/
 
 ## Flusso
 
-1. `data/brani/<slug>.yaml` alimenta `generate_standards.py`.
-2. Il generatore scrive i sorgenti `.ly` (griglia, accompagnamento, guide tones, base) e aggiorna nelle schede RST le parti racchiuse fra i marcatori BEGIN/END. Il testo scritto a mano fuori dai marcatori non viene toccato.
+1. `data/brani/<slug>.toml` alimenta `generate_standards.py`.
+2. Il generatore scrive cinque sorgenti `.ly` per brano (`-griglia`, `-shell`, `-guide-tones`, `-base-studio`, `-base`) e aggiorna nelle schede RST le parti racchiuse fra i marcatori BEGIN/END. Il testo scritto a mano fuori dai marcatori non viene toccato.
 3. `build-lilypond.sh` produce SVG/PDF e MP3 in `src/docs/_static/music/`.
 4. `build.sh` produce l'HTML in `out/`, mentre RTD costruisce HTML, PDF ed ePub.
 
@@ -48,4 +48,5 @@ Come in Pratica, RTD non esegue la pipeline musicale: le risorse vanno generate 
 2. **Navigazione a tre.** Dall'11 novembre 2026 i `nav_links` dei tre `conf.py` sono uniformi: Teoria, Pratica, Repertorio, poi il canale YouTube. Ogni sito usa `index` per sé stesso. Una modifica all'elenco va riportata in tutti e tre.
 3. **iframe nei PDF ed ePub.** Nelle uscite non HTML l'iframe non viene reso, quindi il collegamento testuale è obbligatorio.
 4. **Collegamenti YouTube instabili.** I video possono essere rimossi. Va previsto un controllo periodico (`sphinx-build -b linkcheck`) che non blocchi la build HTML.
+6. **Peso dell'audio.** Ogni brano produce circa 10 MB di MP3 (32 battute a 60 BPM ≈ 2 MB per file; 52 MB per le cinque schede pilota). Con 30 brani il repository supererebbe i 300 MB. Da valutare: bitrate più basso nella libreria (riguarda anche gli altri progetti), basi di studio più brevi, o eliminare un file per brano.
 5. **Politica melodie.** Il divieto dell'ADR 0002 va reso verificabile da test automatici: nessun campo melodia nel catalogo, nessuna risorsa `*-melodia-*`. La correttezza degli studi originali richiede invece una revisione editoriale.

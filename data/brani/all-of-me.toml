@@ -1,0 +1,40 @@
+slug = "all-of-me"
+titolo = "All of Me"
+autori = [{ nome = "Seymour Simons", ruolo = "musica e testo" }, { nome = "Gerald Marks", ruolo = "musica e testo" }]
+anno = 1931
+origine = "canzone"
+famiglia = "6-swing-medium"
+forma = "ABAC 32"
+livello = 1
+tonalita = "Do maggiore"
+chiave = "c major"
+feel = "medium swing"
+bpm_uso = 120
+bpm_studio = 60
+versione = "griglia d'uso più diffusa, con C6 come accordo di tonica. Da confrontare con la registrazione di riferimento."
+
+[[sezioni]]
+nome = "A"
+battute = ["C6", "C6", "E7", "E7", "A7", "A7", "Dm7", "Dm7"]
+
+[[sezioni]]
+nome = "B"
+battute = ["E7", "E7", "Am7", "Am7", "D7", "D7", "Dm7", "G7"]
+
+[[sezioni]]
+nome = "A"
+battute = ["C6", "C6", "E7", "E7", "A7", "A7", "Dm7", "Dm7"]
+
+[[sezioni]]
+nome = "C"
+battute = ["F6", "Fm6", "Em7", "A7", "Dm7", "G7", "C6", "Dm7 G7"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Billie Holiday"
+versione = "incisione per Okeh del 1941"
+compito = "Ascolta come la voce anticipa e ritarda le frasi rispetto al tempo. Conta le quattro sezioni e riconosci il momento in cui la seconda metà del brano prende una strada diversa dalla prima."
+
+[[collegati]]
+slug = "there-will-never-be-another-you"
+motivo = "stessa forma ABAC di 32 battute"

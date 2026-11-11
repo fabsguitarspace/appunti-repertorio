@@ -1,0 +1,30 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "blue-monk"
+titolo = "Blue Monk"
+autori = [{ nome = "Thelonious Monk", ruolo = "musica" }]
+anno = 1954
+origine = "brano strumentale jazz"
+famiglia = "5-blues"
+forma = "blues 12"
+livello = 1
+tonalita = "Si♭ maggiore"
+chiave = "bf major"
+feel = "medium swing"
+bpm_uso = 120
+bpm_studio = 60
+versione = "jazz blues in Si♭ con il diminuito alla sesta battuta, come si suona comunemente nelle jam. Da confrontare con la registrazione di riferimento."
+
+[[sezioni]]
+nome = "A"
+battute = ["Bb7", "Eb7", "Bb7", "Bb7", "Eb7", "Edim7", "Bb7", "G7", "Cm7", "F7", "Bb7 G7", "Cm7 F7"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Thelonious Monk Trio"
+versione = "Thelonious Monk Trio (Prestige), registrazione del 1954"
+compito = "Conta i chorus del tema e dell'assolo di pianoforte. Segna in quale battuta ogni chorus ricomincia e ascolta come il pianoforte sottolinea il passaggio alla quinta battuta."
+
+[[collegati]]
+slug = "i-got-rhythm"
+motivo = "stessa tonalità e turnaround I–VI–II–V nelle ultime due battute"

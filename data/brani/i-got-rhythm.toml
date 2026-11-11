@@ -1,0 +1,40 @@
+slug = "i-got-rhythm"
+titolo = "I Got Rhythm"
+autori = [{ nome = "George Gershwin", ruolo = "musica" }, { nome = "Ira Gershwin", ruolo = "testo" }]
+anno = 1930
+origine = "musical Girl Crazy"
+famiglia = "9-bebop-contrafact"
+forma = "AABA 32"
+livello = 3
+tonalita = "Si♭ maggiore"
+chiave = "bf major"
+feel = "up swing"
+bpm_uso = 160
+bpm_studio = 60
+versione = "rhythm changes nella forma jazz di 32 battute. Nella versione originale di Gershwin l'ultima A è prolungata di due battute."
+
+[[sezioni]]
+nome = "A"
+battute = ["Bb6 G7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb7", "Eb6 Edim7", "Bb6/F G7", "Cm7 F7"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Bb6 G7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb7", "Eb6 Edim7", "Bb6/F F7", "Bb6"]
+
+[[sezioni]]
+nome = "B"
+battute = ["D7", "D7", "G7", "G7", "C7", "C7", "F7", "F7"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Bb6 G7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb7", "Eb6 Edim7", "Bb6/F F7", "Bb6"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Ethel Merman"
+versione = "Girl Crazy, musical di Broadway (1930)"
+compito = "Ascolta la canzone nella sua forma originale: individua le sezioni A e il bridge e cerca il punto in cui l'ultima A si allunga rispetto alle altre."
+
+[[collegati]]
+slug = "blue-monk"
+motivo = "stessa tonalità; il turnaround I–VI–II–V delle sezioni A chiude anche il blues"
