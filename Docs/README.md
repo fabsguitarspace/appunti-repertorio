@@ -1,6 +1,6 @@
 # KB ARCHITECT — Appunti di Repertorio
 
-Aggiornamento: 11 novembre 2026. Esiste lo **scheletro** del progetto: configurazione Sphinx e Read the Docs, la libreria `tools/appunti-musica` come sottomodulo, i capitoli 1–4 in bozza, i capitoli di famiglia, i piani di studio e gli indici con i soli marcatori del generatore, e i test di struttura. Dal 2026-11-11 esistono anche il catalogo `data/brani/*.toml`, il generatore `scripts/generate_standards.py` e le **cinque schede pilota** (Blue Monk, I Got Rhythm, All of Me, Misty, There Will Never Be Another You), con griglie, shell, guide tones e basi audio.
+Aggiornamento: 11 novembre 2026. Esiste lo **scheletro** del progetto: configurazione Sphinx e Read the Docs, la libreria `tools/appunti-musica` come sottomodulo, i capitoli 1–4 in bozza, i capitoli di famiglia, i piani di studio e gli indici con i soli marcatori del generatore, e i test di struttura. Dal 2026-11-11 esistono anche il catalogo `data/brani/*.toml`, il generatore `scripts/generate_standards.py` e le **cinque schede pilota** (Blue Monk, I Got Rhythm, All of Me, Misty, There Will Never Be Another You), con griglie, shell, guide tones e basi audio. Il catalogo comprende anche **Autumn Leaves** (aggiunto l'11 novembre 2026, primo brano in tonalità minore): sei brani in tutto.
 
 I capitoli 1–4 e i testi delle schede pilota sono bozze scritte con assistenza e vanno rilette dall'autore. La prefazione riprende quella di Pratica.
 

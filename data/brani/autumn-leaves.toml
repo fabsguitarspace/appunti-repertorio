@@ -1,0 +1,44 @@
+slug = "autumn-leaves"
+titolo = "Autumn Leaves"
+autori = [{ nome = "Joseph Kosma", ruolo = "musica" }, { nome = "Jacques Prévert", ruolo = "testo francese" }, { nome = "Johnny Mercer", ruolo = "testo inglese" }]
+anno = 1945
+origine = "canzone francese Les feuilles mortes, poi standard con il testo inglese del 1947"
+famiglia = "6-swing-medium"
+forma = "AABC 32"
+livello = 1
+tonalita = "Sol minore"
+chiave = "g minor"
+feel = "medium swing"
+bpm_uso = 120
+bpm_studio = 60
+versione = "griglia d'uso più diffusa in Sol minore, con il II–V–I semplice nella sezione C (molte versioni lo sostituiscono con dominanti cromatiche). Da confrontare con la registrazione di riferimento."
+
+[[sezioni]]
+nome = "A"
+battute = ["Cm7", "F7", "Bbmaj7", "Ebmaj7", "Am7b5", "D7", "Gm6", "Gm6"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Cm7", "F7", "Bbmaj7", "Ebmaj7", "Am7b5", "D7", "Gm6", "Gm6"]
+
+[[sezioni]]
+nome = "B"
+battute = ["Am7b5", "D7", "Gm6", "Gm6", "Cm7", "F7", "Bbmaj7", "Ebmaj7"]
+
+[[sezioni]]
+nome = "C"
+battute = ["Am7b5", "D7", "Gm7 C7", "Fm7 Bb7", "Ebmaj7", "Am7b5 D7", "Gm6", "Gm6"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Cannonball Adderley con Miles Davis"
+versione = "Somethin' Else (Blue Note), registrazione del 1958"
+compito = "Ascolta la lunga introduzione e individua il punto in cui entra il tema. Poi conta le sezioni del primo chorus e riconosci quando la forma ricomincia durante gli assoli."
+
+[[collegati]]
+slug = "there-will-never-be-another-you"
+motivo = "stesso II–V minore (semidiminuito e dominante) verso un accordo minore"
+
+[[collegati]]
+slug = "all-of-me"
+motivo = "stessa famiglia, forma di 32 battute in quattro sezioni"

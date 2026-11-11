@@ -23,6 +23,10 @@ Brani
      - ABAC 32
      - Do maggiore
      - 1
+   * - :doc:`brani/autumn-leaves`
+     - AABC 32
+     - Sol minore
+     - 1
    * - :doc:`brani/there-will-never-be-another-you`
      - ABAC 32
      - Mi♭ maggiore
@@ -32,6 +36,7 @@ Brani
    :hidden:
 
    brani/all-of-me
+   brani/autumn-leaves
    brani/there-will-never-be-another-you
 
 .. END brani

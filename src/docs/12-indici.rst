@@ -15,6 +15,10 @@ Per forma
 - :doc:`brani/i-got-rhythm`
 - :doc:`brani/misty`
 
+**AABC 32**
+
+- :doc:`brani/autumn-leaves`
+
 **ABAC 32**
 
 - :doc:`brani/all-of-me`
@@ -41,6 +45,10 @@ Per tonalità
 - :doc:`brani/blue-monk`
 - :doc:`brani/i-got-rhythm`
 
+**Sol minore**
+
+- :doc:`brani/autumn-leaves`
+
 Per tempo e feel
 ----------------
 
@@ -51,6 +59,7 @@ Per tempo e feel
 **medium swing**
 
 - :doc:`brani/all-of-me`
+- :doc:`brani/autumn-leaves`
 - :doc:`brani/blue-monk`
 - :doc:`brani/there-will-never-be-another-you`
 
@@ -64,6 +73,7 @@ Per livello
 **Livello 1**
 
 - :doc:`brani/all-of-me`
+- :doc:`brani/autumn-leaves`
 - :doc:`brani/blue-monk`
 
 **Livello 2**
