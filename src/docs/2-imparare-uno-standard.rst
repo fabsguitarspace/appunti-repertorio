@@ -83,8 +83,9 @@ ti perdi, la base continua senza di te.
 -----------------------------
 
 Improvvisa partendo dalle note bersaglio e dalle guide tones, poi allarga il
-discorso. Ogni scheda contiene uno studio originale di un chorus, da
-suonare, analizzare e poi trasformare.
+discorso. Ogni scheda conterrà uno studio originale di un chorus, da
+suonare, analizzare e poi trasformare; per ora trovi la linea delle guide
+tones su tutta la forma.
 
 Infine mettiti alla prova a memoria:
 

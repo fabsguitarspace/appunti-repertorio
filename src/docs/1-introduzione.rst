@@ -76,8 +76,10 @@ Tutte le schede hanno la stessa struttura, così sai sempre dove cercare:
 #. **Imparare la melodia a orecchio**.
 #. **Mappa della forma**: griglia e spartito con le sole sigle.
 #. **Lettura armonica**, con rimandi alla Teoria.
-#. **Accompagnamento** su tre livelli, con spartito, tablatura e audio.
-#. **Linee per improvvisare**: guide tones, note bersaglio, uno studio originale.
+#. **Accompagnamento** su tre livelli; per ora spartito, tablatura e audio
+   riguardano il primo.
+#. **Linee per improvvisare**: guide tones e note bersaglio; lo studio
+   originale di un chorus sarà aggiunto in seguito.
 #. **Base per suonare**, senza melodia.
 #. **Riarmonizzazioni**, quando sono utili.
 #. **Piano di studio, Compito e Verifica**.
