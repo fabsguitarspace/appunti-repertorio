@@ -1,0 +1,53 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "blue-bossa"
+titolo = "Blue Bossa"
+autori = [{ nome = "Kenny Dorham", ruolo = "musica" }]
+anno = 1963
+origine = "brano strumentale jazz, inciso per la prima volta nel disco Page One di Joe Henderson"
+famiglia = "8-latin-bossa"
+forma = "AB 16"
+livello = 1
+tonalita = "Do minore"
+chiave = "c minor"
+feel = "bossa"
+bpm_uso = 140
+bpm_studio = 70
+versione = "griglia d'uso più diffusa in Do minore, con il II–V minore nell'ultima battuta per tornare all'inizio. Da confrontare con la registrazione di riferimento."
+
+[[sezioni]]
+nome = "A"
+battute = ["Cm7", "Cm7", "Fm7", "Fm7", "Dm7b5", "G7", "Cm7", "Cm7"]
+
+[[sezioni]]
+nome = "B"
+battute = ["Ebm7", "Ab7", "Dbmaj7", "Dbmaj7", "Dm7b5", "G7", "Cm7", "Dm7b5 G7"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Joe Henderson"
+versione = "Page One (Blue Note), registrazione del 1963, con Kenny Dorham alla tromba"
+youtube = "https://www.youtube.com/watch?v=EUxv3AAaK_Y"
+compito = "Ascolta il disegno di basso e batteria prima che entri il tema: le crome sono regolari, non swing. Poi conta le 16 battute del primo chorus e riconosci il punto in cui l'armonia si sposta, a metà della forma."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Pat Martino"
+versione = "Cream, raccolta pubblicata nel 1997"
+youtube = "https://www.youtube.com/watch?v=gql2_RPwUeo"
+compito = "Il tempo è più veloce e il feel diverso da quello di Page One. Segui la forma durante l'assolo di chitarra: riconosci ogni volta l'arrivo su Re♭ maggiore e il ritorno a Do minore?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "George Benson"
+versione = "Lil' Darlin', raccolta pubblicata nel 2007"
+youtube = "https://www.youtube.com/watch?v=JRg-LwiAysU"
+compito = "Confronta il modo in cui la chitarra porta le crome con quello di Pat Martino: più vicine allo swing o più regolari? Durante l'assolo conta i chorus e segna quando ricomincia la sezione A."
+
+[[collegati]]
+slug = "autumn-leaves"
+motivo = "stesso II–V minore (semidiminuito e dominante) verso un accordo minore"
+
+[[collegati]]
+slug = "so-what"
+motivo = "accordi minori tenuti per più battute, senza swing qui e senza cadenze là"

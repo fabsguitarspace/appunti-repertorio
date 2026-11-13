@@ -17,7 +17,9 @@ Livello 1
 
 - :doc:`brani/all-of-me` — ABAC 32, medium swing
 - :doc:`brani/autumn-leaves` — AABC 32, medium swing
+- :doc:`brani/blue-bossa` — AB 16, bossa
 - :doc:`brani/blue-monk` — blues 12, medium swing
+- :doc:`brani/so-what` — AABA 32, medium swing
 
 Livello 2
 ---------

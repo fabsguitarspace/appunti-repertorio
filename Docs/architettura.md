@@ -31,6 +31,7 @@ src/lilypond/
 
 1. `data/brani/<slug>.toml` alimenta `generate_standards.py`.
 2. Il generatore scrive cinque sorgenti `.ly` per brano (`-griglia`, `-shell`, `-guide-tones`, `-base-studio`, `-base`) e aggiorna nelle schede RST le parti racchiuse fra i marcatori BEGIN/END. Il testo scritto a mano fuori dai marcatori non viene toccato.
+   Il campo `feel` del catalogo sceglie il disegno ritmico delle basi (dal 13 novembre 2026): `ballad` dà basso in due e piatto in quarti; `bossa` dà crome regolari, con basso su fondamentale e quinta e anticipo in levare; ogni altro valore dà walking e swing. Nel walking, quando lo stesso accordo dura quattro o più battute di seguito (`LONG_RUN`, brani modali), il disegno del basso cambia a ogni battuta; le serie più brevi restano invariate, quindi i brani precedenti non cambiano. Il soundfont `PracticeRhythm.sf2` offre solo cassa, rullante, charleston chiuso e ride: il pattern di bossa usa charleston e cassa.
 3. `build-lilypond.sh` produce SVG/PDF e MP3 in `src/docs/_static/music/`.
 4. `build.sh` produce l'HTML in `out/`, mentre RTD costruisce HTML, PDF ed ePub.
 

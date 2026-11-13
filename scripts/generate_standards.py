@@ -12,7 +12,8 @@ Per ogni brano produce:
     <slug>-base-studio.ly  base a velocità di studio, un chorus
     <slug>-base.ly         base a velocità d'uso, due chorus
 
-Le basi hanno basso, batteria e accompagnamento, senza melodia. I file .ly generati
+Le basi hanno basso, batteria e accompagnamento, senza melodia. Il campo ``feel`` sceglie
+il disegno ritmico: ``ballad`` (due movimenti), ``bossa`` (crome regolari) o swing negli altri casi. I file .ly generati
 non vanno modificati a mano. Nelle schede RST il generatore riscrive solo le parti
 comprese fra i marcatori ``.. BEGIN nome:`` e ``.. END nome``; se una scheda non
 esiste, ne crea lo scheletro con le sezioni del modello (analisi 001).
@@ -382,38 +383,82 @@ def bass_root(note):
     return 33 + (note.pc - 9) % 12
 
 
-def bassline(chords, ballad):
-    """Walking (o due movimenti per le ballad): fondamentale, note dell'accordo, approccio cromatico."""
+LONG_RUN = 4   # battute consecutive sullo stesso accordo oltre le quali il walking varia
+
+
+def run_positions(chords):
+    """Per ogni accordo: (posizione nella serie di accordi uguali, lunghezza della serie)."""
+    out, i = [], 0
+    while i < len(chords):
+        j = i
+        while j < len(chords) and chords[j][0].symbol == chords[i][0].symbol and chords[j][1] == 4:
+            j += 1
+        j = max(j, i + 1)
+        out += [(k, j - i) for k in range(j - i)]
+        i = j
+    return out
+
+
+def bassline(chords, feel):
+    """Linea di basso come elenco di (altezza, durata LilyPond).
+
+    Swing: walking con fondamentale, note dell'accordo e approccio cromatico; sulle serie
+    lunghe dello stesso accordo (brani modali) il disegno cambia a ogni battuta.
+    Ballad: due movimenti. Bossa: fondamentale e quinta con l'anticipo in levare.
+    """
     events = []
+    runs = run_positions(chords)
     for i, (chord, beats) in enumerate(chords):
         nxt = chords[(i + 1) % len(chords)][0]
         r = bass_root(chord.bass)
         target = bass_root(nxt.bass)
         _, s3 = chord.tone('3')
         _, s5 = chord.tone('5')
-        if ballad:
-            events += [(r, 2), (r + s5, 2)] if beats == 4 else [(r, 2)]
+        _, s7 = chord.tone('7')
+        if feel == 'ballad':
+            events += [(r, '2'), (r + s5, '2')] if beats == 4 else [(r, '2')]
+            continue
+        if feel == 'bossa':
+            fifth = r + s5 - 12 if r + s5 - 12 >= 31 else r + s5
+            if beats == 4:
+                events += [(r, '4.'), (fifth, '8'), (fifth, '4.'), (target, '8')]
+            else:
+                events += [(r, '4.'), (target, '8')]
             continue
         approach = target - 1 if target > r + s5 - 6 else target + 1
-        if beats == 4:
-            events += [(r, 1), (r + s3, 1), (r + s5, 1), (approach, 1)]
+        position, length = runs[i]
+        if beats == 4 and length >= LONG_RUN:
+            last = approach if position == length - 1 else None
+            pattern = [
+                [r, r + s3, r + s5, r + s7],
+                [r + 12, r + s7, r + s5, r + s3],
+                [r, r + s5, r + s7, r + s5],
+                [r + 12, r + s7, r + s5, approach],
+            ][position % 4]
+            if last is not None:
+                pattern[3] = last
+            events += [(p, '4') for p in pattern]
+        elif beats == 4:
+            events += [(r, '4'), (r + s3, '4'), (r + s5, '4'), (approach, '4')]
         else:
-            events += [(r, 1), (approach, 1)]
+            events += [(r, '4'), (approach, '4')]
     return events
 
 
-def drum_bar(ballad):
-    if ballad:
+def drum_bar(feel):
+    if feel == 'ballad':
         return 'cymr4 <cymr hh>4 cymr4 <cymr hh>4'
+    if feel == 'bossa':
+        return '<hh bd>8 hh hh <hh bd> <hh bd> hh hh <hh bd>'
     return r'cymr4 \tuplet 3/2 { <cymr hh>4 cymr8 } cymr4 \tuplet 3/2 { <cymr hh>4 cymr8 }'
 
 
 def base_source(tune, bars, voicings, choruses, bpm, label):
-    ballad = tune['feel'] == 'ballad'
+    feel = tune['feel']
     chords = flat_chords(bars)
-    bass = ' '.join(f'{pitch_name(p)}{ {1: "4", 2: "2"}[b] }' for p, b in bassline(chords, ballad))
+    bass = ' '.join(f'{pitch_name(p)}{d}' for p, d in bassline(chords, feel))
     comp = ' '.join(voicing_token(v, DURATION[b]) for v, (c, b) in zip(voicings, chords))
-    drums = ' '.join(drum_bar(ballad) for _ in bars)
+    drums = ' '.join(drum_bar(feel) for _ in bars)
     systems = math.ceil(len(bars) / 4)
     unfold = rf'\repeat unfold {choruses}'
     return '\n'.join([

@@ -195,5 +195,6 @@ Brani collegati
 
 - :doc:`There Will Never Be Another You <there-will-never-be-another-you>`: stesso II–V minore (semidiminuito e dominante) verso un accordo minore.
 - :doc:`All of Me <all-of-me>`: stessa famiglia, forma di 32 battute in quattro sezioni.
+- :doc:`Blue Bossa <blue-bossa>`: stesso II–V minore, in un brano di 16 battute con le crome regolari.
 
 .. END collegati

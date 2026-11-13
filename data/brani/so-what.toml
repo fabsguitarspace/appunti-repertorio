@@ -1,0 +1,68 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "so-what"
+titolo = "So What"
+autori = [{ nome = "Miles Davis", ruolo = "musica" }]
+anno = 1959
+origine = "brano strumentale jazz, primo titolo del disco Kind of Blue"
+famiglia = "10-modale-moderno"
+forma = "AABA 32"
+livello = 1
+tonalita = "Re dorico"
+chiave = "d dorian"
+feel = "medium swing"
+bpm_uso = 136
+bpm_studio = 68
+versione = "forma modale di Kind of Blue: Re dorico nelle sezioni A, Mi♭ dorico nella sezione B. Le sigle Dm7 ed E♭m7 indicano l'area modale, non un accordo da ripetere uguale. Da confrontare con la registrazione di riferimento."
+
+[[sezioni]]
+nome = "A"
+battute = ["Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7"]
+
+[[sezioni]]
+nome = "B"
+battute = ["Ebm7", "Ebm7", "Ebm7", "Ebm7", "Ebm7", "Ebm7", "Ebm7", "Ebm7"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Miles Davis"
+versione = "Kind of Blue (Columbia), registrazione del 1959"
+youtube = "https://www.youtube.com/watch?v=ylXk1LBvIqU"
+compito = "Dopo l'introduzione libera il tema è affidato al contrabbasso, e il gruppo risponde con due accordi. Conta le battute: riconosci il momento in cui tutto sale di un semitono e quello in cui ridiscende? Fai lo stesso durante l'assolo di tromba."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Grant Green"
+versione = "Sunday Mornin' (Blue Note), registrazione del 1961"
+youtube = "https://www.youtube.com/watch?v=T9k9eFl-mgU"
+compito = "Ascolta come la chitarra espone il tema e poi costruisce l'assolo con frasi brevi, ripetute e variate. Conta le battute di un chorus dell'assolo: da che cosa riconosci l'arrivo della sezione B?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Ronny Jordan"
+versione = "The Antidote (Island), disco del 1992"
+youtube = "https://www.youtube.com/watch?v=rgSEqeDQyPI"
+compito = "La forma è la stessa, ma il ritmo non è swing. Che cosa cambia nel modo di portare le crome e di accompagnare? Segui comunque le 32 battute e il passaggio di semitono."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "George Benson"
+versione = "Beyond the Blue Horizon (CTI), registrazione del 1971, con organo, contrabbasso e batteria"
+youtube = "https://www.youtube.com/watch?v=3OxTCUpgHhs"
+compito = "Il tempo è molto più veloce di quello di Kind of Blue. Senza cadenze a segnalare la forma, da che cosa capisci che è arrivata la sezione B? Ascolta l'organo e il basso sotto l'assolo di chitarra."
+
+[[collegati]]
+slug = "i-got-rhythm"
+motivo = "stessa forma AABA di 32 battute, con un'armonia opposta: là due accordi per battuta, qui uno per sezione"
+
+[[collegati]]
+slug = "blue-bossa"
+motivo = "accordi minori settima tenuti per più battute, da suonare con il colore dorico"

@@ -14,10 +14,15 @@ Per forma
 
 - :doc:`brani/i-got-rhythm`
 - :doc:`brani/misty`
+- :doc:`brani/so-what`
 
 **AABC 32**
 
 - :doc:`brani/autumn-leaves`
+
+**AB 16**
+
+- :doc:`brani/blue-bossa`
 
 **ABAC 32**
 
@@ -35,10 +40,18 @@ Per tonalità
 
 - :doc:`brani/all-of-me`
 
+**Do minore**
+
+- :doc:`brani/blue-bossa`
+
 **Mi♭ maggiore**
 
 - :doc:`brani/misty`
 - :doc:`brani/there-will-never-be-another-you`
+
+**Re dorico**
+
+- :doc:`brani/so-what`
 
 **Si♭ maggiore**
 
@@ -56,11 +69,16 @@ Per tempo e feel
 
 - :doc:`brani/misty`
 
+**bossa**
+
+- :doc:`brani/blue-bossa`
+
 **medium swing**
 
 - :doc:`brani/all-of-me`
 - :doc:`brani/autumn-leaves`
 - :doc:`brani/blue-monk`
+- :doc:`brani/so-what`
 - :doc:`brani/there-will-never-be-another-you`
 
 **up swing**
@@ -74,7 +92,9 @@ Per livello
 
 - :doc:`brani/all-of-me`
 - :doc:`brani/autumn-leaves`
+- :doc:`brani/blue-bossa`
 - :doc:`brani/blue-monk`
+- :doc:`brani/so-what`
 
 **Livello 2**
 
