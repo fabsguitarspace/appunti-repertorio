@@ -62,9 +62,35 @@ Ascolti guidati
 Imparare la melodia a orecchio
 ------------------------------
 
-Il tema procede per frasi ampie, con note lunghe nei punti di arrivo. Cantalo seguendo la versione di riferimento e nota dove la voce si allontana dal tempo per poi ritornarci: è una libertà interpretativa, non una differenza nella forma.
+.. BEGIN tema: generato da scripts/generate_standards.py, non modificare a mano
 
-Sulla chitarra cerca prima le note lunghe di ogni frase, poi riempi lo spazio fra una e l'altra. Le due sezioni A iniziano allo stesso modo: imparane una e verifica che la seconda coincida.
+**Carta del tema**
+
+.. list-table::
+   :widths: 30 70
+
+   * - Frase e respiro
+     - Frasi ampie, con note lunghe nei punti di arrivo; prendi fiato alla fine di ogni coppia di battute, non a metà frase.
+   * - Profilo
+     - Segui la direzione della frase: dove sale, dove scende, dove si ferma. Cerca prima il disegno, poi le note.
+   * - Appoggi
+     - Le frasi chiudono su una nota dell'accordo del momento: ascolta se è la tonica, la terza o la quinta.
+   * - Testo
+     - Sì, in inglese: cantalo con le parole, che aiutano a ricordare il ritmo delle frasi.
+   * - Insidia
+     - La voce anticipa e ritarda le frasi rispetto al tempo; il tema resta però dentro la forma.
+   * - Dove cercarlo
+     - Zona del terzo tasto, la stessa degli shell di questa scheda.
+   * - Obiettivo (livello 1)
+     - Canta e suona la prima frase in una posizione; riconosci dove il tema comincia e finisce.
+
+.. END tema
+
+**Profilo.** Billie Holiday non canta il tema a tempo metronomico: lo phraseggia sul testo, anticipando e ritardando le frasi. Impara prima il ritmo delle parole, poi lascia che le note lo seguano. Usa la versione di Django Reinhardt per la forma e l'accompagnamento; per il tema, però, resta sulla voce.
+
+**Compito.** Suona la prima frase su una sola corda, poi in una posizione. Rifalla con la base a 60 BPM senza guardare la griglia; se sbagli, canta di nuovo la frase invece di cercare a caso.
+
+**Verifica.** Sai cantare l'inizio della sezione B dopo aver ascoltato solo la fine della A? Sai dire su quale accordo si appoggia l'ultima nota di ogni frase?
 
 Mappa della forma
 -----------------

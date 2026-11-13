@@ -37,6 +37,18 @@ FAMILIES = {
     '10-modale-moderno': 'Modale e moderno',
 }
 LEVELS = {1: 'Livello 1', 2: 'Livello 2', 3: 'Livello 3'}
+# Obiettivo sul tema per livello (analisi 003): nessuna nota, solo comportamento.
+LADDER = {
+    1: 'Canta e suona la prima frase in una posizione; riconosci dove il tema comincia e finisce.',
+    2: 'Tema intero a memoria, in due posizioni, poi trasposto in una tonalità vicina.',
+    3: 'Tema in tempo con l\'interpretazione del feel; sviluppane ritmo e profilo '
+       'nell\'improvvisazione, senza citarlo.',
+}
+# Campi ammessi in [tema]: descrizioni qualitative, mai altezze o sequenze di note.
+TEMA_KEYS = {'frase', 'profilo', 'appoggi', 'testo', 'insidia', 'posizione', 'ascolto'}
+TEMA_REQUIRED = TEMA_KEYS - {'ascolto'}
+FORBIDDEN_KEYS = {'melodia', 'melody', 'tema_note', 'note', 'altezze', 'pitch', 'pitches',
+                  'frammenti', 'fragment', 'intervalli'}
 OPEN = {6: 40, 5: 45, 4: 50, 3: 55, 2: 59, 1: 64}
 LETTERS = 'CDEFGAB'
 NATURAL = {'C': 0, 'D': 2, 'E': 4, 'F': 5, 'G': 7, 'A': 9, 'B': 11}
@@ -52,7 +64,7 @@ QUALITIES = {
 }
 FOUR_NOTE = {'m7b5', 'dim7'}   # niente shell: servono la quinta diminuita e la terza
 CHORD_RE = re.compile(r'^([A-G])([b#]?)(maj7|m7b5|dim7|m7|m6|6|7)(?:/([A-G])([b#]?))?$')
-SECTION_ORDER = ['identita', 'perche', 'storia', 'ascolti', 'melodia', 'forma', 'armonia',
+SECTION_ORDER = ['identita', 'perche', 'storia', 'ascolti', 'tema', 'forma', 'armonia',
                  'accompagnamento', 'guide', 'base', 'piano', 'collegati']
 
 
@@ -146,6 +158,39 @@ def expected_bars(tune):
     return int(m[1]) if m else None
 
 
+def all_keys(value):
+    """Tutte le chiavi del catalogo, anche dentro tabelle e liste annidate."""
+    if isinstance(value, dict):
+        for key, item in value.items():
+            yield key
+            yield from all_keys(item)
+    elif isinstance(value, list):
+        for item in value:
+            yield from all_keys(item)
+
+
+def validate_tema(t):
+    """La tabella [tema] contiene solo descrizioni qualitative, mai note (analisi 003)."""
+    tema = t.get('tema')
+    if tema is None:
+        return
+    if not isinstance(tema, dict):
+        raise ValueError(f"{t['slug']}: [tema] deve essere una tabella")
+    unknown = set(tema) - TEMA_KEYS
+    if unknown:
+        raise ValueError(f"{t['slug']}: campi [tema] non ammessi: {sorted(unknown)}")
+    missing = TEMA_REQUIRED - set(tema)
+    if missing:
+        raise ValueError(f"{t['slug']}: campi [tema] mancanti: {sorted(missing)}")
+    for key, value in tema.items():
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f"{t['slug']}: [tema].{key} deve essere una stringa non vuota")
+    roles = {a['ruolo'] for a in t.get('ascolti', [])}
+    if tema.get('ascolto') and tema['ascolto'] not in roles:
+        raise ValueError(f"{t['slug']}: [tema].ascolto non è un ruolo di [[ascolti]]: "
+                         f"{tema['ascolto']}")
+
+
 def load_catalogue():
     tunes = [tomllib.loads(p.read_text()) for p in sorted(DATA.glob('*.toml'))]
     for t in tunes:
@@ -153,9 +198,10 @@ def load_catalogue():
             raise ValueError(f"{t['slug']}: famiglia sconosciuta {t['famiglia']}")
         if len(bars_of(t)) != expected_bars(t):
             raise ValueError(f"{t['slug']}: {len(bars_of(t))} battute, forma {t['forma']}")
-        for key in t:
-            if key.lower() in ('melodia', 'melody', 'tema_note'):
+        for key in all_keys(t):
+            if key.lower() in FORBIDDEN_KEYS:
                 raise ValueError(f"{t['slug']}: campo vietato dall'ADR 0002: {key}")
+        validate_tema(t)
     return tunes
 
 
@@ -493,6 +539,22 @@ def block_ascolti(t):
     return '\n\n'.join(out)
 
 
+def block_tema(t):
+    """Carta del tema: indice qualitativo, senza note né minutaggi (ADR 0002)."""
+    tema = t['tema']
+    rows = [
+        ('Frase e respiro', tema['frase']),
+        ('Profilo', tema['profilo']),
+        ('Appoggi', tema['appoggi']),
+        ('Testo', tema['testo']),
+        ('Insidia', tema['insidia']),
+        ('Dove cercarlo', tema['posizione']),
+        (f"Obiettivo (livello {t['livello']})", LADDER[t['livello']]),
+    ]
+    body = '\n'.join(f'   * - {label}\n     - {text}' for label, text in rows)
+    return '**Carta del tema**\n\n.. list-table::\n   :widths: 30 70\n\n' + body
+
+
 def block_forma(t, bars):
     lines, counts = [], []
     i = 0
@@ -529,12 +591,13 @@ def block_collegati(t, by_slug):
 
 SKELETON = [
     ('identita', None), ('perche', 'Perché studiarlo'), ('storia', 'Storia e contesto'),
-    ('ascolti', 'Ascolti guidati'), ('melodia', 'Imparare la melodia a orecchio'),
+    ('ascolti', 'Ascolti guidati'), ('tema', 'Imparare la melodia a orecchio'),
     ('forma', 'Mappa della forma'), ('armonia', 'Lettura armonica'),
     ('accompagnamento', 'Accompagnamento'), ('guide', 'Linee per improvvisare'),
     ('base', 'Base per suonare'), ('piano', 'Piano di studio'), ('collegati', 'Brani collegati'),
 ]
-GENERATED_IN_CARD = {'identita', 'ascolti', 'forma', 'accompagnamento', 'guide', 'base', 'collegati'}
+GENERATED_IN_CARD = {'identita', 'ascolti', 'tema', 'forma', 'accompagnamento', 'guide', 'base',
+                     'collegati'}
 
 
 def marker(name, body):
@@ -547,7 +610,7 @@ def skeleton(t):
     parts = [f".. _brano-{t['slug']}:\n\n{title}\n{'=' * len(title)}"]
     for key, heading in SKELETON:
         section = f'{heading}\n{"-" * len(heading)}\n\n' if heading else ''
-        if key in GENERATED_IN_CARD:
+        if key in GENERATED_IN_CARD and (key != 'tema' or 'tema' in t):
             section += marker(key, '')
         else:
             section += '*Da scrivere.*'
@@ -618,7 +681,7 @@ def write_docs(tunes):
     by_slug = {t['slug']: t for t in tunes}
     for t in tunes:
         bars = bars_of(t)
-        update(DOCS / 'brani' / f"{t['slug']}.rst", {
+        blocks = {
             'identita': block_identita(t),
             'ascolti': block_ascolti(t),
             'forma': block_forma(t, bars),
@@ -627,7 +690,10 @@ def write_docs(tunes):
             'guide': block_media(t, 'guide-tones', 'guide tones', f"guide tones a {t['bpm_studio']} BPM"),
             'base': block_base(t),
             'collegati': block_collegati(t, by_slug),
-        }, create=skeleton(t))
+        }
+        if 'tema' in t:
+            blocks['tema'] = block_tema(t)
+        update(DOCS / 'brani' / f"{t['slug']}.rst", blocks, create=skeleton(t))
     for family in FAMILIES:
         members = sorted((t for t in tunes if t['famiglia'] == family), key=sort_key)
         update(DOCS / f'{family}.rst', {'brani': family_block(members)})

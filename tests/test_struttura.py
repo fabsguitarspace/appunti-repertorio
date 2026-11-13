@@ -3,6 +3,7 @@
 Esecuzione: python3 tests/test_struttura.py   (anche pytest raccoglie i test_*)
 """
 import re
+import tomllib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -42,9 +43,10 @@ def test_nessuna_melodia():
     for folder in [ROOT / 'src/lilypond', DOCS / '_static/music']:
         offending = [p.name for p in folder.rglob('*') if 'melodia' in p.name.lower()]
         assert not offending, offending
-    for path in (ROOT / 'data/brani').glob('*.yaml'):
-        keys = re.findall(r'^\s*-?\s*(melodia|melody|tema_note)\s*:', path.read_text(),
-                          re.MULTILINE | re.IGNORECASE)
+    g = generator()
+    for path in (ROOT / 'data/brani').glob('*.toml'):
+        data = tomllib.loads(path.read_text())
+        keys = [k for k in g.all_keys(data) if k.lower() in g.FORBIDDEN_KEYS]
         assert not keys, (path.name, keys)
 
 
@@ -102,6 +104,38 @@ def test_ascolti():
                 assert a['youtube'] in card, (t['slug'], a['youtube'])
 
 
+def card_section(card, heading):
+    """Testo fra un titolo di sezione e il successivo."""
+    match = re.search(rf'^{re.escape(heading)}\n-+\n\n(.*?)(?=^[^\n]+\n-+\n)', card, re.M | re.S)
+    assert match, heading
+    return match.group(1)
+
+
+SOFLEGE = r'(?:Do|Re|Mi|Fa|Sol|La|Si)'
+NOTE_RUN = re.compile(rf'\b{SOFLEGE}\b(?:[\s,;–—-]+\b{SOFLEGE}\b){{2,}}', re.IGNORECASE)
+
+
+def test_tema():
+    # Analisi 003: la sezione sul tema è descrittiva, senza note né supporti (ADR 0002).
+    g = generator()
+    for t in g.load_catalogue():
+        if 'tema' not in t:
+            continue
+        card = (DOCS / 'brani' / (t['slug'] + '.rst')).read_text()
+        section = card_section(card, 'Imparare la melodia a orecchio')
+        assert '.. BEGIN tema:' in section and '.. END tema' in section, t['slug']
+        assert 'Carta del tema' in section, t['slug']
+        assert '**Compito.**' in section, (t['slug'], 'Compito')
+        assert '**Verifica.**' in section, (t['slug'], 'Verifica')
+        assert len(section.split()) >= 120, (t['slug'], len(section.split()))
+        for forbidden in ('.. image::', '.. raw::', '<audio', 'youtube.com', 'http'):
+            assert forbidden not in section, (t['slug'], forbidden)
+        assert not re.search(r'\b\d{1,2}:\d{2}\b', section), (t['slug'], 'minutaggio')
+        assert not NOTE_RUN.search(section), (t['slug'], NOTE_RUN.search(section).group(0))
+        roles = {a['ruolo'] for a in t['ascolti']}
+        assert t['tema'].get('ascolto', 'riferimento') in roles, t['slug']
+
+
 def test_ordine_alfabetico():
     g = generator()
     tunes = g.load_catalogue()
@@ -146,4 +180,4 @@ if __name__ == '__main__':
         if name.startswith('test_'):
             test()
     print('PASS: indice, marcatori, nessuna melodia, navigazione e libreria, catalogo e schede, ascolti, '
-          'ordine alfabetico, voicing, generatore stabile')
+          'tema, ordine alfabetico, voicing, generatore stabile')
