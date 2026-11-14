@@ -46,6 +46,7 @@ Layout, stile didattico e pipeline musicale riprendono quelli di Pratica.
 
 - [001 — Struttura del progetto e modello della scheda brano](analisi/001-struttura-e-scheda-brano.md): proposta di indice, modello di scheda, catalogo dati e pilota. I punti aperti sono elencati nel documento.
 - [002 — Libreria musicale comune ai tre progetti](analisi/002-libreria-musicale-comune.md): inventario delle differenze fra Pratica e Teoria, collocazione e piano di migrazione.
+- [003 — Una vera sezione per studiare il tema in ogni scheda](analisi/003-sezione-tema-melodia.md): stato attuale, alternative, modello proposto, campi qualitativi del catalogo, test e piano di attuazione. Proposta, non decisione.
 
 ## Gestione delle decisioni
 
