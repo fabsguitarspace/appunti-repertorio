@@ -4,6 +4,9 @@ Appunti di Repertorio per Chitarra Jazz
 .. image:: _static/logo-repertorio.png
    :alt: Logo degli Appunti di Repertorio
 
+Realizzati con l'assistenza dell'intelligenza artificiale.
+:ref:`Scopri come nascono questi appunti <come-nascono-appunti>`.
+
 .. toctree::
   :maxdepth: 2
 
