@@ -1,0 +1,50 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "maiden-voyage"
+titolo = "Maiden Voyage"
+autori = [{ nome = "Herbie Hancock", ruolo = "musica" }]
+anno = 1965
+origine = "brano strumentale jazz, titolo del disco Maiden Voyage"
+famiglia = "10-modale-moderno"
+forma = "AABA 32"
+livello = 2
+tonalita = "Re sospeso (modale)"
+chiave = "c major"
+feel = "crome dritte"
+bpm_uso = 120
+bpm_studio = 60
+versione = "sigle come accordi minori settima con il basso una quinta sotto (Am7/D = D9sus4), secondo l'uso dei fake book. Il secondo accordo della sezione B è letto in modi diversi: C♯m7 in alcune trascrizioni, D♭7sus4 in altre. Da confrontare con la registrazione di riferimento."
+
+[[sezioni]]
+nome = "A"
+battute = ["Am7/D", "Am7/D", "Am7/D", "Am7/D", "Cm7/F", "Cm7/F", "Cm7/F", "Cm7/F"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Am7/D", "Am7/D", "Am7/D", "Am7/D", "Cm7/F", "Cm7/F", "Cm7/F", "Cm7/F"]
+
+[[sezioni]]
+nome = "B"
+battute = ["Bbm7/Eb", "Bbm7/Eb", "Bbm7/Eb", "Bbm7/Eb", "C#m7", "C#m7", "C#m7", "C#m7"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Am7/D", "Am7/D", "Am7/D", "Am7/D", "Cm7/F", "Cm7/F", "Cm7/F", "Cm7/F"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Herbie Hancock"
+versione = "Maiden Voyage (Blue Note), registrazione del 1965"
+youtube = "https://www.youtube.com/watch?v=EWC5x9G45yo"
+compito = "Il pianoforte ripete per tutto il tema una figura ritmica di due battute. Battila sulle gambe e conta le battute: dove cambia l'accordo? Riconosci il ritorno della sezione A dopo il bridge?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Grant Green"
+versione = "Mellow Madness"
+youtube = "https://www.youtube.com/watch?v=9CYW8SP9lYs"
+compito = "Confronta l'accompagnamento con quello del disco di Hancock: resta la figura ritmica di due battute? Conta le battute dell'assolo di chitarra e segna dove senti arrivare la sezione B."
+
+[[collegati]]
+slug = "so-what"
+motivo = "stessa forma AABA di 32 battute con accordi tenuti a lungo; qui due accordi per sezione e un colore sospeso invece che dorico"

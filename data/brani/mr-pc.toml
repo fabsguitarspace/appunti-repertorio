@@ -1,0 +1,42 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "mr-pc"
+titolo = "Mr. P.C."
+autori = [{ nome = "John Coltrane", ruolo = "musica" }]
+anno = 1959
+origine = "brano strumentale jazz, dedicato al contrabbassista Paul Chambers e inciso nel disco Giant Steps"
+famiglia = "5-blues"
+forma = "blues 12"
+livello = 1
+tonalita = "Do minore"
+chiave = "c minor"
+feel = "up swing"
+bpm_uso = 180
+bpm_studio = 90
+versione = "blues minore in Do con A♭7–G7 nelle battute 9 e 10 e G7 nell'ultima battuta per tornare all'inizio, come si suona comunemente nelle jam. La registrazione originale è molto più veloce. Da confrontare con la registrazione di riferimento."
+
+[[sezioni]]
+nome = "A"
+battute = ["Cm7", "Cm7", "Cm7", "Cm7", "Fm7", "Fm7", "Cm7", "Cm7", "Ab7", "G7", "Cm7", "G7"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "John Coltrane"
+versione = "Giant Steps (Atlantic), registrazione del 1959"
+youtube = "https://www.youtube.com/watch?v=oHDsywpCHj4"
+compito = "Il tempo è molto veloce: prima di seguire il sassofono, conta le dodici battute battendo il primo movimento di ogni battuta. Riconosci il passaggio a Fa minore alla quinta battuta e la discesa A♭7–G7 alla nona?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Doug Raney"
+versione = "Introducing Doug Raney (SteepleChase)"
+youtube = "https://www.youtube.com/watch?v=yv-aJBa5f7k"
+compito = "Conta i chorus dell'assolo di chitarra. In quale punto della forma la frase si interrompe o cambia direzione? Ascolta in particolare come la linea arriva su G7 alla decima battuta."
+
+[[collegati]]
+slug = "blue-monk"
+motivo = "stessa forma di dodici battute, in maggiore: confronta il IV7 di Blue Monk con il IVm7 di Mr. P.C."
+
+[[collegati]]
+slug = "blue-bossa"
+motivo = "stessa tonalità di Do minore e stesso passaggio da Cm7 a Fm7, con crome regolari invece dello swing"

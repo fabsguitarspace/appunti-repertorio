@@ -23,10 +23,15 @@ Brani
      - blues 12
      - Si♭ maggiore
      - 1
+   * - :doc:`brani/mr-pc`
+     - blues 12
+     - Do minore
+     - 1
 
 .. toctree::
    :hidden:
 
    brani/blue-monk
+   brani/mr-pc
 
 .. END brani

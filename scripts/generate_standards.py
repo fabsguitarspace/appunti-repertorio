@@ -13,7 +13,7 @@ Per ogni brano produce:
     <slug>-base.ly         base a velocità d'uso, due chorus
 
 Le basi hanno basso, batteria e accompagnamento, senza melodia. Il campo ``feel`` sceglie
-il disegno ritmico: ``ballad`` (due movimenti), ``bossa`` (crome regolari) o swing negli altri casi. I file .ly generati
+il disegno ritmico: ``ballad`` (due movimenti), ``bossa`` o ``crome dritte`` (crome regolari) o swing negli altri casi. I file .ly generati
 non vanno modificati a mano. Nelle schede RST il generatore riscrive solo le parti
 comprese fra i marcatori ``.. BEGIN nome:`` e ``.. END nome``; se una scheda non
 esiste, ne crea lo scheletro con le sezioni del modello (analisi 001).
@@ -51,7 +51,9 @@ QUALITIES = {
     'm7b5': ((2, 3), (6, 10), (4, 6)),
     'dim7': ((2, 3), (6, 9), (4, 6)),
 }
-FOUR_NOTE = {'m7b5', 'dim7'}   # niente shell: servono la quinta diminuita e la terza
+FOUR_NOTE = {'m7b5', 'dim7'}
+# Feel con crome regolari: basso su fondamentale e quinta con anticipo, charleston e cassa.
+STRAIGHT = {'bossa', 'crome dritte'}   # niente shell: servono la quinta diminuita e la terza
 CHORD_RE = re.compile(r'^([A-G])([b#]?)(maj7|m7b5|dim7|m7|m6|6|7)(?:/([A-G])([b#]?))?$')
 SECTION_ORDER = ['identita', 'perche', 'storia', 'ascolti', 'melodia', 'forma', 'armonia',
                  'accompagnamento', 'guide', 'base', 'piano', 'collegati']
@@ -418,7 +420,7 @@ def bassline(chords, feel):
         if feel == 'ballad':
             events += [(r, '2'), (r + s5, '2')] if beats == 4 else [(r, '2')]
             continue
-        if feel == 'bossa':
+        if feel in STRAIGHT:
             fifth = r + s5 - 12 if r + s5 - 12 >= 31 else r + s5
             if beats == 4:
                 events += [(r, '4.'), (fifth, '8'), (fifth, '4.'), (target, '8')]
@@ -448,7 +450,7 @@ def bassline(chords, feel):
 def drum_bar(feel):
     if feel == 'ballad':
         return 'cymr4 <cymr hh>4 cymr4 <cymr hh>4'
-    if feel == 'bossa':
+    if feel in STRAIGHT:
         return '<hh bd>8 hh hh <hh bd> <hh bd> hh hh <hh bd>'
     return r'cymr4 \tuplet 3/2 { <cymr hh>4 cymr8 } cymr4 \tuplet 3/2 { <cymr hh>4 cymr8 }'
 

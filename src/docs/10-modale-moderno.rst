@@ -19,6 +19,10 @@ Brani
      - Forma
      - Tonalità
      - Livello
+   * - :doc:`brani/maiden-voyage`
+     - AABA 32
+     - Re sospeso (modale)
+     - 2
    * - :doc:`brani/so-what`
      - AABA 32
      - Re dorico
@@ -27,6 +31,7 @@ Brani
 .. toctree::
    :hidden:
 
+   brani/maiden-voyage
    brani/so-what
 
 .. END brani

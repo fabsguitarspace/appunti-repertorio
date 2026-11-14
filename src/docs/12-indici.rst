@@ -13,6 +13,7 @@ Per forma
 **AABA 32**
 
 - :doc:`brani/i-got-rhythm`
+- :doc:`brani/maiden-voyage`
 - :doc:`brani/misty`
 - :doc:`brani/so-what`
 
@@ -32,6 +33,7 @@ Per forma
 **blues 12**
 
 - :doc:`brani/blue-monk`
+- :doc:`brani/mr-pc`
 
 Per tonalità
 ------------
@@ -43,6 +45,7 @@ Per tonalità
 **Do minore**
 
 - :doc:`brani/blue-bossa`
+- :doc:`brani/mr-pc`
 
 **Mi♭ maggiore**
 
@@ -52,6 +55,10 @@ Per tonalità
 **Re dorico**
 
 - :doc:`brani/so-what`
+
+**Re sospeso (modale)**
+
+- :doc:`brani/maiden-voyage`
 
 **Si♭ maggiore**
 
@@ -73,6 +80,10 @@ Per tempo e feel
 
 - :doc:`brani/blue-bossa`
 
+**crome dritte**
+
+- :doc:`brani/maiden-voyage`
+
 **medium swing**
 
 - :doc:`brani/all-of-me`
@@ -84,6 +95,7 @@ Per tempo e feel
 **up swing**
 
 - :doc:`brani/i-got-rhythm`
+- :doc:`brani/mr-pc`
 
 Per livello
 -----------
@@ -94,10 +106,12 @@ Per livello
 - :doc:`brani/autumn-leaves`
 - :doc:`brani/blue-bossa`
 - :doc:`brani/blue-monk`
+- :doc:`brani/mr-pc`
 - :doc:`brani/so-what`
 
 **Livello 2**
 
+- :doc:`brani/maiden-voyage`
 - :doc:`brani/misty`
 - :doc:`brani/there-will-never-be-another-you`
 
