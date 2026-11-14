@@ -4,7 +4,7 @@ Aggiornamento: 11 novembre 2026. Esiste lo **scheletro** del progetto: configura
 
 I capitoli 1–4 e i testi delle schede pilota sono bozze scritte con assistenza e vanno rilette dall'autore. La prefazione riprende quella di Pratica.
 
-Versione: **0.1** (`release` in `src/docs/conf.py`). Per decisione dell'utente dell'11 novembre 2026 verrà incrementata ai prossimi rilasci; Teoria e Pratica sono passati alla 1.0.
+Versione: **0.1** (`VERSIONE` in `src/docs/conf.py`). Per decisione dell'utente dell'11 novembre 2026 verrà incrementata ai prossimi rilasci; Teoria e Pratica sono passati alla 1.0. Dal 14 novembre 2026, su richiesta dell'utente, la versione completa è **MAJOR.MINOR.PATCH**: MAJOR.MINOR si scrive a mano nella riga `VERSIONE = "X.Y"` di `src/docs/conf.py`; la patch conta i commit successivi all'ultimo cambio di quella riga, quindi avanza a ogni push su main e riparte da 0 quando si cambia MAJOR.MINOR. La data di aggiornamento è quella dell'ultimo commit. Entrambe compaiono in fondo alla homepage e nel frontespizio del PDF ed ePub; il calcolo è in `src/docs/versione_git.py`, copia identica nei tre volumi, e `.readthedocs.yaml` completa la storia git prima della build.
 
 ## Modalità di lavoro
 

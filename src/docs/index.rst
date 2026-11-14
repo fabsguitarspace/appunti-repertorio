@@ -19,3 +19,7 @@ Appunti di Repertorio per Chitarra Jazz
   10-modale-moderno
   11-piani-di-studio
   12-indici
+
+.. rst-class:: ultimo-aggiornamento
+
+Versione |release| · aggiornato il |today|

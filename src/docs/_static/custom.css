@@ -13,3 +13,11 @@
     aspect-ratio: 16 / 9;
     margin: 5px 0;
 }
+
+/* Versione e data di aggiornamento in fondo alla homepage (versione_git.py). */
+.ultimo-aggiornamento {
+  margin-top: 3rem;
+  font-size: 0.85em;
+  opacity: 0.7;
+  text-align: center;
+}
