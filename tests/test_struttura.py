@@ -89,6 +89,10 @@ def test_catalogo_e_schede():
             for ext in exts:
                 path = DOCS / '_static/music' / f"{t['slug']}-{stem}.{ext}"
                 assert path.is_file() and path.stat().st_size, path
+        cm = DOCS / '_static/music' / f"{t['slug']}-chord-melody.svg"
+        if g.chord_melody_published(t):                 # ADR 0005
+            assert cm.is_file() and cm.stat().st_size, cm
+            assert f"{t['slug']}-chord-melody.*" in card, t['slug']
         family = (DOCS / (t['famiglia'] + '.rst')).read_text()
         assert f"brani/{t['slug']}" in family, (t['slug'], t['famiglia'])
 

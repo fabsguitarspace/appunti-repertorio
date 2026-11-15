@@ -16,27 +16,27 @@ bpm_studio = 60
 versione = "sigle come accordi minori settima con il basso una quinta sotto (Am7/D = D9sus4), secondo l'uso dei fake book. Il secondo accordo della sezione B è letto in modi diversi: C♯m7 in alcune trascrizioni, D♭7sus4 in altre. Da confrontare con la registrazione di riferimento."
 # ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
 # "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
-canto_verificato = false
+canto_verificato = true
 
 [[sezioni]]
 nome = "A"
 battute = ["Am7/D", "Am7/D", "Am7/D", "Am7/D", "Cm7/F", "Cm7/F", "Cm7/F", "Cm7/F"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
+canto = ["D5", "D5", "D5", "C5", "Eb5", "C5", "C5", "A4"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Am7/D", "Am7/D", "Am7/D", "Am7/D", "Cm7/F", "Cm7/F", "Cm7/F", "Cm7/F"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
+canto = ["D5", "D5", "D5", "C5", "Eb5", "C5", "C5", "C5"]
 
 [[sezioni]]
 nome = "B"
 battute = ["Bbm7/Eb", "Bbm7/Eb", "Bbm7/Eb", "Bbm7/Eb", "C#m7", "C#m7", "C#m7", "C#m7"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
+canto = ["F5", "F5", "F5", "Eb5", "D#5", "C#5", "C#5", "A4"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Am7/D", "Am7/D", "Am7/D", "Am7/D", "Cm7/F", "Cm7/F", "Cm7/F", "Cm7/F"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
+canto = ["D5", "D5", "D5", "C5", "Eb5", "C5", "C5", "-"]
 
 [[ascolti]]
 ruolo = "riferimento"

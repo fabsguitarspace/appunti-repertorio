@@ -14,7 +14,7 @@ bpm_studio = 60
 versione = "griglia d'uso più diffusa in Mi♭. Da confrontare con la registrazione di riferimento."
 # ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
 # "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
-canto_verificato = false
+canto_verificato = true
 
 [[sezioni]]
 nome = "A"

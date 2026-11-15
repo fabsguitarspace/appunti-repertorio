@@ -134,15 +134,19 @@ Chord melody
 
 .. BEGIN chordmelody: generato da scripts/generate_standards.py, non modificare a mano
 
-Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda non contiene né la melodia né un arrangiamento: lo costruisci tu, partendo dal tema imparato a orecchio, e resta un lavoro tuo.
+Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda propone un voicing per ogni cambio di accordo, senza ritmo e senza le note fra un cambio e l'altro: l'arrangiamento lo completi tu, partendo dal tema imparato a orecchio.
 
 Il vocabolario è in `Voicing per il chord melody <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#chord-melody-voicings>`__ negli Appunti di Pratica. L'esempio `Mettere tutto insieme: otto battute <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#mettere-tutto-insieme-otto-battute>`__ mostra il procedimento su una progressione originale.
 
 #. Trova il tema in Mi♭ maggiore sulle prime tre corde, all'ottava più acuta che ti è comoda: la melodia deve restare sempre sopra gli accordi.
-#. Su ogni cambio di accordo cerca un voicing che abbia la nota del tema al canto: drop 2 sulle prime quattro corde, oppure tre voci con il basso sulla sesta o sulla quinta corda.
+#. Su ogni cambio di accordo suona il voicing dello spartito qui sotto: ha la nota del tema al canto ed è scelto per muovere la mano il meno possibile. Se una forma non ti è comoda, cercane un'altra con la stessa nota in cima.
 #. Fra un cambio e l'altro suona le note del tema da sole, o con il solo basso sotto.
 #. In una battuta su 32 gli accordi cambiano a metà battuta: lì bastano due o tre voci.
 #. Studialo lento ma in tempo: accordi sui tempi forti e sulle note lunghe, note singole sulle crome.
+
+.. image:: ../_static/music/there-will-never-be-another-you-chord-melody.*
+   :width: 100%
+   :alt: There Will Never Be Another You: un voicing per ogni cambio di accordo, con la nota del tema al canto
 
 **Compito.** Arrangia la prima sezione A (8 battute), con un accordo su ogni cambio, e suonala senza base, lentamente e senza fermarti.
 
