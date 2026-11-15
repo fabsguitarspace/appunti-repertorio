@@ -19,22 +19,22 @@ canto_verificato = false
 [[sezioni]]
 nome = "A"
 battute = ["Ebmaj7", "Ebmaj7", "Dm7b5", "G7", "Cm7", "Cm7", "Bbm7", "Eb7"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
+canto = ["C5", "G4", "F4", "F4", "Eb4", "C5", "C5", "C5"]
 
 [[sezioni]]
 nome = "B"
 battute = ["Abmaj7", "Db7", "Ebmaj7", "Cm7", "F7", "F7", "Fm7", "Bb7"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
+canto = ["Eb5", "G4", "Bb4", "F4", "D5", "G4", "Ab4", "Ab4"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Ebmaj7", "Ebmaj7", "Dm7b5", "G7", "Cm7", "Cm7", "Bbm7", "Eb7"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
+canto = ["C5", "G4", "F4", "F4", "Eb4", "C5", "C5", "C5"]
 
 [[sezioni]]
 nome = "C"
 battute = ["Abmaj7", "Db7", "Gm7", "C7", "Fm7", "Bb7", "Eb6", "Fm7 Bb7"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "? ?"]
+canto = ["Eb5", "G4", "Bb4", "D5", "Bb4", "Bb4", "F4", "Eb4 Eb4"]
 
 [[ascolti]]
 ruolo = "riferimento"

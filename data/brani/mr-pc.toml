@@ -21,7 +21,7 @@ canto_verificato = false
 [[sezioni]]
 nome = "A"
 battute = ["Cm7", "Cm7", "Cm7", "Cm7", "Fm7", "Fm7", "Cm7", "Cm7", "Ab7", "G7", "Cm7", "G7"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?"]
+canto = ["C4", "G4", "C4", "C4", "F4", "C5", "C4", "C4", "Gb4", "Ab4", "C4", "C4"]
 
 [[ascolti]]
 ruolo = "riferimento"

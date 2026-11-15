@@ -19,22 +19,22 @@ canto_verificato = false
 [[sezioni]]
 nome = "A"
 battute = ["Bb6 G7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb7", "Eb6 Edim7", "Bb6/F G7", "Cm7 F7"]
-canto = ["? ?", "? ?", "? ?", "? ?", "?", "? ?", "? ?", "? ?"]
+canto = ["F4 F4", "Bb4 C5", "C5 C5", "G4 F4", "F4", "Bb4 Eb5", "D5 C5", "Bb4 Bb4"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Bb6 G7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb7", "Eb6 Edim7", "Bb6/F F7", "Bb6"]
-canto = ["? ?", "? ?", "? ?", "? ?", "?", "? ?", "? ?", "?"]
+canto = ["F4 F4", "Bb4 C5", "C5 C5", "G4 F4", "F4", "Bb4 Eb5", "D5 C5", "Bb4"]
 
 [[sezioni]]
 nome = "B"
 battute = ["D7", "D7", "G7", "G7", "C7", "C7", "F7", "F7"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
+canto = ["D5", "D5", "D5", "D5", "C5", "C5", "C5", "C5"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Bb6 G7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb7", "Eb6 Edim7", "Bb6/F F7", "Bb6"]
-canto = ["? ?", "? ?", "? ?", "? ?", "?", "? ?", "? ?", "?"]
+canto = ["F4 F4", "Bb4 C5", "C5 C5", "G4 F4", "F4", "Bb4 Eb5", "D5 C5", "Bb4"]
 
 
 

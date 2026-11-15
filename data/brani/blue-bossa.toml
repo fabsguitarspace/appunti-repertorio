@@ -21,12 +21,12 @@ canto_verificato = false
 [[sezioni]]
 nome = "A"
 battute = ["Cm7", "Cm7", "Fm7", "Fm7", "Dm7b5", "G7", "Cm7", "Cm7"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
+canto = ["G5", "C5", "Ab4", "F5", "F5", "Bb4", "G4", "Eb5"]
 
 [[sezioni]]
 nome = "B"
 battute = ["Ebm7", "Ab7", "Dbmaj7", "Dbmaj7", "Dm7b5", "G7", "Cm7", "Dm7b5 G7"]
-canto = ["?", "?", "?", "?", "?", "?", "?", "? ?"]
+canto = ["Eb5", "Ab4", "F4", "Ab4", "Ab4", "Ab4", "G4", "G4 Bb4"]
 
 [[ascolti]]
 ruolo = "riferimento"

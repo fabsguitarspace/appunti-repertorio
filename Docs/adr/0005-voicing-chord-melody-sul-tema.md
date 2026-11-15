@@ -54,15 +54,16 @@ La selezione rende visibile la sequenza delle note al canto sui cambi, cioè uno
 ## Attuazione (2026-11-15)
 
 - **Formato.** In ogni sezione del catalogo, `canto` è parallelo a `battute`: una stringa per battuta, con una nota per accordo separata da spazi. Le note sono ad altezza reale con ottava (`E4` = prima corda a vuoto, `G4` = prima corda al terzo tasto). `-` indica una pausa sull'attacco dell'accordo, `?` una nota ancora da trascrivere.
-- **Quale nota.** La nota che suona sull'attacco dell'accordo, anche se tenuta o anticipata dalla battuta precedente; `-` se in quel punto il tema tace.
+- **Quale nota.** La nota che suona sull'attacco dell'accordo, anche se tenuta o anticipata dalla battuta precedente. Se lì il tema tace, la prima nota attaccata mentre dura l'accordo; `-` solo se il tema tace per tutto l'accordo. L'ottava si sceglie per la chitarra: dove una nota è troppo grave per tre voci sotto, si sposta all'ottava superiore.
 - **Verifica.** Ogni brano ha `canto_verificato`. Il generatore pubblica lo spartito `<slug>-chord-melody` solo con `canto_verificato = true` e nessun `?`; altrimenti la sezione resta il solo metodo e un eventuale spartito precedente viene cancellato.
 - **Voicing.** Quattro voci sulle corde 4-3-2-1 o 5-4-3-2 (drop 2) e 6-4-3-2 o 5-3-2-1 (drop 3), tasti 1–15, estensione massima di quattro tasti, terza e settima sempre presenti. Una tensione al canto sostituisce la fondamentale (nona, ♭9, ♯9) o la quinta (11, ♯11, 13, ♭13); nei m7♭5 e dim7 sostituisce sempre la fondamentale. Fra le forme valide si sceglie la più vicina alla precedente.
 - **Test.** `test_chord_melody` verifica, con dati sintetici e nessuna melodia reale, corde, nota in cima, struttura drop, terza e settima, estensione e rifiuto dei formati errati. `test_nessuna_melodia` vieta MP3 e MIDI `*-chord-melody` e ora controlla davvero i file TOML (prima cercava file YAML, assenti).
 
 ## Questioni aperte
 
-1. **Trascrizione.** Il catalogo contiene solo segnaposto `?`. L'utente ha chiesto all'assistente di inserire le note, ma l'assistente non ricorda i temi con la precisione necessaria e non le ha inventate. Restano da trascrivere a orecchio dalla versione di riferimento di ogni scheda, poi da verificare.
-2. **So What.** Il tema è affidato al basso e la risposta è un accordo: va deciso se il chord melody abbia senso per questo brano o se lasciare tutte pause.
+1. **Trascrizione (2026-11-15).** L'assistente ha ricavato le note al canto di nove brani da lead sheet forniti dall'utente, letti fuori dal repository e non copiati. Tutti i brani restano con `canto_verificato = false` fino al confronto a orecchio con la versione di riferimento. Maiden Voyage manca dalla raccolta fornita: le sue note restano `?`.
+2. **Differenze di armonia fra lead sheet e catalogo.** In Misty (ultime due battute delle sezioni A dopo la prima) e There Will Never Be Another You (sezione C) i lead sheet hanno un'armonia diversa da quella del catalogo; le note sono state assegnate agli accordi del catalogo. Da verificare a orecchio.
+3. **So What.** Il tema è affidato al basso; come nota al canto si è presa la voce superiore della prima risposta degli accordi (Si su Dm7, Do su E♭m7), e `-` nelle battute del solo basso. Da confermare.
 
 ## Collegamenti
 
