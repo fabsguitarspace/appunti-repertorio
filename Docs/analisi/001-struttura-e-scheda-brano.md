@@ -60,7 +60,7 @@ Legenda: **G** = generata dal catalogo, **M** = scritta a mano fra marcatori, **
 | 6 | Mappa della forma | griglia testuale per sezione e spartito con sole sigle; intro, coda e turnaround d'uso indicati come prassi; varianti delle sigle con la versione seguita | G |
 | 7 | Lettura armonica | aree tonali, numeri romani, punti critici, scale per area; rimandi a Teoria | M |
 | 8 | Accompagnamento | tre passi: shell, quattro voci, ritmo adatto al feel; spartito, TAB e audio; rimandi a Pratica | G+M |
-| 8b | Chord melody | metodo per arrangiare da sé il tema imparato a orecchio: vocabolario in Pratica, passi adattati a tonalità, ritmo armonico e feel; compito e verifica; nessuna nota del tema (ADR 0002) | G |
+| 8b | Chord melody | metodo per arrangiare da sé il tema imparato a orecchio: vocabolario in Pratica, passi adattati a tonalità, ritmo armonico e feel; compito e verifica; nessuna nota del tema (ADR 0002); con l'ADR 0005, un voicing statico per cambio con la nota del tema al canto, pubblicato quando il campo `canto` del brano è verificato | G |
 | 9 | Linee per improvvisare | guide tones sull'intera forma, note bersaglio, studio originale di un chorus; spartito, TAB e audio | G+M |
 | 10 | Base per suonare | basso, batteria e comping, senza melodia, con conteggio; 60 BPM e velocità d'uso; 2–3 chorus | G |
 | 11 | Riarmonizzazioni (facoltativa) | sostituzioni d'uso con esempio sulle sigle; rimandi a Teoria | M |
@@ -136,6 +136,7 @@ Criteri di accettazione: quelli dell'ADR 0003, più la verifica dei collegamenti
 5. Progetto RTD ✓ e `nav_links` uniformi nei tre progetti ✓ (2026-11-11); `linkcheck` ancora da configurare.
 6. ✓ Terminologia dell'accompagnamento (2026-11-15, decisa dall'utente): i «livelli 1–3» dell'accompagnamento diventano i passi **shell**, **quattro voci** e **ritmo**, perché «livello» indica già la difficoltà del brano (carta d'identità, piani di studio, indici). Aggiornati il generatore (titolo dello spartito, alt e aria-label), le dieci schede, il compito d'ascolto di All of Me, i capitoli 1 e 2; ricompilati i dieci spartiti `-shell` (audio invariato). Verifiche: `tests/test_struttura.py` passa, build HTML con `-W` pulita.
 7. ✓ Sezione «Chord melody» (2026-11-15, decisa dall'utente): blocco generato `chordmelody` fra Accompagnamento e Linee per improvvisare, nelle dieci schede e nello scheletro. Contiene solo il metodo, con rimandi a `chord-melody-voicings` e «Mettere tutto insieme: otto battute» di Pratica; i passi dipendono da tonalità, battute con due accordi, accordo più lungo, feel e famiglia. Nessuna nota del tema. Non fatto: un esempio originale sugli accordi del brano.
+8. ✓ Voicing di chord melody (ADR 0005, 2026-11-15): campo `canto` e `canto_verificato` nel catalogo, scelta automatica drop 2/drop 3 con la nota al canto, spartito `<slug>-chord-melody` senza audio, test sintetici. **Non fatto:** trascrizione delle note al canto, oggi tutte `?`.
 
 ## Punti aperti
 

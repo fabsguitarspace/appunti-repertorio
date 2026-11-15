@@ -159,6 +159,7 @@ def load_catalogue():
         for key in t:
             if key.lower() in ('melodia', 'melody', 'tema_note'):
                 raise ValueError(f"{t['slug']}: campo vietato dall'ADR 0002: {key}")
+        canto_of(t)                       # ADR 0005: una nota per accordo, formato valido
     return tunes
 
 
@@ -226,6 +227,142 @@ def guide_line(chords):
         previous = pick[1]
         line.append(pick)
     return line
+
+
+# --------------------------------------------------------------------------- chord melody (ADR 0005)
+
+PITCH_RE = re.compile(r'^([A-G])([b#]?)(\d)$')
+# Corde per i voicing a quattro voci: drop 2 su corde adiacenti, drop 3 con una corda saltata.
+CM_SETS = {(4, 3, 2, 1): 'drop 2', (5, 4, 3, 2): 'drop 2', (6, 4, 3, 2): 'drop 3', (5, 3, 2, 1): 'drop 3'}
+CM_MAX_FRET = 15
+
+
+def parse_pitch(text):
+    """Nota con ottava ad altezza reale (E4 = prima corda a vuoto) → (Note, midi)."""
+    m = PITCH_RE.match(text)
+    if not m:
+        raise ValueError(f'Nota al canto non riconosciuta: {text} (formato: G4, Bb4, F#5; - per una pausa; ? da trascrivere)')
+    note = parse_note(m[1], m[2])
+    return note, NATURAL[m[1]] + note.acc + 12 * (int(m[3]) + 1)
+
+
+def canto_of(tune):
+    """Note al canto, una per accordo nell'ordine delle sigle; None per una pausa ('-') o per una
+    nota ancora da trascrivere ('?').
+
+    Restituisce None se il brano non ha il campo ``canto`` in nessuna sezione."""
+    sections = tune['sezioni']
+    if not any('canto' in sec for sec in sections):
+        return None
+    out = []
+    for sec in sections:
+        if 'canto' not in sec or len(sec['canto']) != len(sec['battute']):
+            raise ValueError(f"{tune['slug']}: sezione {sec['nome']}: canto assente o con un numero di "
+                             'battute diverso da battute')
+        for bar, notes in zip(sec['battute'], sec['canto']):
+            tokens = notes.split()
+            if len(tokens) != len(bar.split()):
+                raise ValueError(f"{tune['slug']}: canto {notes!r} non ha una nota per accordo in {bar!r}")
+            out += [None if tok in ('-', '?') else parse_pitch(tok) for tok in tokens]
+    return out
+
+
+def canto_complete(tune):
+    """Vero se nessuna nota al canto è ancora da trascrivere ('?')."""
+    return all('?' not in bar.split() for sec in tune['sezioni'] for bar in sec.get('canto', []))
+
+
+def chord_melody_published(tune):
+    if canto_of(tune) is None or tune.get('canto_verificato') is not True:
+        return False
+    if not canto_complete(tune):
+        raise ValueError(f"{tune['slug']}: canto_verificato = true ma ci sono note da trascrivere ('?')")
+    return True
+
+
+def cm_pitch_classes(chord, top):
+    """Classi di altezza disponibili sotto la nota al canto.
+
+    Fondamentale, terza, quinta e settima (o sesta); una tensione al canto sostituisce la fondamentale
+    (nona, ♭9, ♯9) oppure la quinta (11, ♯11, 13, ♭13), salvo negli accordi in cui la quinta
+    diminuita è necessaria (m7♭5, dim7), dove sostituisce la fondamentale."""
+    tones = {'R': chord.root.pc, '3': chord.tone('3')[0].pc, '5': chord.tone('5')[0].pc,
+             '7': chord.tone('7')[0].pc}
+    if top.pc not in tones.values():
+        interval = (top.pc - chord.root.pc) % 12
+        drop = 'R' if interval in (1, 2, 3) or chord.quality in FOUR_NOTE else '5'
+        del tones[drop]
+    required = {tones['3'], tones['7']} | ({tones['5']} if chord.quality in FOUR_NOTE and '5' in tones else set())
+    return tones, required
+
+
+def is_drop(pitches, kind):
+    """pitches ascendenti; drop 2 / drop 3 rispetto a una posizione stretta entro l'ottava."""
+    low = pitches[0] + 12
+    rest = pitches[1:]
+    close = sorted(rest + [low])
+    if close[-1] - close[0] >= 12:
+        return False
+    position = close.index(low)          # 0 = più grave; 3 = più acuta
+    return position == (2 if kind == 'drop 2' else 1)
+
+
+def cm_candidates(chord, top_note, top):
+    tones, required = cm_pitch_classes(chord, top_note)
+    pcs = set(tones.values())
+    names = {}
+    for name, pc in tones.items():
+        names[pc] = chord.root if name == 'R' else chord.tone(name)[0]
+    out = []
+    for strings, kind in CM_SETS.items():
+        top_fret = top - OPEN[strings[-1]]
+        if not 1 <= top_fret <= CM_MAX_FRET:
+            continue
+        lower = strings[:-1]
+        options = [[OPEN[s] + f for f in range(1, CM_MAX_FRET + 1) if (OPEN[s] + f) % 12 in pcs]
+                   for s in lower]
+        for a in options[0]:
+            for b in options[1]:
+                for c in options[2]:
+                    pitches = [a, b, c, top]
+                    if not a < b < c < top:
+                        continue
+                    below = {a % 12, b % 12, c % 12}
+                    if len(below) != 3 or top % 12 in below or not required <= below | {top % 12}:
+                        continue
+                    if not is_drop(pitches, kind):
+                        continue
+                    frets = [p - OPEN[s] for s, p in zip(strings, pitches)]
+                    if max(frets) - min(frets) > 4:
+                        continue
+                    voicing = tuple((s, names[p % 12], p) for s, p in zip(strings[:-1], pitches[:-1]))
+                    out.append((voicing + ((strings[-1], top_note, top),), kind))
+    return out
+
+
+def chord_melody_voicings(tune, chords):
+    """Per ogni accordo, il voicing con la nota al canto in cima più vicino al precedente."""
+    chosen, previous = [], None
+    for chord, entry in zip(chords, canto_of(tune)):
+        if entry is None:
+            chosen.append(None)
+            continue
+        note, top = entry
+        options = cm_candidates(chord, note, top)
+        if not options:
+            raise ValueError(f"{tune['slug']}: nessun voicing drop 2/drop 3 per {chord.symbol} con "
+                             f'{note.text()} al canto ({top})')
+        def cost(option):
+            frets = [p - OPEN[s] for s, n, p in option[0]]
+            centre = sum(frets) / len(frets)
+            span = max(frets) - min(frets)
+            return (abs(centre - (previous if previous is not None else 6)) + 0.5 * span
+                    + (0.2 if option[1] == 'drop 3' else 0))
+        best = min(options, key=cost)
+        frets = [p - OPEN[s] for s, n, p in best[0]]
+        previous = sum(frets) / len(frets)
+        chosen.append(best[0])
+    return chosen
 
 
 # --------------------------------------------------------------------------- LilyPond
@@ -352,6 +489,34 @@ def shell_source(tune, bars, voicings):
         f"comp = \\absolute {{ \\time 4/4\n  {comp_music(bars, voicings)} \\bar \"|.\" }}",
         staff_tab(tune, 'comp', systems),
         rf'\score {{ \new Staff {{ \set Staff.midiInstrument = "acoustic grand" {countin_guitar(tune["bpm_studio"])} \comp }} \midi {{ }} }}',
+        ''])
+
+
+def chord_melody_source(tune, bars, voicings):
+    """Un voicing per cambio, tutti della stessa durata grafica: niente ritmo (ADR 0005)."""
+    it = iter(voicings)
+    def render(i, bar):
+        tokens = []
+        for chord, _ in bar['chords']:
+            v = next(it)
+            tokens.append(voicing_token(v, '1', chord) if v else f'r1^{chord.markup()}')
+        return ' '.join(tokens)
+    out = []
+    for i, bar in enumerate(bars):
+        prefix = ''
+        if bar['section']:
+            prefix = (r'\section ' if i else '') + rf'\sectionLabel "{bar["section"]}" '
+        line = prefix + render(i, bar) + r' \bar "|"'
+        if (i + 1) % 4 == 0 and i + 1 < len(bars):
+            line += r' \break'
+        out.append(line)
+    systems = math.ceil(len(bars) / 4)
+    music = '\n  '.join(out)
+    return '\n'.join([
+        header(tune['titolo'], 'Chord melody: un voicing per cambio, nota del tema al canto'),
+        paper(systems, 42),
+        f"cm = \\absolute {{ \\cadenzaOn \\omit Staff.TimeSignature\n  {music} \\bar \"|.\" }}",
+        staff_tab(tune, 'cm', systems),
         ''])
 
 
@@ -492,6 +657,14 @@ def write_sources(tune):
         f'{slug}-base': base_source(tune, bars, voicings, 2, tune['bpm_uso'],
                                     f"Base, {tune['bpm_uso']} BPM, due chorus"),
     }
+    stale = LILYPOND / f'{slug}-chord-melody.ly'
+    if chord_melody_published(tune):
+        files[f'{slug}-chord-melody'] = chord_melody_source(tune, bars, chord_melody_voicings(tune, chords))
+    else:
+        if canto_of(tune) is not None:
+            chord_melody_voicings(tune, chords)      # la bozza va comunque risolta, anche se non pubblicata
+        if stale.exists():
+            stale.unlink()                           # bozza non verificata: niente spartito
     for stem, text in files.items():
         path = LILYPOND / f'{stem}.ly'
         if not path.exists() or path.read_text() != text:
@@ -602,7 +775,8 @@ def longest_run(bars):
 
 
 def block_chordmelody(t, bars):
-    """Metodo per costruire da sé un chord melody: nessuna nota del tema (ADR 0002)."""
+    """Metodo per il chord melody; con note al canto verificate, anche lo spartito dei voicing (ADR 0005)."""
+    published = chord_melody_published(t)
     split = sum(len(b['chords']) == 2 for b in bars)
     run = longest_run(bars)
     rhythm = []
@@ -618,8 +792,11 @@ def block_chordmelody(t, bars):
     steps = [
         f"Trova il tema in {t['tonalita']} sulle prime tre corde, all'ottava più acuta che ti è comoda: "
         'la melodia deve restare sempre sopra gli accordi.',
-        'Su ogni cambio di accordo cerca un voicing che abbia la nota del tema al canto: drop 2 sulle '
-        'prime quattro corde, oppure tre voci con il basso sulla sesta o sulla quinta corda.',
+        ('Su ogni cambio di accordo suona il voicing dello spartito qui sotto: ha la nota del tema al '
+         'canto ed è scelto per muovere la mano il meno possibile. Se una forma non ti è comoda, cercane '
+         'un\'altra con la stessa nota in cima.' if published else
+         'Su ogni cambio di accordo cerca un voicing che abbia la nota del tema al canto: drop 2 sulle '
+         'prime quattro corde, oppure tre voci con il basso sulla sesta o sulla quinta corda.'),
         'Fra un cambio e l\'altro suona le note del tema da sole, o con il solo basso sotto.',
     ]
     if rhythm:
@@ -630,14 +807,20 @@ def block_chordmelody(t, bars):
     target, pron = ((f"la prima sezione {first['nome']} ({n} battute)", 'suonala') if len(t['sezioni']) > 1
                     else (f"il primo chorus ({n} battute)", 'suonalo'))
     return (
-        'Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda non contiene né la '
-        'melodia né un arrangiamento: lo costruisci tu, partendo dal tema imparato a orecchio, e resta '
-        'un lavoro tuo.\n\n'
-        f"Il vocabolario è in `Voicing per il chord melody <{PRATICA_ACCORDI}#chord-melody-voicings>`__ "
+        ('Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda propone un voicing '
+           'per ogni cambio di accordo, senza ritmo e senza le note fra un cambio e l\'altro: '
+           'l\'arrangiamento lo completi tu, partendo dal tema imparato a orecchio.\n\n' if published else
+           'Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda non contiene né la '
+           'melodia né un arrangiamento: lo costruisci tu, partendo dal tema imparato a orecchio, e resta '
+           'un lavoro tuo.\n\n')
+        + f"Il vocabolario è in `Voicing per il chord melody <{PRATICA_ACCORDI}#chord-melody-voicings>`__ "
         'negli Appunti di Pratica. L\'esempio '
         f"`Mettere tutto insieme: otto battute <{PRATICA_ACCORDI}#mettere-tutto-insieme-otto-battute>`__ "
         'mostra il procedimento su una progressione originale.\n\n'
         + '\n'.join(f'#. {s}' for s in steps)
+        + (f"\n\n.. image:: ../_static/music/{t['slug']}-chord-melody.*\n   :width: 100%\n"
+           f"   :alt: {t['titolo']}: un voicing per ogni cambio di accordo, con la nota del tema al canto"
+           if published else '')
         + f"\n\n**Compito.** Arrangia {target}, con un accordo su ogni cambio, e {pron} senza base, "
         'lentamente e senza fermarti.'
         '\n\n**Verifica.** La nota più acuta di ogni accordo è sempre quella del tema? Chi ascolta '

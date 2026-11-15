@@ -14,10 +14,14 @@ feel = "medium swing"
 bpm_uso = 120
 bpm_studio = 60
 versione = "jazz blues in Si♭ con il diminuito alla sesta battuta, come si suona comunemente nelle jam. Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = false
 
 [[sezioni]]
 nome = "A"
 battute = ["Bb7", "Eb7", "Bb7", "Bb7", "Eb7", "Edim7", "Bb7", "G7", "Cm7", "F7", "Bb7 G7", "Cm7 F7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "? ?", "? ?"]
 
 [[ascolti]]
 ruolo = "riferimento"

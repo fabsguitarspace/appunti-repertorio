@@ -12,22 +12,29 @@ feel = "medium swing"
 bpm_uso = 140
 bpm_studio = 60
 versione = "griglia d'uso più diffusa in Mi♭. Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = false
 
 [[sezioni]]
 nome = "A"
 battute = ["Ebmaj7", "Ebmaj7", "Dm7b5", "G7", "Cm7", "Cm7", "Bbm7", "Eb7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "B"
 battute = ["Abmaj7", "Db7", "Ebmaj7", "Cm7", "F7", "F7", "Fm7", "Bb7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Ebmaj7", "Ebmaj7", "Dm7b5", "G7", "Cm7", "Cm7", "Bbm7", "Eb7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "C"
 battute = ["Abmaj7", "Db7", "Gm7", "C7", "Fm7", "Bb7", "Eb6", "Fm7 Bb7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "? ?"]
 
 [[ascolti]]
 ruolo = "riferimento"

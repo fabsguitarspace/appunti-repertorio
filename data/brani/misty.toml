@@ -12,22 +12,29 @@ feel = "ballad"
 bpm_uso = 60
 bpm_studio = 50
 versione = "griglia d'uso più diffusa in Mi♭. Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = false
 
 [[sezioni]]
 nome = "A"
 battute = ["Ebmaj7", "Bbm7 Eb7", "Abmaj7", "Abm7 Db7", "Ebmaj7 Cm7", "Fm7 Bb7", "Gm7 C7", "Fm7 Bb7"]
+canto = ["?", "? ?", "?", "? ?", "? ?", "? ?", "? ?", "? ?"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Ebmaj7", "Bbm7 Eb7", "Abmaj7", "Abm7 Db7", "Ebmaj7 Cm7", "Fm7 Bb7", "Fm7 Bb7", "Eb6"]
+canto = ["?", "? ?", "?", "? ?", "? ?", "? ?", "? ?", "?"]
 
 [[sezioni]]
 nome = "B"
 battute = ["Bbm7", "Eb7", "Abmaj7", "Abmaj7", "Am7", "D7", "Gm7 C7", "Fm7 Bb7"]
+canto = ["?", "?", "?", "?", "?", "?", "? ?", "? ?"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Ebmaj7", "Bbm7 Eb7", "Abmaj7", "Abm7 Db7", "Ebmaj7 Cm7", "Fm7 Bb7", "Fm7 Bb7", "Eb6"]
+canto = ["?", "? ?", "?", "? ?", "? ?", "? ?", "? ?", "?"]
 
 [[ascolti]]
 ruolo = "riferimento"

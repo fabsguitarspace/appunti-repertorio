@@ -14,22 +14,29 @@ feel = "medium swing"
 bpm_uso = 136
 bpm_studio = 68
 versione = "forma modale di Kind of Blue: Re dorico nelle sezioni A, Mi♭ dorico nella sezione B. Le sigle Dm7 ed E♭m7 indicano l'area modale, non un accordo da ripetere uguale. Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = false
 
 [[sezioni]]
 nome = "A"
 battute = ["Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "B"
 battute = ["Ebm7", "Ebm7", "Ebm7", "Ebm7", "Ebm7", "Ebm7", "Ebm7", "Ebm7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7", "Dm7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[ascolti]]
 ruolo = "riferimento"

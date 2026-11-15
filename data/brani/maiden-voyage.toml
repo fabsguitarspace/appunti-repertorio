@@ -14,22 +14,29 @@ feel = "crome dritte"
 bpm_uso = 120
 bpm_studio = 60
 versione = "sigle come accordi minori settima con il basso una quinta sotto (Am7/D = D9sus4), secondo l'uso dei fake book. Il secondo accordo della sezione B è letto in modi diversi: C♯m7 in alcune trascrizioni, D♭7sus4 in altre. Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = false
 
 [[sezioni]]
 nome = "A"
 battute = ["Am7/D", "Am7/D", "Am7/D", "Am7/D", "Cm7/F", "Cm7/F", "Cm7/F", "Cm7/F"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Am7/D", "Am7/D", "Am7/D", "Am7/D", "Cm7/F", "Cm7/F", "Cm7/F", "Cm7/F"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "B"
 battute = ["Bbm7/Eb", "Bbm7/Eb", "Bbm7/Eb", "Bbm7/Eb", "C#m7", "C#m7", "C#m7", "C#m7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Am7/D", "Am7/D", "Am7/D", "Am7/D", "Cm7/F", "Cm7/F", "Cm7/F", "Cm7/F"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[ascolti]]
 ruolo = "riferimento"

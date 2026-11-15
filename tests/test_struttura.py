@@ -42,8 +42,12 @@ def test_nessuna_melodia():
     for folder in [ROOT / 'src/lilypond', DOCS / '_static/music']:
         offending = [p.name for p in folder.rglob('*') if 'melodia' in p.name.lower()]
         assert not offending, offending
-    for path in (ROOT / 'data/brani').glob('*.yaml'):
-        keys = re.findall(r'^\s*-?\s*(melodia|melody|tema_note)\s*:', path.read_text(),
+    # ADR 0005: i voicing di chord melody non hanno audio né MIDI.
+    for folder in [ROOT / 'src/lilypond', DOCS / '_static/music']:
+        audio = [p.name for p in folder.glob('*-chord-melody.*') if p.suffix in ('.mp3', '.midi', '.mid')]
+        assert not audio, audio
+    for path in (ROOT / 'data/brani').glob('*.toml'):
+        keys = re.findall(r'^\s*-?\s*(melodia|melody|tema_note)\s*[:=]', path.read_text(),
                           re.MULTILINE | re.IGNORECASE)
         assert not keys, (path.name, keys)
 
@@ -128,6 +132,43 @@ def test_voicing():
             assert all(p % 12 == n.pc for s, n, p in voicing), chord.symbol
 
 
+def test_chord_melody():
+    # ADR 0005: un voicing drop 2 o drop 3 per accordo, con la nota indicata al canto.
+    # Dati sintetici (terze, settime e tensioni), nessuna melodia reale.
+    g = generator()
+    tune = {'slug': 'prova', 'sezioni': [{'nome': 'A',
+            'battute': ['Cmaj7', 'Dm7 G7', 'Em7b5 A7', 'Ebdim7', 'F6', 'Am7/D', 'Bb7', 'Cm6'],
+            'canto': ['B4', 'F4 A4', 'Bb4 C#5', 'A4', 'D5', 'G4', '-', 'Eb5']}]}
+    chords = [c for c, _ in g.flat_chords(g.bars_of(tune))]
+    canto = g.canto_of(tune)
+    for chord, entry, voicing in zip(chords, canto, g.chord_melody_voicings(tune, chords)):
+        if entry is None:
+            assert voicing is None
+            continue
+        strings = tuple(s for s, n, p in voicing)
+        assert strings in g.CM_SETS, (chord.symbol, strings)
+        assert voicing[-1][2] == entry[1], chord.symbol                   # nota al canto in cima
+        pitches = [p for s, n, p in voicing]
+        assert pitches == sorted(pitches) and len({p % 12 for p in pitches}) == 4, chord.symbol
+        assert g.is_drop(pitches, g.CM_SETS[strings]), chord.symbol
+        pcs = {p % 12 for p in pitches}
+        assert {chord.tone('3')[0].pc, chord.tone('7')[0].pc} <= pcs, chord.symbol
+        assert all(p % 12 == n.pc for s, n, p in voicing), chord.symbol
+        frets = [p - g.OPEN[s] for s, n, p in voicing]
+        assert min(frets) >= 1 and max(frets) - min(frets) <= 4, (chord.symbol, frets)
+    for bad in (['B4', 'F4', 'A4', 'A4', 'D5', 'G4', '-', 'Eb5'],            # una nota per due accordi
+                ['H4'] + ['C5'] * 7):                                         # nota non valida
+        broken = {'slug': 'prova', 'sezioni': [dict(tune['sezioni'][0], canto=bad)]}
+        try:
+            g.canto_of(broken)
+        except ValueError:
+            continue
+        raise AssertionError(bad)
+    # Bozza non verificata: lo spartito non si pubblica.
+    assert not g.chord_melody_published(tune)
+    assert g.chord_melody_published(dict(tune, canto_verificato=True))
+
+
 def test_generatore_stabile():
     # Rieseguire il generatore non deve cambiare sorgenti né schede.
     g = generator()
@@ -146,4 +187,4 @@ if __name__ == '__main__':
         if name.startswith('test_'):
             test()
     print('PASS: indice, marcatori, nessuna melodia, navigazione e libreria, catalogo e schede, ascolti, '
-          'ordine alfabetico, voicing, generatore stabile')
+          'ordine alfabetico, voicing, chord melody, generatore stabile')

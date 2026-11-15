@@ -12,22 +12,29 @@ feel = "up swing"
 bpm_uso = 160
 bpm_studio = 60
 versione = "rhythm changes nella forma jazz di 32 battute. Nella versione originale di Gershwin l'ultima A è prolungata di due battute."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = false
 
 [[sezioni]]
 nome = "A"
 battute = ["Bb6 G7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb7", "Eb6 Edim7", "Bb6/F G7", "Cm7 F7"]
+canto = ["? ?", "? ?", "? ?", "? ?", "?", "? ?", "? ?", "? ?"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Bb6 G7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb7", "Eb6 Edim7", "Bb6/F F7", "Bb6"]
+canto = ["? ?", "? ?", "? ?", "? ?", "?", "? ?", "? ?", "?"]
 
 [[sezioni]]
 nome = "B"
 battute = ["D7", "D7", "G7", "G7", "C7", "C7", "F7", "F7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Bb6 G7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb7", "Eb6 Edim7", "Bb6/F F7", "Bb6"]
+canto = ["? ?", "? ?", "? ?", "? ?", "?", "? ?", "? ?", "?"]
 
 
 

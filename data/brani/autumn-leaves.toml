@@ -12,22 +12,29 @@ feel = "medium swing"
 bpm_uso = 120
 bpm_studio = 60
 versione = "griglia d'uso più diffusa in Sol minore, con il II–V–I semplice nella sezione C (molte versioni lo sostituiscono con dominanti cromatiche). Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = false
 
 [[sezioni]]
 nome = "A"
 battute = ["Cm7", "F7", "Bbmaj7", "Ebmaj7", "Am7b5", "D7", "Gm6", "Gm6"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "A"
 battute = ["Cm7", "F7", "Bbmaj7", "Ebmaj7", "Am7b5", "D7", "Gm6", "Gm6"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "B"
 battute = ["Am7b5", "D7", "Gm6", "Gm6", "Cm7", "F7", "Bbmaj7", "Ebmaj7"]
+canto = ["?", "?", "?", "?", "?", "?", "?", "?"]
 
 [[sezioni]]
 nome = "C"
 battute = ["Am7b5", "D7", "Gm7 C7", "Fm7 Bb7", "Ebmaj7", "Am7b5 D7", "Gm6", "Gm6"]
+canto = ["?", "?", "? ?", "? ?", "?", "? ?", "?", "?"]
 
 [[ascolti]]
 ruolo = "riferimento"

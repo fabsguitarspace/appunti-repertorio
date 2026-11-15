@@ -1,6 +1,6 @@
 # ADR 0002 — Nessuna melodia degli standard; ascolti tramite YouTube
 
-- Stato: Accettato
+- Stato: Accettato; superato in parte dall'[ADR 0005](0005-voicing-chord-melody-sul-tema.md) (punto 1, solo chord melody)
 - Data: 2026-11-11
 - Decisore: utente responsabile dei progetti, nella conversazione di lavoro
 - Ambito: appunti-repertorio
@@ -52,9 +52,11 @@ Test automatici come sopra, più una revisione editoriale di ogni scheda prima d
 ## Collegamenti
 
 - Nessun ADR precedente superato.
+- Successore parziale: [ADR 0005 — Voicing di chord melody scelti sul tema](0005-voicing-chord-melody-sul-tema.md).
 - Legge 633/1941 (diritto d'autore italiano), art. 70: citazione per critica e insegnamento. Non usata come base della decisione.
 
 ## Modifiche
 
 - **2026-11-11**, decisa dall'utente: tolta la regola che ammetteva soltanto caricamenti ufficiali. Restano invariati il divieto di qualunque forma di melodia e l'obbligo del collegamento testuale. Al momento della modifica 8 collegamenti su 12 erano su canali ufficiali (verificati con oEmbed) e 4 su canali di terzi.
 - **2026-11-15**, decisa dall'utente: chiarito che il divieto riguarda gli arrangiamenti chord-melody del tema, non il metodo. Le schede possono avere una sezione «Chord melody» che spiega come arrangiare da sé il tema imparato a orecchio, senza alcuna nota del tema (analisi 001, sezione 8b). Resta invariato il punto 1.
+- **2026-11-15**, decisa dall'utente: l'[ADR 0005](0005-voicing-chord-melody-sul-tema.md) ammette, nella sola sezione «Chord melody», un voicing statico per cambio di accordo con la nota del tema al canto. Il resto del punto 1 resta in vigore.
