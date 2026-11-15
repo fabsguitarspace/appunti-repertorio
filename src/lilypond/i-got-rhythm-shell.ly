@@ -1,7 +1,7 @@
 % Generato da scripts/generate_standards.py: modificare il catalogo o il generatore.
 \version "2.26.0"
 \language "english"
-\header { title = "I Got Rhythm" subtitle = "Accompagnamento, livello 1" tagline = ##f }
+\header { title = "I Got Rhythm" subtitle = "Accompagnamento con shell" tagline = ##f }
 \paper { page-breaking = #ly:one-page-breaking line-width = 160\mm paper-height = 396\mm ragged-right = ##f ragged-last-bottom = ##t }
 comp = \absolute { \time 4/4
   \sectionLabel "A" <bf,\6 g\4 d'\3>2^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "6" } } <g,\6 f\4 b\3>2^\markup { \concat { "G" "7" } } |

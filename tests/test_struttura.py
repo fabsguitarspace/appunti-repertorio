@@ -59,7 +59,7 @@ def test_navigazione_e_libreria():
 
 
 SCHEDA = ['Perché studiarlo', 'Storia e contesto', 'Ascolti guidati', 'Imparare la melodia a orecchio',
-          'Mappa della forma', 'Lettura armonica', 'Accompagnamento', 'Linee per improvvisare',
+          'Mappa della forma', 'Lettura armonica', 'Accompagnamento', 'Chord melody', 'Linee per improvvisare',
           'Base per suonare', 'Piano di studio', 'Brani collegati']
 SUFFIXES = {'griglia': ('svg',), 'shell': ('svg', 'mp3'), 'guide-tones': ('svg', 'mp3'),
             'base-studio': ('mp3',), 'base': ('mp3',)}

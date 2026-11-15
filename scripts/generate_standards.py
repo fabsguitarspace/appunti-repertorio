@@ -7,7 +7,7 @@ Uso:
 
 Per ogni brano produce:
     <slug>-griglia.ly      forma con sole sigle e barre (nessuna melodia, ADR 0002)
-    <slug>-shell.ly        accompagnamento di livello 1, shell sulle corde 6-4-3 e 5-4-3
+    <slug>-shell.ly        accompagnamento con shell sulle corde 6-4-3 e 5-4-3
     <slug>-guide-tones.ly  linea di terze e settime su tutta la forma
     <slug>-base-studio.ly  base a velocità di studio, un chorus
     <slug>-base.ly         base a velocità d'uso, due chorus
@@ -165,7 +165,7 @@ def load_catalogue():
 # --------------------------------------------------------------------------- voicing
 
 def candidates(chord):
-    """Voicing di livello 1 possibili: shell 6-4-3 / 5-4-3, oppure 4 note per m7♭5 e dim7."""
+    """Shell possibili: shell 6-4-3 / 5-4-3, oppure 4 note per m7♭5 e dim7."""
     r3, s3 = chord.tone('3')
     r7, s7 = chord.tone('7')
     r5, s5 = chord.tone('5')
@@ -347,7 +347,7 @@ def countin_guitar(bpm):
 def shell_source(tune, bars, voicings):
     systems = math.ceil(len(bars) / 4)
     return '\n'.join([
-        header(tune['titolo'], 'Accompagnamento, livello 1'),
+        header(tune['titolo'], 'Accompagnamento con shell'),
         paper(systems, 42),
         f"comp = \\absolute {{ \\time 4/4\n  {comp_music(bars, voicings)} \\bar \"|.\" }}",
         staff_tab(tune, 'comp', systems),
@@ -574,14 +574,87 @@ def block_collegati(t, by_slug):
     return '\n'.join(items) or '*Nessun brano collegato nel catalogo attuale.*'
 
 
+PRATICA_ACCORDI = 'https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html'
+CHORD_MELODY_FEEL = {
+    'ballad': 'In una ballad puoi suonare rubato: arpeggia gli accordi sotto le note lunghe e '
+              'lascia respirare la fine delle frasi.',
+    'bossa': 'In bossa tieni il pollice sui bassi, al primo e al terzo movimento, e la melodia sopra '
+             'con le altre dita: è il modo più naturale di suonare il brano da solo.',
+    'crome dritte': 'Quando un accordo dura più battute, tieni ferma la forma e muovi solo la voce più '
+                    'acuta insieme al tema.',
+    'up swing': 'Al tempo d\'uso un chord melody non regge: arrangia il brano lento, quasi come una '
+                'ballad, e lascia a note singole i passaggi più veloci.',
+}
+CHORD_MELODY_SWING = ('Studialo lento ma in tempo: accordi sui tempi forti e sulle note lunghe, '
+                      'note singole sulle crome.')
+
+
+def longest_run(bars):
+    """Numero massimo di battute consecutive con lo stesso accordo, da solo nella battuta."""
+    best = run = 0
+    prev = None
+    for b in bars:
+        cur = b['chords'][0][0].text() if len(b['chords']) == 1 else None
+        run = run + 1 if cur is not None and cur == prev else (1 if cur else 0)
+        prev = cur
+        best = max(best, run)
+    return best
+
+
+def block_chordmelody(t, bars):
+    """Metodo per costruire da sé un chord melody: nessuna nota del tema (ADR 0002)."""
+    split = sum(len(b['chords']) == 2 for b in bars)
+    run = longest_run(bars)
+    rhythm = []
+    if split:
+        where = 'una battuta' if split == 1 else f'{split} battute'
+        rhythm.append(f"In {where} su {len(bars)} gli accordi cambiano a metà battuta: "
+                      'lì bastano due o tre voci.')
+    if run >= 4:
+        rhythm.append(f"Dove un accordo dura fino a {run} battute di fila, cambia voicing sotto le note "
+                      'lunghe invece di ripetere la stessa forma.')
+    if t['famiglia'] == '10-modale-moderno':
+        rhythm.append('Puoi usare anche i voicing per quarte dell\'accompagnamento, spostandoli dentro il modo.')
+    steps = [
+        f"Trova il tema in {t['tonalita']} sulle prime tre corde, all'ottava più acuta che ti è comoda: "
+        'la melodia deve restare sempre sopra gli accordi.',
+        'Su ogni cambio di accordo cerca un voicing che abbia la nota del tema al canto: drop 2 sulle '
+        'prime quattro corde, oppure tre voci con il basso sulla sesta o sulla quinta corda.',
+        'Fra un cambio e l\'altro suona le note del tema da sole, o con il solo basso sotto.',
+    ]
+    if rhythm:
+        steps.append(' '.join(rhythm))
+    steps.append(CHORD_MELODY_FEEL.get(t['feel'], CHORD_MELODY_SWING))
+    first = t['sezioni'][0]
+    n = len(first['battute'])
+    target, pron = ((f"la prima sezione {first['nome']} ({n} battute)", 'suonala') if len(t['sezioni']) > 1
+                    else (f"il primo chorus ({n} battute)", 'suonalo'))
+    return (
+        'Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda non contiene né la '
+        'melodia né un arrangiamento: lo costruisci tu, partendo dal tema imparato a orecchio, e resta '
+        'un lavoro tuo.\n\n'
+        f"Il vocabolario è in `Voicing per il chord melody <{PRATICA_ACCORDI}#chord-melody-voicings>`__ "
+        'negli Appunti di Pratica. L\'esempio '
+        f"`Mettere tutto insieme: otto battute <{PRATICA_ACCORDI}#mettere-tutto-insieme-otto-battute>`__ "
+        'mostra il procedimento su una progressione originale.\n\n'
+        + '\n'.join(f'#. {s}' for s in steps)
+        + f"\n\n**Compito.** Arrangia {target}, con un accordo su ogni cambio, e {pron} senza base, "
+        'lentamente e senza fermarti.'
+        '\n\n**Verifica.** La nota più acuta di ogni accordo è sempre quella del tema? Chi ascolta '
+        'riconosce il brano senza la base?'
+    )
+
+
 SKELETON = [
     ('identita', None), ('perche', 'Perché studiarlo'), ('storia', 'Storia e contesto'),
     ('ascolti', 'Ascolti guidati'), ('melodia', 'Imparare la melodia a orecchio'),
     ('forma', 'Mappa della forma'), ('armonia', 'Lettura armonica'),
-    ('accompagnamento', 'Accompagnamento'), ('guide', 'Linee per improvvisare'),
+    ('accompagnamento', 'Accompagnamento'), ('chordmelody', 'Chord melody'),
+    ('guide', 'Linee per improvvisare'),
     ('base', 'Base per suonare'), ('piano', 'Piano di studio'), ('collegati', 'Brani collegati'),
 ]
-GENERATED_IN_CARD = {'identita', 'ascolti', 'forma', 'accompagnamento', 'guide', 'base', 'collegati'}
+GENERATED_IN_CARD = {'identita', 'ascolti', 'forma', 'accompagnamento', 'chordmelody', 'guide', 'base',
+                     'collegati'}
 
 
 def marker(name, body):
@@ -669,8 +742,9 @@ def write_docs(tunes):
             'identita': block_identita(t),
             'ascolti': block_ascolti(t),
             'forma': block_forma(t, bars),
-            'accompagnamento': block_media(t, 'shell', 'accompagnamento di livello 1',
-                                           f"accompagnamento di livello 1 a {t['bpm_studio']} BPM"),
+            'accompagnamento': block_media(t, 'shell', 'accompagnamento con shell',
+                                           f"accompagnamento con shell a {t['bpm_studio']} BPM"),
+            'chordmelody': block_chordmelody(t, bars),
             'guide': block_media(t, 'guide-tones', 'guide tones', f"guide tones a {t['bpm_studio']} BPM"),
             'base': block_base(t),
             'collegati': block_collegati(t, by_slug),

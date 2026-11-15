@@ -1,7 +1,7 @@
 % Generato da scripts/generate_standards.py: modificare il catalogo o il generatore.
 \version "2.26.0"
 \language "english"
-\header { title = "All of Me" subtitle = "Accompagnamento, livello 1" tagline = ##f }
+\header { title = "All of Me" subtitle = "Accompagnamento con shell" tagline = ##f }
 \paper { page-breaking = #ly:one-page-breaking line-width = 160\mm paper-height = 396\mm ragged-right = ##f ragged-last-bottom = ##t }
 comp = \absolute { \time 4/4
   \sectionLabel "A" <c\5 e\4 a\3>1^\markup { \concat { "C" "6" } } |

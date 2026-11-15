@@ -59,14 +59,15 @@ Legenda: **G** = generata dal catalogo, **M** = scritta a mano fra marcatori, **
 | 5 | Imparare la melodia a orecchio | procedura di ascolto e canto, ricerca sulla tastiera, punti di riferimento formali; nessuna nota della melodia | M |
 | 6 | Mappa della forma | griglia testuale per sezione e spartito con sole sigle; intro, coda e turnaround d'uso indicati come prassi; varianti delle sigle con la versione seguita | G |
 | 7 | Lettura armonica | aree tonali, numeri romani, punti critici, scale per area; rimandi a Teoria | M |
-| 8 | Accompagnamento | livello 1 shell, livello 2 voicing a 4 note, livello 3 ritmo adatto al feel; spartito, TAB e audio; rimandi a Pratica | G+M |
+| 8 | Accompagnamento | tre passi: shell, quattro voci, ritmo adatto al feel; spartito, TAB e audio; rimandi a Pratica | G+M |
+| 8b | Chord melody | metodo per arrangiare da sé il tema imparato a orecchio: vocabolario in Pratica, passi adattati a tonalità, ritmo armonico e feel; compito e verifica; nessuna nota del tema (ADR 0002) | G |
 | 9 | Linee per improvvisare | guide tones sull'intera forma, note bersaglio, studio originale di un chorus; spartito, TAB e audio | G+M |
 | 10 | Base per suonare | basso, batteria e comping, senza melodia, con conteggio; 60 BPM e velocità d'uso; 2–3 chorus | G |
 | 11 | Riarmonizzazioni (facoltativa) | sostituzioni d'uso con esempio sulle sigle; rimandi a Teoria | M |
 | 12 | Piano di studio, Compito, Verifica | passi numerati; compito e verifica in stile Pratica; tonalità alternative; esercizio a memoria | M |
 | 13 | Brani collegati | stessa forma o armonia, contrafact | G |
 
-Esclusi per ADR 0002: melodia in qualunque notazione o audio, lead sheet, chord-melody, frammenti del tema.
+Esclusi per ADR 0002: melodia in qualunque notazione o audio, lead sheet, arrangiamenti chord-melody del tema, frammenti del tema. La sezione 8b dà solo il metodo.
 
 ## Catalogo dati (bozza)
 
@@ -128,11 +129,13 @@ Criteri di accettazione: quelli dell'ADR 0003, più la verifica dei collegamenti
 2. ✓ Capitoli 1–4 in bozza; capitoli di famiglia, piani di studio e indici con marcatori BEGIN/END al posto dei toctree. Un toctree vuoto o un glob senza corrispondenze produrrebbe avvisi con `-W`, quindi il generatore inserirà il toctree fra i marcatori.
 
    Verifiche: `tests/test_struttura.py` passa; `sphinx-build -b html -W --keep-going` termina senza avvisi; `./build-lilypond.sh` raggiunge la libreria e si ferma, come atteso, con «No LilyPond sources found». Non verificati: build PDF/ePub e build su RTD (progetto RTD non ancora creato).
-3. ✓ `generate_standards.py` e test (2026-11-11): catalogo TOML invece di YAML, per non aggiungere dipendenze. Il generatore produce griglia, shell di livello 1 con scelta automatica del voicing più vicino, guide tones con corde esplicite, basi con walking bass (due movimenti nelle ballad), ride swing e shell; aggiorna schede, capitoli di famiglia, piani di studio e indici. I test verificano sezioni della scheda, risorse, ordine alfabetico, voicing (corde, fondamentale al basso, terza e settima presenti) e stabilità del generatore.
+3. ✓ `generate_standards.py` e test (2026-11-11): catalogo TOML invece di YAML, per non aggiungere dipendenze. Il generatore produce griglia, shell con scelta automatica del voicing più vicino, guide tones con corde esplicite, basi con walking bass (due movimenti nelle ballad), ride swing e shell; aggiorna schede, capitoli di famiglia, piani di studio e indici. I test verificano sezioni della scheda, risorse, ordine alfabetico, voicing (corde, fondamentale al basso, terza e settima presenti) e stabilità del generatore.
 4. ✓ Le cinque schede pilota e le loro risorse (25 sorgenti, build in circa 50 s); build HTML con `-W` pulita; pagine controllate nel browser locale (tabella, immagini, quattro audio per scheda).
 
-   **Non fatto o non verificato:** ascolto delle basi e degli audio; confronto delle griglie con le registrazioni (dichiarato in ogni scheda); studio originale di un chorus; esempi dei livelli 2 e 3 dell'accompagnamento; versioni per chitarra e collegamenti YouTube negli ascolti (aggiornamento 2026-11-11: versioni per chitarra scelte dall'utente per tutti i brani; 8 collegamenti su canali ufficiali verificati con oEmbed; 4 su canali di terzi, Billie Holiday e Django Reinhardt per All of Me, Ethel Waters per I Got Rhythm, Chet Baker per There Will Never Be Another You, ammessi dopo la modifica dell'ADR 0002 dello stesso giorno: tutti i 12 ascolti hanno ora un collegamento); revisione dei testi da parte dell'autore; resa degli SVG con il tema scuro.
+   **Non fatto o non verificato:** ascolto delle basi e degli audio; confronto delle griglie con le registrazioni (dichiarato in ogni scheda); studio originale di un chorus; esempi dei passi «quattro voci» e «ritmo» dell'accompagnamento; versioni per chitarra e collegamenti YouTube negli ascolti (aggiornamento 2026-11-11: versioni per chitarra scelte dall'utente per tutti i brani; 8 collegamenti su canali ufficiali verificati con oEmbed; 4 su canali di terzi, Billie Holiday e Django Reinhardt per All of Me, Ethel Waters per I Got Rhythm, Chet Baker per There Will Never Be Another You, ammessi dopo la modifica dell'ADR 0002 dello stesso giorno: tutti i 12 ascolti hanno ora un collegamento); revisione dei testi da parte dell'autore; resa degli SVG con il tema scuro.
 5. Progetto RTD ✓ e `nav_links` uniformi nei tre progetti ✓ (2026-11-11); `linkcheck` ancora da configurare.
+6. ✓ Terminologia dell'accompagnamento (2026-11-15, decisa dall'utente): i «livelli 1–3» dell'accompagnamento diventano i passi **shell**, **quattro voci** e **ritmo**, perché «livello» indica già la difficoltà del brano (carta d'identità, piani di studio, indici). Aggiornati il generatore (titolo dello spartito, alt e aria-label), le dieci schede, il compito d'ascolto di All of Me, i capitoli 1 e 2; ricompilati i dieci spartiti `-shell` (audio invariato). Verifiche: `tests/test_struttura.py` passa, build HTML con `-W` pulita.
+7. ✓ Sezione «Chord melody» (2026-11-15, decisa dall'utente): blocco generato `chordmelody` fra Accompagnamento e Linee per improvvisare, nelle dieci schede e nello scheletro. Contiene solo il metodo, con rimandi a `chord-melody-voicings` e «Mettere tutto insieme: otto battute» di Pratica; i passi dipendono da tonalità, battute con due accordi, accordo più lungo, feel e famiglia. Nessuna nota del tema. Non fatto: un esempio originale sugli accordi del brano.
 
 ## Punti aperti
 

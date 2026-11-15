@@ -111,23 +111,44 @@ Approfondisci i due II–V in `Armonia funzionale <https://appunti-di-teoria-e-a
 Accompagnamento
 ---------------
 
-Il livello 1 usa **shell** di tre note sulle corde 6–4–3 o 5–4–3, una forma per accordo, come in `Shell voicings <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#shell-voicings>`__ negli Appunti di Pratica. Il semidiminuito Dm7♭5 ha invece quattro note, perché senza la quinta diminuita non si riconoscerebbe. Il voicing di ogni accordo è scelto per muovere la mano il meno possibile rispetto al precedente.
+Il primo passo sono gli **shell** di tre note sulle corde 6–4–3 o 5–4–3, una forma per accordo, come in `Shell voicings <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#shell-voicings>`__ negli Appunti di Pratica. Il semidiminuito Dm7♭5 ha invece quattro note, perché senza la quinta diminuita non si riconoscerebbe. Il voicing di ogni accordo è scelto per muovere la mano il meno possibile rispetto al precedente.
 
-Quando gli shell sono sicuri, passa al **livello 2**: aggiungi una quarta voce sulla seconda corda (nona, undicesima o quinta) e segui la voce più acuta. Il **livello 3** riguarda il ritmo, che qui conta più che altrove: suona con le dita, il pollice sulla fondamentale al primo e al terzo movimento, le altre dita sulle voci superiori con qualche attacco in levare. Tieni le crome regolari e non accentare il secondo e il quarto movimento. Gli esempi scritti dei livelli 2 e 3 saranno aggiunti in seguito; per ora lavora con le indicazioni di `Progressioni <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/7-progressioni.html>`__.
+Quando gli shell sono sicuri, passa alle **quattro voci**: aggiungi una quarta voce sulla seconda corda (nona, undicesima o quinta) e segui la voce più acuta. Il terzo passo è il **ritmo**, che qui conta più che altrove: suona con le dita, il pollice sulla fondamentale al primo e al terzo movimento, le altre dita sulle voci superiori con qualche attacco in levare. Tieni le crome regolari e non accentare il secondo e il quarto movimento. Gli esempi scritti di questi due passi saranno aggiunti in seguito; per ora lavora con le indicazioni di `Progressioni <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/7-progressioni.html>`__.
 
 .. BEGIN accompagnamento: generato da scripts/generate_standards.py, non modificare a mano
 
 .. image:: ../_static/music/blue-bossa-shell.*
    :width: 100%
-   :alt: Blue Bossa: accompagnamento di livello 1
+   :alt: Blue Bossa: accompagnamento con shell
 
 .. raw:: html
 
-   <audio controls class="audio-controls" preload="none" aria-label="Blue Bossa, accompagnamento di livello 1 a 70 BPM">
+   <audio controls class="audio-controls" preload="none" aria-label="Blue Bossa, accompagnamento con shell a 70 BPM">
      <source src="../_static/music/blue-bossa-shell.mp3" type="audio/mpeg">
    </audio>
 
 .. END accompagnamento
+
+Chord melody
+------------
+
+.. BEGIN chordmelody: generato da scripts/generate_standards.py, non modificare a mano
+
+Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda non contiene né la melodia né un arrangiamento: lo costruisci tu, partendo dal tema imparato a orecchio, e resta un lavoro tuo.
+
+Il vocabolario è in `Voicing per il chord melody <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#chord-melody-voicings>`__ negli Appunti di Pratica. L'esempio `Mettere tutto insieme: otto battute <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#mettere-tutto-insieme-otto-battute>`__ mostra il procedimento su una progressione originale.
+
+#. Trova il tema in Do minore sulle prime tre corde, all'ottava più acuta che ti è comoda: la melodia deve restare sempre sopra gli accordi.
+#. Su ogni cambio di accordo cerca un voicing che abbia la nota del tema al canto: drop 2 sulle prime quattro corde, oppure tre voci con il basso sulla sesta o sulla quinta corda.
+#. Fra un cambio e l'altro suona le note del tema da sole, o con il solo basso sotto.
+#. In una battuta su 16 gli accordi cambiano a metà battuta: lì bastano due o tre voci.
+#. In bossa tieni il pollice sui bassi, al primo e al terzo movimento, e la melodia sopra con le altre dita: è il modo più naturale di suonare il brano da solo.
+
+**Compito.** Arrangia la prima sezione A (8 battute), con un accordo su ogni cambio, e suonala senza base, lentamente e senza fermarti.
+
+**Verifica.** La nota più acuta di ogni accordo è sempre quella del tema? Chi ascolta riconosce il brano senza la base?
+
+.. END chordmelody
 
 Linee per improvvisare
 ----------------------

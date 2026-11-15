@@ -57,3 +57,4 @@ Test automatici come sopra, più una revisione editoriale di ogni scheda prima d
 ## Modifiche
 
 - **2026-11-11**, decisa dall'utente: tolta la regola che ammetteva soltanto caricamenti ufficiali. Restano invariati il divieto di qualunque forma di melodia e l'obbligo del collegamento testuale. Al momento della modifica 8 collegamenti su 12 erano su canali ufficiali (verificati con oEmbed) e 4 su canali di terzi.
+- **2026-11-15**, decisa dall'utente: chiarito che il divieto riguarda gli arrangiamenti chord-melody del tema, non il metodo. Le schede possono avere una sezione «Chord melody» che spiega come arrangiare da sé il tema imparato a orecchio, senza alcuna nota del tema (analisi 001, sezione 8b). Resta invariato il punto 1.

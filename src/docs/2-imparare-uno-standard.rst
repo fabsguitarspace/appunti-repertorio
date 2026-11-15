@@ -70,14 +70,21 @@ rimanda agli `Appunti di Teoria e Armonia <https://appunti-di-teoria-e-armonia-p
 6. Accompagnare
 ---------------
 
-Accompagna il brano con la base della scheda, su tre livelli:
+Accompagna il brano con la base della scheda, in tre passi:
 
-#. Shell a tre note, un accordo per battuta, attacchi lunghi.
-#. Voicing a quattro note, cercando di muovere le voci il meno possibile.
-#. Un ritmo adatto al feel del brano: swing, bossa, ballad.
+#. **Shell**: tre note, un accordo per battuta, attacchi lunghi.
+#. **Quattro voci**: aggiungi una voce, cercando di muovere le voci il meno possibile.
+#. **Ritmo**: un disegno adatto al feel del brano: swing, bossa, ballad.
+
+I passi riguardano solo l'accompagnamento e non vanno confusi con il livello
+di difficoltà del brano, indicato da 1 a 3 nella carta d'identità.
 
 L'accompagnamento è la prova più onesta della conoscenza della forma: se
 ti perdi, la base continua senza di te.
+
+Quando tema e accompagnamento sono sicuri, puoi unirli in un **chord
+melody**: il tema sulla voce più acuta, gli accordi sotto. Ogni scheda ti
+guida a costruirlo da solo, ma non contiene l'arrangiamento.
 
 7. Improvvisare e memorizzare
 -----------------------------

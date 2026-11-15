@@ -114,24 +114,45 @@ Le sigle del fake book, un accordo minore settima con il basso una quinta sotto,
 Accompagnamento
 ---------------
 
-Il livello 1 usa **shell** di tre note degli accordi minori scritti nelle sigle: La–Sol–Do per Am7/D, e così via. Il basso della base suona la nota dopo la barra. Insieme danno l'accordo sospeso: sopra il Re, La–Sol–Do sono 5–4–♭7. È lo stesso principio di `Shell voicings <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#shell-voicings>`__ negli Appunti di Pratica, con il basso affidato a un altro strumento.
+Il primo passo sono gli **shell** di tre note degli accordi minori scritti nelle sigle: La–Sol–Do per Am7/D, e così via. Il basso della base suona la nota dopo la barra. Insieme danno l'accordo sospeso: sopra il Re, La–Sol–Do sono 5–4–♭7. È lo stesso principio di `Shell voicings <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#shell-voicings>`__ negli Appunti di Pratica, con il basso affidato a un altro strumento.
 
-Quando gli shell sono sicuri, passa al **livello 2**: aggiungi il Mi su Am7/D, la nona del basso, e sposta la forma per gli altri accordi. Il **livello 3** riguarda il ritmo: la figura dell'accompagnamento a crome regolari, con gli anticipi, uguale per tutti gli accordi. Gli esempi scritti dei livelli 2 e 3 saranno aggiunti in seguito.
+Quando gli shell sono sicuri, passa alle **quattro voci**: aggiungi il Mi su Am7/D, la nona del basso, e sposta la forma per gli altri accordi. Il terzo passo è il **ritmo**: la figura dell'accompagnamento a crome regolari, con gli anticipi, uguale per tutti gli accordi. Gli esempi scritti di questi due passi saranno aggiunti in seguito.
 
 
 .. BEGIN accompagnamento: generato da scripts/generate_standards.py, non modificare a mano
 
 .. image:: ../_static/music/maiden-voyage-shell.*
    :width: 100%
-   :alt: Maiden Voyage: accompagnamento di livello 1
+   :alt: Maiden Voyage: accompagnamento con shell
 
 .. raw:: html
 
-   <audio controls class="audio-controls" preload="none" aria-label="Maiden Voyage, accompagnamento di livello 1 a 60 BPM">
+   <audio controls class="audio-controls" preload="none" aria-label="Maiden Voyage, accompagnamento con shell a 60 BPM">
      <source src="../_static/music/maiden-voyage-shell.mp3" type="audio/mpeg">
    </audio>
 
 .. END accompagnamento
+
+Chord melody
+------------
+
+.. BEGIN chordmelody: generato da scripts/generate_standards.py, non modificare a mano
+
+Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda non contiene né la melodia né un arrangiamento: lo costruisci tu, partendo dal tema imparato a orecchio, e resta un lavoro tuo.
+
+Il vocabolario è in `Voicing per il chord melody <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#chord-melody-voicings>`__ negli Appunti di Pratica. L'esempio `Mettere tutto insieme: otto battute <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#mettere-tutto-insieme-otto-battute>`__ mostra il procedimento su una progressione originale.
+
+#. Trova il tema in Re sospeso (modale) sulle prime tre corde, all'ottava più acuta che ti è comoda: la melodia deve restare sempre sopra gli accordi.
+#. Su ogni cambio di accordo cerca un voicing che abbia la nota del tema al canto: drop 2 sulle prime quattro corde, oppure tre voci con il basso sulla sesta o sulla quinta corda.
+#. Fra un cambio e l'altro suona le note del tema da sole, o con il solo basso sotto.
+#. Dove un accordo dura fino a 4 battute di fila, cambia voicing sotto le note lunghe invece di ripetere la stessa forma. Puoi usare anche i voicing per quarte dell'accompagnamento, spostandoli dentro il modo.
+#. Quando un accordo dura più battute, tieni ferma la forma e muovi solo la voce più acuta insieme al tema.
+
+**Compito.** Arrangia la prima sezione A (8 battute), con un accordo su ogni cambio, e suonala senza base, lentamente e senza fermarti.
+
+**Verifica.** La nota più acuta di ogni accordo è sempre quella del tema? Chi ascolta riconosce il brano senza la base?
+
+.. END chordmelody
 
 Linee per improvvisare
 ----------------------

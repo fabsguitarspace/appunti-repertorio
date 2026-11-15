@@ -107,23 +107,44 @@ Lettura armonica
 Accompagnamento
 ---------------
 
-Il livello 1 usa **shell** di tre note sulle corde 6–4–3 o 5–4–3, una forma per accordo, come in `Shell voicings <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#shell-voicings>`__ negli Appunti di Pratica. Gli accordi semidiminuiti e diminuiti hanno invece quattro note, perché senza la quinta diminuita non si riconoscerebbero. Il voicing di ogni accordo è scelto per muovere la mano il meno possibile rispetto al precedente.
+Il primo passo sono gli **shell** di tre note sulle corde 6–4–3 o 5–4–3, una forma per accordo, come in `Shell voicings <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#shell-voicings>`__ negli Appunti di Pratica. Gli accordi semidiminuiti e diminuiti hanno invece quattro note, perché senza la quinta diminuita non si riconoscerebbero. Il voicing di ogni accordo è scelto per muovere la mano il meno possibile rispetto al precedente.
 
-Quando gli shell sono sicuri, passa al **livello 2**: aggiungi una quarta voce sulla seconda corda (nona, tredicesima o quinta) e segui la voce più acuta. Il **livello 3** riguarda il ritmo: A 160 BPM gli accordi cambiano ogni due movimenti: suona attacchi brevi e sicuri, anche uno solo per accordo. Gli esempi scritti dei livelli 2 e 3 saranno aggiunti in seguito; per ora lavora con le indicazioni di `Progressioni <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/7-progressioni.html>`__.
+Quando gli shell sono sicuri, passa alle **quattro voci**: aggiungi una quarta voce sulla seconda corda (nona, tredicesima o quinta) e segui la voce più acuta. Il terzo passo è il **ritmo**: a 160 BPM gli accordi cambiano ogni due movimenti: suona attacchi brevi e sicuri, anche uno solo per accordo. Gli esempi scritti di questi due passi saranno aggiunti in seguito; per ora lavora con le indicazioni di `Progressioni <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/7-progressioni.html>`__.
 
 .. BEGIN accompagnamento: generato da scripts/generate_standards.py, non modificare a mano
 
 .. image:: ../_static/music/i-got-rhythm-shell.*
    :width: 100%
-   :alt: I Got Rhythm: accompagnamento di livello 1
+   :alt: I Got Rhythm: accompagnamento con shell
 
 .. raw:: html
 
-   <audio controls class="audio-controls" preload="none" aria-label="I Got Rhythm, accompagnamento di livello 1 a 60 BPM">
+   <audio controls class="audio-controls" preload="none" aria-label="I Got Rhythm, accompagnamento con shell a 60 BPM">
      <source src="../_static/music/i-got-rhythm-shell.mp3" type="audio/mpeg">
    </audio>
 
 .. END accompagnamento
+
+Chord melody
+------------
+
+.. BEGIN chordmelody: generato da scripts/generate_standards.py, non modificare a mano
+
+Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda non contiene né la melodia né un arrangiamento: lo costruisci tu, partendo dal tema imparato a orecchio, e resta un lavoro tuo.
+
+Il vocabolario è in `Voicing per il chord melody <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#chord-melody-voicings>`__ negli Appunti di Pratica. L'esempio `Mettere tutto insieme: otto battute <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#mettere-tutto-insieme-otto-battute>`__ mostra il procedimento su una progressione originale.
+
+#. Trova il tema in Si♭ maggiore sulle prime tre corde, all'ottava più acuta che ti è comoda: la melodia deve restare sempre sopra gli accordi.
+#. Su ogni cambio di accordo cerca un voicing che abbia la nota del tema al canto: drop 2 sulle prime quattro corde, oppure tre voci con il basso sulla sesta o sulla quinta corda.
+#. Fra un cambio e l'altro suona le note del tema da sole, o con il solo basso sotto.
+#. In 19 battute su 32 gli accordi cambiano a metà battuta: lì bastano due o tre voci.
+#. Al tempo d'uso un chord melody non regge: arrangia il brano lento, quasi come una ballad, e lascia a note singole i passaggi più veloci.
+
+**Compito.** Arrangia la prima sezione A (8 battute), con un accordo su ogni cambio, e suonala senza base, lentamente e senza fermarti.
+
+**Verifica.** La nota più acuta di ogni accordo è sempre quella del tema? Chi ascolta riconosce il brano senza la base?
+
+.. END chordmelody
 
 Linee per improvvisare
 ----------------------

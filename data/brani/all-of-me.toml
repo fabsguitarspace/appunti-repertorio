@@ -42,7 +42,7 @@ ruolo = "chitarra"
 artista = "Django Reinhardt con Hubert Rostaing"
 versione = "registrazione di Parigi del 17 dicembre 1940"
 youtube = "https://www.youtube.com/watch?v=hT82Ezo6-1I"
-compito = "Segui la forma durante l'assolo di chitarra: riesci a sentire quando inizia la sezione C senza contare le battute? Confronta poi l'accompagnamento ritmico con il tuo livello 1."
+compito = "Segui la forma durante l'assolo di chitarra: riesci a sentire quando inizia la sezione C senza contare le battute? Confronta poi l'accompagnamento ritmico con i tuoi shell."
 
 [[collegati]]
 slug = "there-will-never-be-another-you"

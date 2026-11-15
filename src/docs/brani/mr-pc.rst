@@ -100,24 +100,45 @@ Confronta la forma con quella in `Blues minore <https://appunti-pratica-per-chit
 Accompagnamento
 ---------------
 
-Il livello 1 usa **shell** di tre note sulle corde 6–4–3 o 5–4–3, una forma per accordo, come in `Shell voicings <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#shell-voicings>`__ negli Appunti di Pratica. Il voicing di ogni accordo è scelto per muovere la mano il meno possibile rispetto al precedente. A tempo veloce suona due attacchi per battuta, brevi, e lascia spazio al contrabbasso.
+Il primo passo sono gli **shell** di tre note sulle corde 6–4–3 o 5–4–3, una forma per accordo, come in `Shell voicings <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#shell-voicings>`__ negli Appunti di Pratica. Il voicing di ogni accordo è scelto per muovere la mano il meno possibile rispetto al precedente. A tempo veloce suona due attacchi per battuta, brevi, e lascia spazio al contrabbasso.
 
-Quando gli shell sono sicuri, passa al **livello 2**: aggiungi la nona su Cm7 e Fm7 e una tensione alterata, ♭9 o ♭13, su G7. Il **livello 3** riguarda il ritmo: attacchi in levare e anticipi del cambio d'accordo, soprattutto prima della quinta e della nona battuta. Gli esempi scritti dei livelli 2 e 3 saranno aggiunti in seguito.
+Quando gli shell sono sicuri, passa alle **quattro voci**: aggiungi la nona su Cm7 e Fm7 e una tensione alterata, ♭9 o ♭13, su G7. Il terzo passo è il **ritmo**: attacchi in levare e anticipi del cambio d'accordo, soprattutto prima della quinta e della nona battuta. Gli esempi scritti di questi due passi saranno aggiunti in seguito.
 
 
 .. BEGIN accompagnamento: generato da scripts/generate_standards.py, non modificare a mano
 
 .. image:: ../_static/music/mr-pc-shell.*
    :width: 100%
-   :alt: Mr. P.C.: accompagnamento di livello 1
+   :alt: Mr. P.C.: accompagnamento con shell
 
 .. raw:: html
 
-   <audio controls class="audio-controls" preload="none" aria-label="Mr. P.C., accompagnamento di livello 1 a 90 BPM">
+   <audio controls class="audio-controls" preload="none" aria-label="Mr. P.C., accompagnamento con shell a 90 BPM">
      <source src="../_static/music/mr-pc-shell.mp3" type="audio/mpeg">
    </audio>
 
 .. END accompagnamento
+
+Chord melody
+------------
+
+.. BEGIN chordmelody: generato da scripts/generate_standards.py, non modificare a mano
+
+Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda non contiene né la melodia né un arrangiamento: lo costruisci tu, partendo dal tema imparato a orecchio, e resta un lavoro tuo.
+
+Il vocabolario è in `Voicing per il chord melody <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#chord-melody-voicings>`__ negli Appunti di Pratica. L'esempio `Mettere tutto insieme: otto battute <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#mettere-tutto-insieme-otto-battute>`__ mostra il procedimento su una progressione originale.
+
+#. Trova il tema in Do minore sulle prime tre corde, all'ottava più acuta che ti è comoda: la melodia deve restare sempre sopra gli accordi.
+#. Su ogni cambio di accordo cerca un voicing che abbia la nota del tema al canto: drop 2 sulle prime quattro corde, oppure tre voci con il basso sulla sesta o sulla quinta corda.
+#. Fra un cambio e l'altro suona le note del tema da sole, o con il solo basso sotto.
+#. Dove un accordo dura fino a 4 battute di fila, cambia voicing sotto le note lunghe invece di ripetere la stessa forma.
+#. Al tempo d'uso un chord melody non regge: arrangia il brano lento, quasi come una ballad, e lascia a note singole i passaggi più veloci.
+
+**Compito.** Arrangia il primo chorus (12 battute), con un accordo su ogni cambio, e suonalo senza base, lentamente e senza fermarti.
+
+**Verifica.** La nota più acuta di ogni accordo è sempre quella del tema? Chi ascolta riconosce il brano senza la base?
+
+.. END chordmelody
 
 Linee per improvvisare
 ----------------------

@@ -126,23 +126,44 @@ Approfondisci il modo in `Scale <https://appunti-di-teoria-e-armonia-per-chitarr
 Accompagnamento
 ---------------
 
-Il livello 1 usa uno **shell** di tre note sulle corde 5–4–3, come in `Shell voicings <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#shell-voicings>`__ negli Appunti di Pratica. Per la sezione B la stessa forma sale di un tasto. L'esempio è volutamente essenziale: serve a contare la forma e a sentire il semitono, non a essere suonato così per un intero brano.
+Il primo passo è uno **shell** di tre note sulle corde 5–4–3, come in `Shell voicings <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#shell-voicings>`__ negli Appunti di Pratica. Per la sezione B la stessa forma sale di un tasto. L'esempio è volutamente essenziale: serve a contare la forma e a sentire il semitono, non a essere suonato così per un intero brano.
 
-Il **livello 2** è il suono tipico di questo repertorio: gli accordi **per quarte**. Sulle corde dalla quinta alla prima, al settimo tasto, sovrapponi tre quarte giuste e una terza maggiore: Mi, La, Re, Sol, Si. Tutte le note appartengono a Re dorico, e la stessa forma si può spostare lungo il modo, per esempio un tono sotto. Per Mi♭ dorico sali di un tasto. Il **livello 3** riguarda il ritmo: pochi attacchi brevi, molto spazio, e voicing che si muovono per gradi dentro il modo invece di restare fermi. Gli esempi scritti dei livelli 2 e 3 saranno aggiunti in seguito; le strutture per quarte sono spiegate in `Armonia non funzionale <https://appunti-di-teoria-e-armonia-per-chitarra-jazz.readthedocs.io/it/latest/10-armonia-non-funzionale.html>`__.
+Il secondo passo, al posto delle quattro voci, è il suono tipico di questo repertorio: gli accordi **per quarte**. Sulle corde dalla quinta alla prima, al settimo tasto, sovrapponi tre quarte giuste e una terza maggiore: Mi, La, Re, Sol, Si. Tutte le note appartengono a Re dorico, e la stessa forma si può spostare lungo il modo, per esempio un tono sotto. Per Mi♭ dorico sali di un tasto. Il terzo passo è il **ritmo**: pochi attacchi brevi, molto spazio, e voicing che si muovono per gradi dentro il modo invece di restare fermi. Gli esempi scritti di questi due passi saranno aggiunti in seguito; le strutture per quarte sono spiegate in `Armonia non funzionale <https://appunti-di-teoria-e-armonia-per-chitarra-jazz.readthedocs.io/it/latest/10-armonia-non-funzionale.html>`__.
 
 .. BEGIN accompagnamento: generato da scripts/generate_standards.py, non modificare a mano
 
 .. image:: ../_static/music/so-what-shell.*
    :width: 100%
-   :alt: So What: accompagnamento di livello 1
+   :alt: So What: accompagnamento con shell
 
 .. raw:: html
 
-   <audio controls class="audio-controls" preload="none" aria-label="So What, accompagnamento di livello 1 a 68 BPM">
+   <audio controls class="audio-controls" preload="none" aria-label="So What, accompagnamento con shell a 68 BPM">
      <source src="../_static/music/so-what-shell.mp3" type="audio/mpeg">
    </audio>
 
 .. END accompagnamento
+
+Chord melody
+------------
+
+.. BEGIN chordmelody: generato da scripts/generate_standards.py, non modificare a mano
+
+Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda non contiene né la melodia né un arrangiamento: lo costruisci tu, partendo dal tema imparato a orecchio, e resta un lavoro tuo.
+
+Il vocabolario è in `Voicing per il chord melody <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#chord-melody-voicings>`__ negli Appunti di Pratica. L'esempio `Mettere tutto insieme: otto battute <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#mettere-tutto-insieme-otto-battute>`__ mostra il procedimento su una progressione originale.
+
+#. Trova il tema in Re dorico sulle prime tre corde, all'ottava più acuta che ti è comoda: la melodia deve restare sempre sopra gli accordi.
+#. Su ogni cambio di accordo cerca un voicing che abbia la nota del tema al canto: drop 2 sulle prime quattro corde, oppure tre voci con il basso sulla sesta o sulla quinta corda.
+#. Fra un cambio e l'altro suona le note del tema da sole, o con il solo basso sotto.
+#. Dove un accordo dura fino a 16 battute di fila, cambia voicing sotto le note lunghe invece di ripetere la stessa forma. Puoi usare anche i voicing per quarte dell'accompagnamento, spostandoli dentro il modo.
+#. Studialo lento ma in tempo: accordi sui tempi forti e sulle note lunghe, note singole sulle crome.
+
+**Compito.** Arrangia la prima sezione A (8 battute), con un accordo su ogni cambio, e suonala senza base, lentamente e senza fermarti.
+
+**Verifica.** La nota più acuta di ogni accordo è sempre quella del tema? Chi ascolta riconosce il brano senza la base?
+
+.. END chordmelody
 
 Linee per improvvisare
 ----------------------

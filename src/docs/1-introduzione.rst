@@ -109,8 +109,10 @@ Tutte le schede hanno la stessa struttura, così sai sempre dove cercare:
 #. **Imparare la melodia a orecchio**.
 #. **Mappa della forma**: griglia e spartito con le sole sigle.
 #. **Lettura armonica**, con rimandi alla Teoria.
-#. **Accompagnamento** su tre livelli; per ora spartito, tablatura e audio
-   riguardano il primo.
+#. **Accompagnamento** in tre passi: shell, quattro voci, ritmo; per ora
+   spartito, tablatura e audio riguardano gli shell.
+#. **Chord melody**: un metodo per arrangiare da solo il tema imparato a
+   orecchio, senza note pubblicate.
 #. **Linee per improvvisare**: guide tones e note bersaglio; lo studio
    originale di un chorus sarà aggiunto in seguito.
 #. **Base per suonare**, senza melodia.
