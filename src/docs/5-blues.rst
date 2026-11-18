@@ -27,11 +27,16 @@ Brani
      - blues 12
      - Do minore
      - 1
+   * - :doc:`brani/nows-the-time`
+     - blues 12
+     - Fa maggiore
+     - 2
 
 .. toctree::
    :hidden:
 
    brani/blue-monk
    brani/mr-pc
+   brani/nows-the-time
 
 .. END brani

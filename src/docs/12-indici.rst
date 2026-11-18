@@ -34,6 +34,7 @@ Per forma
 
 - :doc:`brani/blue-monk`
 - :doc:`brani/mr-pc`
+- :doc:`brani/nows-the-time`
 
 Per tonalità
 ------------
@@ -46,6 +47,10 @@ Per tonalità
 
 - :doc:`brani/blue-bossa`
 - :doc:`brani/mr-pc`
+
+**Fa maggiore**
+
+- :doc:`brani/nows-the-time`
 
 **Mi♭ maggiore**
 
@@ -89,6 +94,7 @@ Per tempo e feel
 - :doc:`brani/all-of-me`
 - :doc:`brani/autumn-leaves`
 - :doc:`brani/blue-monk`
+- :doc:`brani/nows-the-time`
 - :doc:`brani/so-what`
 - :doc:`brani/there-will-never-be-another-you`
 
@@ -113,6 +119,7 @@ Per livello
 
 - :doc:`brani/maiden-voyage`
 - :doc:`brani/misty`
+- :doc:`brani/nows-the-time`
 - :doc:`brani/there-will-never-be-another-you`
 
 **Livello 3**

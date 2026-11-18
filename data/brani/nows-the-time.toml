@@ -1,0 +1,64 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "nows-the-time"
+titolo = "Now's the Time"
+autori = [{ nome = "Charlie Parker", ruolo = "musica" }]
+anno = 1945
+origine = "brano strumentale jazz, inciso per la Savoy nella prima seduta di Charlie Parker come leader"
+famiglia = "5-blues"
+forma = "blues 12"
+livello = 2
+tonalita = "Fa maggiore"
+chiave = "f major"
+feel = "medium swing"
+bpm_uso = 160
+bpm_studio = 80
+versione = "blues bebop in Fa con il diminuito alla sesta battuta e la discesa cromatica di dominanti E7–E♭7–D7 verso Gm7 nelle battute 7 e 8, come nel tema dei fake book. Nei chorus di assolo molti suonano le battute 6–8 più semplici (B♭7, F7, F7). Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = true
+
+[[sezioni]]
+nome = "A"
+battute = ["F7", "Bb7", "F7", "F7", "Bb7", "Bdim7", "F7/C E7", "Eb7 D7", "Gm7", "C7", "F7", "F7"]
+canto = ["F4", "F4", "F4", "F4", "F4", "F4", "F4 F4", "F4 F4", "A4", "G4", "C4", "C4"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Charlie Parker"
+versione = "Savoy, registrazione del 26 novembre 1945, con Miles Davis, Curly Russell e Max Roach"
+youtube = "https://www.youtube.com/watch?v=ryNtmkfeJk4"
+compito = "Conta i chorus del tema e degli assoli. Il riff del tema resta quasi uguale mentre gli accordi cambiano sotto: in quali battute la stessa nota ti suona diversa?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Grant Green"
+versione = "Slick! Live at Oil Can Harry's (Resonance), registrazione dal vivo del 1975"
+youtube = "https://www.youtube.com/watch?v=PsXxtfpj7V0"
+compito = "Conta i chorus dell'assolo di chitarra. In ogni chorus, segna dove Green cambia figura o registro: succede più spesso alla quinta battuta, alla settima o alla nona?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Joe Pass"
+versione = "Virtuoso #4 (Pablo), chitarra sola, pubblicato nel 1983"
+youtube = "https://www.youtube.com/watch?v=gDu-c6YzJbE"
+compito = "Joe Pass suona senza accompagnamento. Ascolta il tema: dove suona il riff a note singole e dove mette un accordo o un basso sotto? Confronta le sue scelte con lo spartito del chord melody di questa scheda."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Don Patterson con Pat Martino"
+versione = "Boppin' and Burnin' (Prestige), registrazione del 1968"
+youtube = "https://www.youtube.com/watch?v=EimsC5u9wyM"
+compito = "In questo gruppo il basso lo suona l'organo di Don Patterson. Segui Pat Martino: conta i chorus del suo assolo e ascolta come accompagna mentre suonano gli altri, con attacchi brevi o accordi tenuti?"
+
+[[collegati]]
+slug = "blue-monk"
+motivo = "jazz blues in Si♭ con lo stesso diminuito di passaggio alla sesta battuta, ma senza la discesa cromatica"
+
+[[collegati]]
+slug = "mr-pc"
+motivo = "blues di dodici battute in minore: confronta la discesa A♭7–G7 con la discesa E7–E♭7–D7 di Now's the Time"
+
+[[collegati]]
+slug = "i-got-rhythm"
+motivo = "l'altra forma su cui Charlie Parker scrisse molti temi: stesso linguaggio bebop su una forma AABA di 32 battute"

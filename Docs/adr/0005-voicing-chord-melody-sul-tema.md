@@ -84,6 +84,7 @@ Su richiesta dell'utente, nella stessa giornata:
 1. **Trascrizione (2026-11-15).** L'assistente ha ricavato le note al canto di nove brani da lead sheet forniti dall'utente, letti fuori dal repository e non copiati. Tutti i brani restano con `canto_verificato = false` fino al confronto a orecchio con la versione di riferimento. Maiden Voyage manca dalla raccolta fornita: le sue note restano `?`.
 2. **Differenze di armonia fra lead sheet e catalogo.** In Misty (ultime due battute delle sezioni A dopo la prima) e There Will Never Be Another You (sezione C) i lead sheet hanno un'armonia diversa da quella del catalogo; le note sono state assegnate agli accordi del catalogo. Da verificare a orecchio.
 3. **So What.** Il tema è affidato al basso; come nota al canto si è presa la voce superiore della prima risposta degli accordi (Si su Dm7, Do su E♭m7), e `-` nelle battute del solo basso. Da confermare.
+4. **Now's the Time (2026-11-18).** Note al canto ricavate dal lead sheet fornito dall'utente, letto fuori dal repository e non copiato, sulla griglia del tema: Fa su tutte le battute 1–8 (anche su E7 ed E♭7 e su D7, dove è la ♯9 del D7(♯9) del lead sheet), La su Gm7, Sol su C7 (prima nota dopo la pausa), Do su F7 nelle ultime due battute (la seconda è l'anacrusi della ripresa). Verificate a orecchio dall'utente il 2026-11-18 (`canto_verificato = true`), spartito pubblicato. Con queste note il generatore sceglie solo forme drop 3, senza ripiego.
 
 ## Collegamenti
 
