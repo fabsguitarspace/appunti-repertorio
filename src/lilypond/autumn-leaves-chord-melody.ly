@@ -6,25 +6,25 @@
 cm = \absolute { \cadenzaOn \omit Staff.TimeSignature
   \sectionLabel "A" <c'\4 g'\3 bf'\2 ef''\1>1^\markup { \concat { "C" "m7" } } \bar "|"
   <c'\4 f'\3 a'\2 ef''\1>1^\markup { \concat { "F" "7" } } \bar "|"
-  <a\5 f'\3 bf'\2 d''\1>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|"
+  <bf\4 f'\3 a'\2 d''\1>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|"
   <g\5 ef'\3 bf'\2 d''\1>1^\markup { \concat { "E" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|" \break
-  <g\5 ef'\3 a'\2 c''\1>1^\markup { \concat { "A" "m7" \raise #0.7 \fontsize #-3 \flat "5" } } \bar "|"
-  <fs\5 d'\3 a'\2 c''\1>1^\markup { \concat { "D" "7" } } \bar "|"
+  <a\4 ef'\3 g'\2 c''\1>1^\markup { \concat { "A" "m7" \raise #0.7 \fontsize #-3 \flat "5" } } \bar "|"
+  <a\4 d'\3 fs'\2 c''\1>1^\markup { \concat { "D" "7" } } \bar "|"
   <e\5 d'\3 g'\2 bf'\1>1^\markup { \concat { "G" "m6" } } \bar "|"
   <e\5 bf\4 d'\3 g'\2>1^\markup { \concat { "G" "m6" } } \bar "|" \break
   \section \sectionLabel "A" <c'\4 g'\3 bf'\2 ef''\1>1^\markup { \concat { "C" "m7" } } \bar "|"
   <c'\4 f'\3 a'\2 ef''\1>1^\markup { \concat { "F" "7" } } \bar "|"
-  <a\5 f'\3 bf'\2 d''\1>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|"
+  <bf\4 f'\3 a'\2 d''\1>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|"
   <g\5 ef'\3 bf'\2 d''\1>1^\markup { \concat { "E" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|" \break
-  <g\5 ef'\3 a'\2 c''\1>1^\markup { \concat { "A" "m7" \raise #0.7 \fontsize #-3 \flat "5" } } \bar "|"
-  <fs\5 d'\3 a'\2 c''\1>1^\markup { \concat { "D" "7" } } \bar "|"
-  <d\6 bf\4 e'\3 g'\2>1^\markup { \concat { "G" "m6" } } \bar "|"
+  <a\4 ef'\3 g'\2 c''\1>1^\markup { \concat { "A" "m7" \raise #0.7 \fontsize #-3 \flat "5" } } \bar "|"
+  <a\4 d'\3 fs'\2 c''\1>1^\markup { \concat { "D" "7" } } \bar "|"
+  <e\5 bf\4 d'\3 g'\2>1^\markup { \concat { "G" "m6" } } \bar "|"
   <bf,\6 g\4 e'\3 fs'\2>1^\markup { \concat { "G" "m6" } } \bar "|" \break
   \section \sectionLabel "B" <ef\5 c'\3 g'\2 a'\1>1^\markup { \concat { "A" "m7" \raise #0.7 \fontsize #-3 \flat "5" } } \bar "|"
   <d\5 c'\3 fs'\2 a'\1>1^\markup { \concat { "D" "7" } } \bar "|"
   <g\4 d'\3 e'\2 bf'\1>1^\markup { \concat { "G" "m6" } } \bar "|"
   <g\4 d'\3 e'\2 bf'\1>1^\markup { \concat { "G" "m6" } } \bar "|" \break
-  <bf\4 ef'\3 g'\2 c''\1>1^\markup { \concat { "C" "m7" } } \bar "|"
+  <g\5 ef'\3 bf'\2 c''\1>1^\markup { \concat { "C" "m7" } } \bar "|"
   <f\5 ef'\3 a'\2 c''\1>1^\markup { \concat { "F" "7" } } \bar "|"
   <bf\4 f'\3 a'\2 d''\1>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|"
   <g\5 ef'\3 bf'\2 d''\1>1^\markup { \concat { "E" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|" \break

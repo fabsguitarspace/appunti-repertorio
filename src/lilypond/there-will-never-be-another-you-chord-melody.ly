@@ -6,10 +6,10 @@
 cm = \absolute { \cadenzaOn \omit Staff.TimeSignature
   \sectionLabel "A" <g\4 d'\3 ef'\2 c''\1>1^\markup { \concat { "E" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|"
   <ef\5 bf\4 d'\3 g'\2>1^\markup { \concat { "E" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|"
-  <c\6 af\4 d'\3 f'\2>1^\markup { \concat { "D" "m7" \raise #0.7 \fontsize #-3 \flat "5" } } \bar "|"
-  <b,\6 g\4 d'\3 f'\2>1^\markup { \concat { "G" "7" } } \bar "|" \break
-  <bf,\6 g\4 c'\3 ef'\2>1^\markup { \concat { "C" "m7" } } \bar "|"
-  <bf\4 ef'\3 g'\2 c''\1>1^\markup { \concat { "C" "m7" } } \bar "|"
+  <d\5 af\4 c'\3 f'\2>1^\markup { \concat { "D" "m7" \raise #0.7 \fontsize #-3 \flat "5" } } \bar "|"
+  <d\5 g\4 b\3 f'\2>1^\markup { \concat { "G" "7" } } \bar "|" \break
+  <c\5 g\4 bf\3 ef'\2>1^\markup { \concat { "C" "m7" } } \bar "|"
+  <g\5 ef'\3 bf'\2 c''\1>1^\markup { \concat { "C" "m7" } } \bar "|"
   <f\5 df'\3 af'\2 c''\1>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "m7" } } \bar "|"
   <ef\5 df'\3 g'\2 c''\1>1^\markup { \concat { "E" \raise #0.7 \fontsize #-3 \flat "7" } } \bar "|" \break
   \section \sectionLabel "B" <c'\4 g'\3 af'\2 ef''\1>1^\markup { \concat { "A" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|"
@@ -22,10 +22,10 @@ cm = \absolute { \cadenzaOn \omit Staff.TimeSignature
   <d\6 bf\4 f'\3 af'\2>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "7" } } \bar "|" \break
   \section \sectionLabel "A" <ef\5 d'\3 g'\2 c''\1>1^\markup { \concat { "E" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|"
   <ef\5 bf\4 d'\3 g'\2>1^\markup { \concat { "E" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|"
-  <c\6 af\4 d'\3 f'\2>1^\markup { \concat { "D" "m7" \raise #0.7 \fontsize #-3 \flat "5" } } \bar "|"
-  <b,\6 g\4 d'\3 f'\2>1^\markup { \concat { "G" "7" } } \bar "|" \break
-  <bf,\6 g\4 c'\3 ef'\2>1^\markup { \concat { "C" "m7" } } \bar "|"
-  <bf\4 ef'\3 g'\2 c''\1>1^\markup { \concat { "C" "m7" } } \bar "|"
+  <d\5 af\4 c'\3 f'\2>1^\markup { \concat { "D" "m7" \raise #0.7 \fontsize #-3 \flat "5" } } \bar "|"
+  <d\5 g\4 b\3 f'\2>1^\markup { \concat { "G" "7" } } \bar "|" \break
+  <c\5 g\4 bf\3 ef'\2>1^\markup { \concat { "C" "m7" } } \bar "|"
+  <g\5 ef'\3 bf'\2 c''\1>1^\markup { \concat { "C" "m7" } } \bar "|"
   <f\5 df'\3 af'\2 c''\1>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "m7" } } \bar "|"
   <ef\5 df'\3 g'\2 c''\1>1^\markup { \concat { "E" \raise #0.7 \fontsize #-3 \flat "7" } } \bar "|" \break
   \section \sectionLabel "C" <c'\4 g'\3 af'\2 ef''\1>1^\markup { \concat { "A" \raise #0.7 \fontsize #-3 \flat "maj7" } } \bar "|"
@@ -33,7 +33,7 @@ cm = \absolute { \cadenzaOn \omit Staff.TimeSignature
   <g\5 d'\4 f'\3 bf'\2>1^\markup { \concat { "G" "m7" } } \bar "|"
   <g\5 e'\3 bf'\2 d''\1>1^\markup { \concat { "C" "7" } } \bar "|" \break
   <af\5 ef'\4 f'\3 bf'\2>1^\markup { \concat { "F" "m7" } } \bar "|"
-  <af\5 d'\4 f'\3 bf'\2>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "7" } } \bar "|"
+  <f\6 d'\4 af'\3 bf'\2>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "7" } } \bar "|"
   <bf,\6 g\4 c'\3 f'\2>1^\markup { \concat { "E" \raise #0.7 \fontsize #-3 \flat "6" } } \bar "|"
   <af,\6 f\4 c'\3 ef'\2>1^\markup { \concat { "F" "m7" } } <d\5 af\4 bf\3 ef'\2>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "7" } } \bar "|" \bar "|." }
 \score {

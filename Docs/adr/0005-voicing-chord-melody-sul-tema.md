@@ -56,12 +56,28 @@ La selezione rende visibile la sequenza delle note al canto sui cambi, cioè uno
 - **Formato.** In ogni sezione del catalogo, `canto` è parallelo a `battute`: una stringa per battuta, con una nota per accordo separata da spazi. Le note sono ad altezza reale con ottava (`E4` = prima corda a vuoto, `G4` = prima corda al terzo tasto). `-` indica una pausa sull'attacco dell'accordo, `?` una nota ancora da trascrivere.
 - **Quale nota.** La nota che suona sull'attacco dell'accordo, anche se tenuta o anticipata dalla battuta precedente. Se lì il tema tace, la prima nota attaccata mentre dura l'accordo; `-` solo se il tema tace per tutto l'accordo. L'ottava si sceglie per la chitarra: dove una nota è troppo grave per tre voci sotto, si sposta all'ottava superiore.
 - **Verifica.** Ogni brano ha `canto_verificato`. Il generatore pubblica lo spartito `<slug>-chord-melody` solo con `canto_verificato = true` e nessun `?`; altrimenti la sezione resta il solo metodo e un eventuale spartito precedente viene cancellato.
-- **Voicing.** Quattro voci sulle corde 4-3-2-1 o 5-4-3-2 (drop 2) e 6-4-3-2 o 5-3-2-1 (drop 3), tasti 1–15, estensione massima di quattro tasti, terza e settima sempre presenti. Una tensione al canto sostituisce la fondamentale (nona, ♭9, ♯9) o la quinta (11, ♯11, 13, ♭13); nei m7♭5 e dim7 sostituisce sempre la fondamentale. Fra le forme valide si sceglie la più vicina alla precedente.
+- **Voicing.** Quattro voci sulle corde 4-3-2-1 o 5-4-3-2 (drop 2) e 6-4-3-2 o 5-3-2-1 (drop 3), tasti 1–15, estensione massima di quattro tasti, terza e settima sempre presenti. Una tensione al canto sostituisce la fondamentale (nona, ♭9, ♯9) o la quinta (11, ♯11, 13, ♭13); nei m7♭5 e dim7 sostituisce sempre la fondamentale. Fra le forme valide si sceglie la più vicina alla precedente. Dal 2026-11-18 senza settima al basso e con le famiglie di ripiego: vedi la sezione dedicata.
 - **Test.** `test_chord_melody` verifica, con dati sintetici e nessuna melodia reale, corde, nota in cima, struttura drop, terza e settima, estensione e rifiuto dei formati errati. `test_nessuna_melodia` vieta MP3 e MIDI `*-chord-melody` e ora controlla davvero i file TOML (prima cercava file YAML, assenti).
 
 ## Regola confermata (2026-11-18)
 
 Su richiesta dell'utente, nel chord melody degli standard si usano **solo voicing drop 2 e drop 3**. Si usano le varianti con un'estensione al canto (9, 11, 13) o un'alterazione (♭9, ♯9, ♯11, ♭13) solo quando la nota del tema non è un suono dell'accordo. La sostituzione è quella del punto Voicing dell'Attuazione. La regola vale sia per lo spartito generato sia per il metodo che la scheda propone allo studente. Per questo il testo generato non suggerisce più forme ridotte («due o tre voci») né, nei brani modali, gli accordi per quarte. Gli accordi per quarte restano ammessi nell'accompagnamento. La selezione del generatore rispettava già la regola: nessuno spartito è cambiato.
+
+## Niente settima al basso e famiglie di ripiego (2026-11-18)
+
+Su richiesta dell'utente, nella stessa giornata:
+
+1. **Settima mai al basso.** Fra le forme drop 2 e drop 3 si scartano quelle con la settima minore o maggiore come voce più grave. La sesta degli accordi 6 e la settima diminuita dei dim7 restano ammesse al basso.
+2. **Ripiego.** Se un accordo non ha alcun drop 2 o drop 3 valido senza settima al basso, il generatore prova le altre famiglie in quest'ordine e usa la prima che ha soluzioni (`CM_FALLBACK`):
+   - **close position**: i suoni del drop (con la stessa sostituzione delle tensioni) entro un'ottava;
+   - **rootless**: senza fondamentale, con terza, quinta, settima e le tensioni ammesse;
+   - **per quarte**: intervalli di quarta giusta fra voci vicine, l'ultimo anche di terza maggiore;
+   - **upper structure**, solo sugli accordi di dominante: la terza al basso e sopra una triade maggiore su II, ♭III, ♭V, ♭VI o VI;
+   - **spread**: forma aperta con la terza al basso.
+3. **Regole comuni a tutte le famiglie.** Quattro voci su quattro corde qualsiasi; tasti 1–15; estensione massima di quattro tasti; terza e settima presenti (anche la quinta in m7♭5 e dim7); settima mai al basso. Le tensioni ammesse sotto il canto sono in `CM_TENSIONS`: 9 e 13 su maj7 e 7, 9 su 6, 9 e 11 su m7, m6 e dim7, 11 e ♭13 su m7♭5. Una tensione al canto è sempre ammessa.
+4. **Scelta.** Dentro la famiglia vince la forma più vicina alla precedente. A parità di comodità, sotto il canto la nona viene prima dell'undicesima e della tredicesima.
+
+**Effetto sui dieci brani.** Prima della modifica 60 dei 288 voicing pubblicati avevano la settima al basso. Ne cambiano 72: gli altri 12 cambiano a cascata, per la scelta del voicing più vicino al precedente. Solo quattro accordi escono dai drop. In Blue Bossa, Fm7 con Fa5 al canto diventa uno spread La♭-Mi♭-Sol-Fa (corde 5-4-3-1, tasti 11-13-12-13). In Misty, Abmaj7 con Do4 al canto diventa, tre volte, un rootless Si♭-Mi♭-Sol-Do (corde 6-5-4-3, tasti 6-6-5-5). La scelta della forma spread per Fm7 è dell'utente.
 
 ## Questioni aperte
 

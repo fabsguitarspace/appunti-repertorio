@@ -21,6 +21,7 @@ esiste, ne crea lo scheletro con le sezioni del modello (analisi 001).
 from __future__ import annotations
 
 import math
+import itertools
 import re
 import sys
 import tomllib
@@ -310,6 +311,8 @@ def is_drop(pitches, kind):
 def cm_candidates(chord, top_note, top):
     tones, required = cm_pitch_classes(chord, top_note)
     pcs = set(tones.values())
+    # Settima minore o maggiore; la sesta degli accordi 6 e la settima diminuita dei dim7 restano ammesse.
+    seventh = tones['7'] if (tones['7'] - chord.root.pc) % 12 in (10, 11) else None
     names = {}
     for name, pc in tones.items():
         names[pc] = chord.root if name == 'R' else chord.tone(name)[0]
@@ -332,6 +335,8 @@ def cm_candidates(chord, top_note, top):
                         continue
                     if not is_drop(pitches, kind):
                         continue
+                    if a % 12 == seventh:          # niente settima al basso (2026-11-18)
+                        continue
                     frets = [p - OPEN[s] for s, p in zip(strings, pitches)]
                     if max(frets) - min(frets) > 4:
                         continue
@@ -340,7 +345,99 @@ def cm_candidates(chord, top_note, top):
     return out
 
 
-def chord_melody_voicings(tune, chords):
+# Ripiego (2026-11-18): se nessun drop 2/drop 3 evita la settima al basso, si prova in quest'ordine.
+CM_FALLBACK = ('close', 'rootless', 'quarte', 'upper structure', 'spread')
+# Tensioni ammesse oltre ai suoni dell'accordo, come (passi di lettera, semitoni) dalla fondamentale.
+CM_TENSIONS = {
+    'maj7': ((1, 2), (5, 9)), '6': ((1, 2),), '7': ((1, 2), (5, 9)),
+    'm7': ((1, 2), (3, 5)), 'm6': ((1, 2), (3, 5)), 'm7b5': ((3, 5), (5, 8)), 'dim7': ((1, 2), (3, 5)),
+}
+# Triadi maggiori dell'upper structure sugli accordi di dominante: II, ♭III, ♭V, ♭VI, VI.
+CM_UPPER = ((1, 2), (2, 3), (4, 6), (5, 8), (5, 9))
+
+
+def cm_seventh(chord):
+    """Classe di altezza della settima (minore o maggiore) da non mettere al basso; None per 6 e dim7."""
+    pc = chord.tone('7')[0].pc
+    return pc if (pc - chord.root.pc) % 12 in (10, 11) else None
+
+
+def cm_fallback_candidates(chord, top_note, top, family):
+    """Forme a quattro voci su quattro corde qualsiasi, con la nota al canto in cima.
+
+    Regole comuni: tasti 1–15, estensione massima di quattro tasti, terza e settima presenti (anche la
+    quinta in m7♭5 e dim7), settima mai al basso."""
+    third, seventh, fifth = (chord.tone(k)[0] for k in ('3', '7', '5'))
+    names = {chord.root.pc: chord.root, third.pc: third, seventh.pc: seventh, fifth.pc: fifth}
+    for steps, semis in CM_TENSIONS[chord.quality]:
+        names.setdefault(chord.root.up(steps, semis).pc, chord.root.up(steps, semis))
+    names[top_note.pc] = top_note
+    required = {third.pc, seventh.pc} | ({fifth.pc} if chord.quality in FOUR_NOTE else set())
+    no_bass = cm_seventh(chord)
+    if family == 'close':
+        tones, _ = cm_pitch_classes(chord, top_note)
+        allowed = set(tones.values())
+    elif family == 'rootless':
+        allowed = set(names) - {chord.root.pc}
+    elif family == 'upper structure':
+        if chord.quality != '7':
+            return []
+        triads = []
+        for st, se in CM_UPPER:
+            base = chord.root.up(st, se)
+            notes = (base, base.up(2, 4), base.up(4, 7))
+            if top_note.pc in {n.pc for n in notes}:
+                triads.append({n.pc for n in notes})
+                for n in notes:
+                    names.setdefault(n.pc, n)
+        allowed = set().union(*triads) | {third.pc} if triads else set()
+    else:
+        allowed = set(names)
+    if top_note.pc not in allowed:
+        return []
+    out = []
+    for strings in itertools.combinations((6, 5, 4, 3, 2, 1), 4):
+        top_fret = top - OPEN[strings[-1]]
+        if not 1 <= top_fret <= CM_MAX_FRET:
+            continue
+        options = [[OPEN[s] + f for f in range(1, CM_MAX_FRET + 1) if (OPEN[s] + f) % 12 in allowed]
+                   for s in strings[:-1]]
+        for a, b, c in itertools.product(*options):
+            pitches = [a, b, c, top]
+            if not a < b < c < top:
+                continue
+            pcs = [p % 12 for p in pitches]
+            if len(set(pcs)) != 4 or not required <= set(pcs) or pcs[0] == no_bass:
+                continue
+            frets = [p - OPEN[s] for s, p in zip(strings, pitches)]
+            if max(frets) - min(frets) > 4:
+                continue
+            steps = [y - x for x, y in zip(pitches, pitches[1:])]
+            if family == 'close' and top - a >= 12:
+                continue
+            if family == 'quarte' and steps not in ([5, 5, 5], [5, 5, 4]):
+                continue
+            if family == 'upper structure' and not (pcs[0] == third.pc and top - b < 12 and any(
+                    set(pcs[1:]) == t for t in triads)):
+                continue
+            if family == 'spread' and pcs[0] != third.pc:
+                continue
+            out.append((tuple((s, names[pc], p) for s, pc, p in zip(strings[:-1], pcs, pitches))
+                        + ((strings[-1], top_note, top),), family))
+    return out
+
+
+def chord_melody_options(chord, note, top):
+    """Le forme della prima famiglia che ha soluzioni: drop 2/drop 3, poi il ripiego in ordine."""
+    options = cm_candidates(chord, note, top)
+    for family in CM_FALLBACK:
+        if options:
+            break
+        options = cm_fallback_candidates(chord, note, top, family)
+    return options
+
+
+def chord_melody_voicings(tune, chords, with_kind=False):
     """Per ogni accordo, il voicing con la nota al canto in cima più vicino al precedente."""
     chosen, previous = [], None
     for chord, entry in zip(chords, canto_of(tune)):
@@ -348,20 +445,24 @@ def chord_melody_voicings(tune, chords):
             chosen.append(None)
             continue
         note, top = entry
-        options = cm_candidates(chord, note, top)
+        options = chord_melody_options(chord, note, top)
+        chord_pcs = {chord.root.pc} | {chord.tone(k)[0].pc for k in ('3', '5', '7')}
         if not options:
-            raise ValueError(f"{tune['slug']}: nessun voicing drop 2/drop 3 per {chord.symbol} con "
+            raise ValueError(f"{tune['slug']}: nessun voicing per {chord.symbol} con "
                              f'{note.text()} al canto ({top})')
         def cost(option):
             frets = [p - OPEN[s] for s, n, p in option[0]]
             centre = sum(frets) / len(frets)
             span = max(frets) - min(frets)
+            # Sotto il canto, a parità di comodità, la nona prima dell'undicesima e della tredicesima.
+            other = sum((p - chord.root.pc) % 12 in (5, 8, 9) and p % 12 not in chord_pcs
+                        for s, n, p in option[0][:-1])
             return (abs(centre - (previous if previous is not None else 6)) + 0.5 * span
-                    + (0.2 if option[1] == 'drop 3' else 0))
+                    + (0.2 if option[1] == 'drop 3' else 0) + 0.3 * other)
         best = min(options, key=cost)
         frets = [p - OPEN[s] for s, n, p in best[0]]
         previous = sum(frets) / len(frets)
-        chosen.append(best[0])
+        chosen.append(best if with_kind else best[0])
     return chosen
 
 
@@ -792,8 +893,11 @@ def block_chordmelody(t, bars):
         'la melodia deve restare sempre sopra gli accordi.',
         ('Su ogni cambio di accordo suona il voicing dello spartito qui sotto: ha la nota del tema al '
          'canto ed è scelto per muovere la mano il meno possibile. Se una forma non ti è comoda, cercane '
-         'un\'altra drop 2 o drop 3 con la stessa nota in cima.' if published else
-         'Su ogni cambio di accordo cerca un voicing drop 2 o drop 3 che abbia la nota del tema al canto. '
+         'un\'altra drop 2 o drop 3 con la stessa nota in cima, senza la settima al basso. Dove nessuna lo '
+         'permette, lo spartito ripiega, in quest\'ordine, su close position, rootless, voicing per quarte, '
+         'upper structure o una forma aperta con la terza al basso.' if published else
+         'Su ogni cambio di accordo cerca un voicing drop 2 o drop 3 che abbia la nota del tema al canto e '
+         'non la settima al basso. '
          'Se la nota del tema non è un suono dell\'accordo, è una tensione: la nona (o ♭9, ♯9) prende il '
          'posto della fondamentale, l\'undicesima o la tredicesima (o ♯11, ♭13) quello della quinta.'),
         'Fra un cambio e l\'altro suona le note del tema da sole, o con il solo basso sotto.',

@@ -141,27 +141,37 @@ def test_chord_melody():
     # Dati sintetici (terze, settime e tensioni), nessuna melodia reale.
     g = generator()
     tune = {'slug': 'prova', 'sezioni': [{'nome': 'A',
-            'battute': ['Cmaj7', 'Dm7 G7', 'Em7b5 A7', 'Ebdim7', 'F6', 'Am7/D', 'Bb7', 'Cm6'],
-            'canto': ['B4', 'F4 A4', 'Bb4 C#5', 'A4', 'D5', 'G4', '-', 'Eb5']}]}
+            'battute': ['Cmaj7', 'Dm7 G7', 'Em7b5 A7', 'Ebdim7', 'F6', 'Am7/D', 'Bb7', 'Cm6', 'Fm7', 'Abmaj7'],
+            'canto': ['B4', 'F4 A4', 'Bb4 C#5', 'A4', 'D5', 'G4', '-', 'Eb5', 'F5', 'C4']}]}
     chords = [c for c, _ in g.flat_chords(g.bars_of(tune))]
     canto = g.canto_of(tune)
-    for chord, entry, voicing in zip(chords, canto, g.chord_melody_voicings(tune, chords)):
+    kinds = []
+    for chord, entry, chosen in zip(chords, canto, g.chord_melody_voicings(tune, chords, with_kind=True)):
         if entry is None:
-            assert voicing is None
+            assert chosen is None
             continue
+        voicing, kind = chosen
+        kinds.append(kind)
         strings = tuple(s for s, n, p in voicing)
-        assert strings in g.CM_SETS, (chord.symbol, strings)
+        assert list(strings) == sorted(strings, reverse=True), (chord.symbol, strings)
         assert voicing[-1][2] == entry[1], chord.symbol                   # nota al canto in cima
         pitches = [p for s, n, p in voicing]
         assert pitches == sorted(pitches) and len({p % 12 for p in pitches}) == 4, chord.symbol
-        assert g.is_drop(pitches, g.CM_SETS[strings]), chord.symbol
+        if kind in ('drop 2', 'drop 3'):
+            assert g.CM_SETS.get(strings) == kind and g.is_drop(pitches, kind), chord.symbol
+        else:                                    # ripiego solo se nessun drop evita la settima al basso
+            assert kind in g.CM_FALLBACK and not g.cm_candidates(chord, *entry), (chord.symbol, kind)
         pcs = {p % 12 for p in pitches}
         assert {chord.tone('3')[0].pc, chord.tone('7')[0].pc} <= pcs, chord.symbol
         assert all(p % 12 == n.pc for s, n, p in voicing), chord.symbol
+        if (chord.tone('7')[0].pc - chord.root.pc) % 12 in (10, 11):
+            assert pitches[0] % 12 != chord.tone('7')[0].pc, chord.symbol     # niente settima al basso
         frets = [p - g.OPEN[s] for s, n, p in voicing]
         assert min(frets) >= 1 and max(frets) - min(frets) <= 4, (chord.symbol, frets)
-    for bad in (['B4', 'F4', 'A4', 'A4', 'D5', 'G4', '-', 'Eb5'],            # una nota per due accordi
-                ['H4'] + ['C5'] * 7):                                         # nota non valida
+    # Fm7 con Fa5 e Abmaj7 con Do4 non hanno drop senza settima al basso: spread e rootless.
+    assert kinds[-2:] == ['spread', 'rootless'], kinds
+    for bad in (['B4', 'F4', 'A4', 'A4', 'D5', 'G4', '-', 'Eb5', 'F5', 'C4'],  # una nota per due accordi
+                ['H4'] + ['C5'] * 9):                                         # nota non valida
         broken = {'slug': 'prova', 'sezioni': [dict(tune['sezioni'][0], canto=bad)]}
         try:
             g.canto_of(broken)

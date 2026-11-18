@@ -129,7 +129,7 @@ Il chord melody è il tema suonato da soli, con gli accordi sotto. La scheda pro
 Il vocabolario è in `Voicing per il chord melody <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#chord-melody-voicings>`__ negli Appunti di Pratica. L'esempio `Mettere tutto insieme: otto battute <https://appunti-pratica-per-chitarra-jazz.readthedocs.io/it/latest/6-accordi.html#mettere-tutto-insieme-otto-battute>`__ mostra il procedimento su una progressione originale.
 
 #. Trova il tema in Do minore sulle prime tre corde, all'ottava più acuta che ti è comoda: la melodia deve restare sempre sopra gli accordi.
-#. Su ogni cambio di accordo suona il voicing dello spartito qui sotto: ha la nota del tema al canto ed è scelto per muovere la mano il meno possibile. Se una forma non ti è comoda, cercane un'altra drop 2 o drop 3 con la stessa nota in cima.
+#. Su ogni cambio di accordo suona il voicing dello spartito qui sotto: ha la nota del tema al canto ed è scelto per muovere la mano il meno possibile. Se una forma non ti è comoda, cercane un'altra drop 2 o drop 3 con la stessa nota in cima, senza la settima al basso. Dove nessuna lo permette, lo spartito ripiega, in quest'ordine, su close position, rootless, voicing per quarte, upper structure o una forma aperta con la terza al basso.
 #. Fra un cambio e l'altro suona le note del tema da sole, o con il solo basso sotto.
 #. Dove un accordo dura fino a 4 battute di fila, cambia voicing sotto le note lunghe invece di ripetere la stessa forma.
 #. Al tempo d'uso un chord melody non regge: arrangia il brano lento, quasi come una ballad, e lascia a note singole i passaggi più veloci.

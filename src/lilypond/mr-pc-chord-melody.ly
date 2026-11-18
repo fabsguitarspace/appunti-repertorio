@@ -8,12 +8,12 @@ cm = \absolute { \cadenzaOn \omit Staff.TimeSignature
   <ef\4 bf\3 c'\2 g'\1>1^\markup { \concat { "C" "m7" } } \bar "|"
   <g,\6 ef\4 bf\3 c'\2>1^\markup { \concat { "C" "m7" } } \bar "|"
   <g,\6 ef\4 bf\3 c'\2>1^\markup { \concat { "C" "m7" } } \bar "|" \break
-  <ef\4 af\3 c'\2 f'\1>1^\markup { \concat { "F" "m7" } } \bar "|"
+  <c\5 af\3 ef'\2 f'\1>1^\markup { \concat { "F" "m7" } } \bar "|"
   <af\4 ef'\3 f'\2 c''\1>1^\markup { \concat { "F" "m7" } } \bar "|"
   <g,\6 ef\4 bf\3 c'\2>1^\markup { \concat { "C" "m7" } } \bar "|"
   <g,\6 ef\4 bf\3 c'\2>1^\markup { \concat { "C" "m7" } } \bar "|" \break
   <ef\4 af\3 c'\2 gf'\1>1^\markup { \concat { "A" \raise #0.7 \fontsize #-3 \flat "7" } } \bar "|"
-  <f\4 b\3 d'\2 af'\1>1^\markup { \concat { "G" "7" } } \bar "|"
+  <d\5 b\3 f'\2 af'\1>1^\markup { \concat { "G" "7" } } \bar "|"
   <g,\6 ef\4 bf\3 c'\2>1^\markup { \concat { "C" "m7" } } \bar "|"
   <g,\6 f\4 b\3 c'\2>1^\markup { \concat { "G" "7" } } \bar "|" \bar "|." }
 \score {

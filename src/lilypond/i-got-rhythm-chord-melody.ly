@@ -20,8 +20,8 @@ cm = \absolute { \cadenzaOn \omit Staff.TimeSignature
   <ef\5 c'\3 g'\2 bf'\1>1^\markup { \concat { "E" \raise #0.7 \fontsize #-3 \flat "6" } } <df'\4 g'\3 bf'\2 ef''\1>1^\markup { \concat { "E" "dim7" } } \bar "|"
   <g\5 f'\3 bf'\2 d''\1>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "6" "/" "F" } } <f\5 ef'\3 a'\2 c''\1>1^\markup { \concat { "F" "7" } } \bar "|"
   <f\5 d'\3 g'\2 bf'\1>1^\markup { \concat { "B" \raise #0.7 \fontsize #-3 \flat "6" } } \bar "|" \break
-  \section \sectionLabel "B" <c'\4 fs'\3 a'\2 d''\1>1^\markup { \concat { "D" "7" } } \bar "|"
-  <c'\4 fs'\3 a'\2 d''\1>1^\markup { \concat { "D" "7" } } \bar "|"
+  \section \sectionLabel "B" <a\5 fs'\3 c''\2 d''\1>1^\markup { \concat { "D" "7" } } \bar "|"
+  <a\5 fs'\3 c''\2 d''\1>1^\markup { \concat { "D" "7" } } \bar "|"
   <g\5 f'\3 b'\2 d''\1>1^\markup { \concat { "G" "7" } } \bar "|"
   <g\5 f'\3 b'\2 d''\1>1^\markup { \concat { "G" "7" } } \bar "|" \break
   <g\5 e'\3 bf'\2 c''\1>1^\markup { \concat { "C" "7" } } \bar "|"

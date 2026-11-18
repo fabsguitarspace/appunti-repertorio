@@ -8,14 +8,14 @@ cm = \absolute { \cadenzaOn \omit Staff.TimeSignature
   <a,\6 g\4 c'\3 e'\2>1^\markup { \concat { "C" "6" } } \bar "|"
   <gs\4 d'\3 e'\2 b'\1>1^\markup { \concat { "E" "7" } } \bar "|"
   <b,\6 gs\4 d'\3 e'\2>1^\markup { \concat { "E" "7" } } \bar "|" \break
-  <g\4 cs'\3 e'\2 a'\1>1^\markup { \concat { "A" "7" } } \bar "|"
+  <e\5 cs'\3 g'\2 a'\1>1^\markup { \concat { "A" "7" } } \bar "|"
   <a,\6 g\4 cs'\3 e'\2>1^\markup { \concat { "A" "7" } } \bar "|"
   <d\5 c'\3 f'\2 g'\1>1^\markup { \concat { "D" "m7" } } \bar "|"
   <d\5 a\4 c'\3 f'\2>1^\markup { \concat { "D" "m7" } } \bar "|" \break
   \section \sectionLabel "B" <b,\6 gs\4 d'\3 e'\2>1^\markup { \concat { "E" "7" } } \bar "|"
   <gs,\6 e\4 b\3 d'\2>1^\markup { \concat { "E" "7" } } \bar "|"
   <c'\4 g'\3 a'\2 d''\1>1^\markup { \concat { "A" "m7" } } \bar "|"
-  <g\5 e'\3 a'\2 c''\1>1^\markup { \concat { "A" "m7" } } \bar "|" \break
+  <a\5 e'\4 g'\3 c''\2>1^\markup { \concat { "A" "m7" } } \bar "|" \break
   <d\6 c'\4 fs'\3 b'\2>1^\markup { \concat { "D" "7" } } \bar "|"
   <d\6 c'\4 fs'\3 a'\2>1^\markup { \concat { "D" "7" } } \bar "|"
   <d\6 c'\4 f'\3 a'\2>1^\markup { \concat { "D" "m7" } } \bar "|"
@@ -24,7 +24,7 @@ cm = \absolute { \cadenzaOn \omit Staff.TimeSignature
   <a,\6 g\4 c'\3 e'\2>1^\markup { \concat { "C" "6" } } \bar "|"
   <gs\4 d'\3 e'\2 b'\1>1^\markup { \concat { "E" "7" } } \bar "|"
   <b,\6 gs\4 d'\3 e'\2>1^\markup { \concat { "E" "7" } } \bar "|" \break
-  <g\4 cs'\3 e'\2 a'\1>1^\markup { \concat { "A" "7" } } \bar "|"
+  <e\5 cs'\3 g'\2 a'\1>1^\markup { \concat { "A" "7" } } \bar "|"
   <a,\6 g\4 cs'\3 e'\2>1^\markup { \concat { "A" "7" } } \bar "|"
   <d\5 c'\3 f'\2 g'\1>1^\markup { \concat { "D" "m7" } } \bar "|"
   <d\5 a\4 c'\3 f'\2>1^\markup { \concat { "D" "m7" } } \bar "|" \break
