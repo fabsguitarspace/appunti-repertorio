@@ -59,6 +59,10 @@ La selezione rende visibile la sequenza delle note al canto sui cambi, cioè uno
 - **Voicing.** Quattro voci sulle corde 4-3-2-1 o 5-4-3-2 (drop 2) e 6-4-3-2 o 5-3-2-1 (drop 3), tasti 1–15, estensione massima di quattro tasti, terza e settima sempre presenti. Una tensione al canto sostituisce la fondamentale (nona, ♭9, ♯9) o la quinta (11, ♯11, 13, ♭13); nei m7♭5 e dim7 sostituisce sempre la fondamentale. Fra le forme valide si sceglie la più vicina alla precedente.
 - **Test.** `test_chord_melody` verifica, con dati sintetici e nessuna melodia reale, corde, nota in cima, struttura drop, terza e settima, estensione e rifiuto dei formati errati. `test_nessuna_melodia` vieta MP3 e MIDI `*-chord-melody` e ora controlla davvero i file TOML (prima cercava file YAML, assenti).
 
+## Regola confermata (2026-11-18)
+
+Su richiesta dell'utente, nel chord melody degli standard si usano **solo voicing drop 2 e drop 3**. Si usano le varianti con un'estensione al canto (9, 11, 13) o un'alterazione (♭9, ♯9, ♯11, ♭13) solo quando la nota del tema non è un suono dell'accordo. La sostituzione è quella del punto Voicing dell'Attuazione. La regola vale sia per lo spartito generato sia per il metodo che la scheda propone allo studente. Per questo il testo generato non suggerisce più forme ridotte («due o tre voci») né, nei brani modali, gli accordi per quarte. Gli accordi per quarte restano ammessi nell'accompagnamento. La selezione del generatore rispettava già la regola: nessuno spartito è cambiato.
+
 ## Questioni aperte
 
 1. **Trascrizione (2026-11-15).** L'assistente ha ricavato le note al canto di nove brani da lead sheet forniti dall'utente, letti fuori dal repository e non copiati. Tutti i brani restano con `canto_verificato = false` fino al confronto a orecchio con la versione di riferimento. Maiden Voyage manca dalla raccolta fornita: le sue note restano `?`.

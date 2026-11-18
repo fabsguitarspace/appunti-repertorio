@@ -783,20 +783,19 @@ def block_chordmelody(t, bars):
     if split:
         where = 'una battuta' if split == 1 else f'{split} battute'
         rhythm.append(f"In {where} su {len(bars)} gli accordi cambiano a metà battuta: "
-                      'lì bastano due o tre voci.')
+                      'lì scegli forme drop 2 o drop 3 vicine fra loro, per non spostare la mano.')
     if run >= 4:
         rhythm.append(f"Dove un accordo dura fino a {run} battute di fila, cambia voicing sotto le note "
                       'lunghe invece di ripetere la stessa forma.')
-    if t['famiglia'] == '10-modale-moderno':
-        rhythm.append('Puoi usare anche i voicing per quarte dell\'accompagnamento, spostandoli dentro il modo.')
     steps = [
         f"Trova il tema in {t['tonalita']} sulle prime tre corde, all'ottava più acuta che ti è comoda: "
         'la melodia deve restare sempre sopra gli accordi.',
         ('Su ogni cambio di accordo suona il voicing dello spartito qui sotto: ha la nota del tema al '
          'canto ed è scelto per muovere la mano il meno possibile. Se una forma non ti è comoda, cercane '
-         'un\'altra con la stessa nota in cima.' if published else
-         'Su ogni cambio di accordo cerca un voicing che abbia la nota del tema al canto: drop 2 sulle '
-         'prime quattro corde, oppure tre voci con il basso sulla sesta o sulla quinta corda.'),
+         'un\'altra drop 2 o drop 3 con la stessa nota in cima.' if published else
+         'Su ogni cambio di accordo cerca un voicing drop 2 o drop 3 che abbia la nota del tema al canto. '
+         'Se la nota del tema non è un suono dell\'accordo, è una tensione: la nona (o ♭9, ♯9) prende il '
+         'posto della fondamentale, l\'undicesima o la tredicesima (o ♯11, ♭13) quello della quinta.'),
         'Fra un cambio e l\'altro suona le note del tema da sole, o con il solo basso sotto.',
     ]
     if rhythm:

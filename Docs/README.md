@@ -41,7 +41,7 @@ Layout, stile didattico e pipeline musicale riprendono quelli di Pratica.
 - [ADR 0002 — Nessuna melodia degli standard; ascolti tramite YouTube](adr/0002-nessuna-melodia-ascolti-youtube.md): Accettato, 2026-11-11; modificato lo stesso giorno: ammessi anche caricamenti YouTube di terzi; superato in parte dallo 0005 il 2026-11-15.
 - [ADR 0003 — Struttura per famiglie e schede monografiche](adr/0003-struttura-famiglie-schede-monografiche.md): Accettato, 2026-11-11.
 - [ADR 0004 — Libreria musicale comune ai tre progetti](adr/0004-libreria-musicale-comune.md): Accettato, 2026-11-11. Copia comune ai tre repository.
-- [ADR 0005 — Voicing di chord melody scelti sul tema](adr/0005-voicing-chord-melody-sul-tema.md): Accettato, 2026-11-15; supera in parte lo 0002. Generatore e test attuati; note al canto da trascrivere.
+- [ADR 0005 — Voicing di chord melody scelti sul tema](adr/0005-voicing-chord-melody-sul-tema.md): Accettato, 2026-11-15; supera in parte lo 0002. Generatore e test attuati; note al canto da trascrivere. Il 2026-11-18 l’utente ha confermato la regola: solo drop 2 e drop 3, con estensioni o alterazioni al canto se necessario.
 
 ## Analisi disponibili
 
