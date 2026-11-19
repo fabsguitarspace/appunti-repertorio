@@ -22,7 +22,8 @@ Realizzati con l'assistenza dell'intelligenza artificiale.
   10-modale-moderno
   11-piani-di-studio
   12-indici
+  note-di-rilascio
 
 .. rst-class:: ultimo-aggiornamento
 
-Versione |release| · aggiornato il |today|
+Versione |release| · aggiornato il |today| · :doc:`note di rilascio <note-di-rilascio>`

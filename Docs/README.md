@@ -62,3 +62,5 @@ Le decisioni comuni con i progetti fratelli (pipeline, navigazione) vanno riport
 ## Manutenzione
 
 Quando esisteranno i sorgenti, saranno loro a prevalere sulla KB. `Docs` è distinta da `src/docs` e non entra nella build Sphinx.
+
+**Note di rilascio** (dal 19 novembre 2026, su richiesta dell'utente): `src/docs/note-di-rilascio.rst`, ultima voce dell'indice e collegata dal piè di pagina della homepage. A ogni modifica dei contenuti pubblicata (ogni push su main fa avanzare la PATCH) aggiungere una voce, scritta per il lettore, nella sezione «Prossimo aggiornamento»; alla pubblicazione la sezione diventa una sottosezione datata («19 novembre 2026») sotto la versione MAJOR.MINOR corrente. Quando cambia `VERSIONE` in `src/docs/conf.py` aprire una nuova sezione «X.Y (dal …)» in cima. `tests/test_note_di_rilascio.py` (copia identica nei tre volumi) controlla pagina, indice, sezione della versione attuale e ordine delle date.

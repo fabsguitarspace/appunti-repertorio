@@ -22,7 +22,7 @@ def toctree_entries():
 def test_indice():
     entries = toctree_entries()
     assert entries == ['1-introduzione', '2-imparare-uno-standard', '3-leggere-una-griglia',
-                       '4-le-forme', *FAMILIES, '11-piani-di-studio', '12-indici'], entries
+                       '4-le-forme', *FAMILIES, '11-piani-di-studio', '12-indici', 'note-di-rilascio'], entries
     for entry in entries:
         assert (DOCS / (entry + '.rst')).is_file(), entry
 
