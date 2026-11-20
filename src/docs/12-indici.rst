@@ -15,6 +15,7 @@ Per forma
 - :doc:`brani/i-got-rhythm`
 - :doc:`brani/maiden-voyage`
 - :doc:`brani/misty`
+- :doc:`brani/oleo`
 - :doc:`brani/so-what`
 
 **AABC 32**
@@ -69,6 +70,7 @@ Per tonalità
 
 - :doc:`brani/blue-monk`
 - :doc:`brani/i-got-rhythm`
+- :doc:`brani/oleo`
 
 **Sol minore**
 
@@ -102,6 +104,7 @@ Per tempo e feel
 
 - :doc:`brani/i-got-rhythm`
 - :doc:`brani/mr-pc`
+- :doc:`brani/oleo`
 
 Per livello
 -----------
@@ -125,5 +128,6 @@ Per livello
 **Livello 3**
 
 - :doc:`brani/i-got-rhythm`
+- :doc:`brani/oleo`
 
 .. END indici

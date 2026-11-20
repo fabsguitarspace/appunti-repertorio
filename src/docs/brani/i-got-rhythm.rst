@@ -214,5 +214,6 @@ Brani collegati
 .. BEGIN collegati: generato da scripts/generate_standards.py, non modificare a mano
 
 - :doc:`Blue Monk <blue-monk>`: stessa tonalità; il turnaround I–VI–II–V delle sezioni A chiude anche il blues.
+- :doc:`Oleo <oleo>`: contrafact di Sonny Rollins sugli stessi accordi, con Gm7 alla prima battuta e E♭maj7–E♭m6 alla sesta.
 
 .. END collegati

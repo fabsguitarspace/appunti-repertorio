@@ -1,0 +1,82 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "oleo"
+titolo = "Oleo"
+autori = [{ nome = "Sonny Rollins", ruolo = "musica" }]
+anno = 1954
+origine = "brano strumentale jazz, inciso per la Prestige dal quintetto di Miles Davis con Sonny Rollins al sax tenore"
+famiglia = "9-bebop-contrafact"
+forma = "AABA 32"
+livello = 3
+tonalita = "Si♭ maggiore"
+chiave = "bf major"
+feel = "up swing"
+bpm_uso = 200
+bpm_studio = 80
+versione = "rhythm changes in Si♭ nella forma di 32 battute, come nel lead sheet: Gm7 alla prima battuta e G7 alla terza, B♭7 alla quinta, E♭maj7–E♭m6 alla sesta, Dm7–G7 alla settima. Nell'ultima battuta della seconda e della terza A il lead sheet scrive Cm7–F7–B♭6 in una sola battuta; qui F7–B♭6, un accordo per metà battuta. Il bridge non ha tema scritto: si improvvisa sulle dominanti D7–G7–C7–F7. Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = true
+
+[[sezioni]]
+nome = "A"
+battute = ["Bb6 Gm7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb6 Bb7", "Ebmaj7 Ebm6", "Dm7 G7", "Cm7 F7"]
+canto = ["Bb4 C5", "G4 D5", "Bb4 D5", "Bb4 Bb4", "C5 G4", "Bb4 Eb5", "G4 Bb4", "F5 D5"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Bb6 Gm7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb6 Bb7", "Ebmaj7 Ebm6", "Dm7 G7", "F7 Bb6"]
+canto = ["Bb4 C5", "G4 D5", "Bb4 D5", "Bb4 Bb4", "C5 G4", "Bb4 Eb5", "G4 Bb4", "Db5 Bb4"]
+
+[[sezioni]]
+nome = "B"
+battute = ["D7", "D7", "G7", "G7", "C7", "C7", "F7", "F7"]
+canto = ["-", "-", "-", "-", "-", "-", "-", "-"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Bb6 Gm7", "Cm7 F7", "Bb6 G7", "Cm7 F7", "Bb6 Bb7", "Ebmaj7 Ebm6", "Dm7 G7", "F7 Bb6"]
+canto = ["Bb4 C5", "G4 D5", "Bb4 D5", "Bb4 Bb4", "C5 G4", "Bb4 Eb5", "G4 Bb4", "Db5 Bb4"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Miles Davis con Sonny Rollins"
+versione = "Prestige, registrazione del 29 giugno 1954, con Horace Silver, Percy Heath e Kenny Clarke, poi nell'album Bags' Groove"
+youtube = "https://www.youtube.com/watch?v=9IY29EZb1pI"
+compito = "Conta le 32 battute del primo chorus e segna dove inizia il bridge: chi suona lì, e c'è ancora un tema? Durante le sezioni A ascolta il pianoforte: dove smette di suonare?"
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Miles Davis"
+versione = "In Person at the Blackhawk (Columbia), registrazione dal vivo del 21 aprile 1961, con Hank Mobley, Wynton Kelly, Paul Chambers e Jimmy Cobb"
+youtube = "https://www.youtube.com/watch?v=rezDozYlYJc"
+compito = "Confronta il tempo con l'incisione del 1954: è più veloce o più lento? Conta i chorus dell'assolo di tromba e segna ogni volta l'inizio del bridge."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Joe Pass e Niels-Henning Ørsted Pedersen"
+versione = "duo di chitarra e contrabbasso (Pablo)"
+youtube = "https://www.youtube.com/watch?v=myK3nzdJGTA"
+compito = "Senza pianoforte, gli accordi li mette solo la chitarra. Ascolta Joe Pass mentre suona il contrabbasso: accompagna con accordi brevi o con linee di basso? Conta i chorus del suo assolo."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Pat Martino"
+versione = "Live at Yoshi's (Blue Note), registrazione dal vivo del 2001 a Oakland, con Joey DeFrancesco all'organo e Billy Hart alla batteria"
+youtube = "https://www.youtube.com/watch?v=ZBi29nU-S-I"
+compito = "Segui le frasi lunghe di Pat Martino: in quante battute del bridge suona senza pause? Segna dove una frase attraversa il confine fra una sezione e la successiva."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Joscho Stephan con Biréli Lagrène"
+versione = "due chitarre manouche, video pubblicato da Joscho Stephan"
+youtube = "https://www.youtube.com/watch?v=81qsu_6UgnU"
+compito = "Ascolta la chitarra ritmica mentre l'altra improvvisa: scandisce tutti e quattro i movimenti o solo il secondo e il quarto? Prova ad accompagnare il video con gli shell della scheda."
+
+[[collegati]]
+slug = "i-got-rhythm"
+motivo = "la canzone da cui Oleo prende gli accordi: confronta la sesta e la settima battuta delle sezioni A"
+
+[[collegati]]
+slug = "nows-the-time"
+motivo = "un altro tema bebop costruito su un riff breve, su un blues invece che sui rhythm changes"

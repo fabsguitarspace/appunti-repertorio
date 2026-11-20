@@ -23,10 +23,15 @@ Brani
      - AABA 32
      - Si♭ maggiore
      - 3
+   * - :doc:`brani/oleo`
+     - AABA 32
+     - Si♭ maggiore
+     - 3
 
 .. toctree::
    :hidden:
 
    brani/i-got-rhythm
+   brani/oleo
 
 .. END brani

@@ -17,6 +17,11 @@ Le novità sono raggruppate per MAJOR.MINOR e, all’interno, per data di pubbli
 
 Il volume è in costruzione: le schede crescono un brano alla volta.
 
+20 novembre 2026
+~~~~~~~~~~~~~~~~
+
+- Nuova scheda: *Oleo*, il primo contrafact sui rhythm changes, con lo spartito del chord melody. La scheda di *I Got Rhythm* rimanda a Oleo.
+
 18 novembre 2026
 ~~~~~~~~~~~~~~~~
 

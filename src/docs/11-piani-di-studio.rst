@@ -34,5 +34,6 @@ Livello 3
 ---------
 
 - :doc:`brani/i-got-rhythm` — AABA 32, up swing
+- :doc:`brani/oleo` — AABA 32, up swing
 
 .. END piani
