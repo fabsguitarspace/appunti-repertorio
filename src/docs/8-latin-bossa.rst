@@ -23,10 +23,15 @@ Brani
      - AB 16
      - Do minore
      - 1
+   * - :doc:`brani/the-girl-from-ipanema`
+     - AABA 40
+     - Fa maggiore
+     - 2
 
 .. toctree::
    :hidden:
 
    brani/blue-bossa
+   brani/the-girl-from-ipanema
 
 .. END brani

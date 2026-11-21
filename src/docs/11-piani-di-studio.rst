@@ -28,6 +28,7 @@ Livello 2
 - :doc:`brani/maiden-voyage` — AABA 32, crome dritte
 - :doc:`brani/misty` — AABA 32, ballad
 - :doc:`brani/nows-the-time` — blues 12, medium swing
+- :doc:`brani/the-girl-from-ipanema` — AABA 40, bossa
 - :doc:`brani/there-will-never-be-another-you` — ABAC 32, medium swing
 
 Livello 3

@@ -1,0 +1,82 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "the-girl-from-ipanema"
+titolo = "The Girl from Ipanema"
+autori = [{ nome = "Antonio Carlos Jobim", ruolo = "musica" }, { nome = "Vinícius de Moraes", ruolo = "testo originale" }, { nome = "Norman Gimbel", ruolo = "testo inglese" }]
+anno = 1962
+origine = "canzone brasiliana (Garota de Ipanema), diventata uno standard jazz con il disco Getz/Gilberto"
+famiglia = "8-latin-bossa"
+forma = "AABA 40"
+livello = 2
+tonalita = "Fa maggiore"
+chiave = "f major"
+feel = "bossa"
+bpm_uso = 140
+bpm_studio = 70
+versione = "griglia del lead sheet in Fa, con il bridge di 16 battute. Le sigle sono semplificate alle forme del catalogo: G7 per G13, G♭7 per G♭7(♭5) e G♭13(♯11), B7 per B9, F♯m7 e Gm7 per i minori con la nona, E♭7 per E♭9, D7 per D9(♯11), C7 per C7(♭9 ♯11). L'ultima battuta della forma, G♭7, riporta all'inizio; nel finale si resta su Fmaj7. Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = true
+
+[[sezioni]]
+nome = "A"
+battute = ["Fmaj7", "Fmaj7", "G7", "G7", "Gm7", "Gb7", "Fmaj7", "Gb7"]
+canto = ["G4", "G4", "G4", "G4", "F4", "E4", "C4", "-"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Fmaj7", "Fmaj7", "G7", "G7", "Gm7", "Gb7", "Fmaj7", "Fmaj7"]
+canto = ["G4", "G4", "G4", "G4", "F4", "E4", "C4", "-"]
+
+[[sezioni]]
+nome = "B"
+battute = ["Gbmaj7", "Gbmaj7", "B7", "B7", "F#m7", "F#m7", "D7", "D7", "Gm7", "Gm7", "Eb7", "Eb7", "Am7", "D7", "Gm7", "C7"]
+canto = ["F4", "F4", "C#4", "D#4", "G#4", "G#4", "E4", "F#4", "A4", "A4", "F4", "G4", "C5", "G#4", "Bb4", "F#4"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Fmaj7", "Fmaj7", "G7", "G7", "Gm7", "Gb7", "Fmaj7", "Gb7"]
+canto = ["G4", "G4", "G4", "G4", "A4", "C5", "E4", "-"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Stan Getz e João Gilberto con Astrud Gilberto e Antonio Carlos Jobim"
+versione = "Getz/Gilberto (Verve), registrazione del marzo 1963"
+youtube = "https://www.youtube.com/watch?v=v5DZ5clg-bg"
+compito = "Conta le 40 battute del primo chorus e segna dove inizia il bridge. Ascolta la chitarra di João Gilberto: il pollice suona il basso su quali movimenti? Le altre dita attaccano gli accordi insieme al basso o fra un basso e l'altro?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Charlie Byrd"
+versione = "Charlie Byrd Plays Jobim, chitarra classica"
+youtube = "https://www.youtube.com/watch?v=Cfe3xPOSSjM"
+compito = "Charlie Byrd suona con le dita su una chitarra classica. Ascolta il tema: dove suona la melodia da sola e dove mette gli accordi sotto? Confronta le sue scelte con lo spartito del chord melody di questa scheda."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Barney Kessel"
+versione = "Live at Sometime, registrazione dal vivo del 1977"
+youtube = "https://www.youtube.com/watch?v=jLRuUIOWDmM"
+compito = "Conta i chorus dell'assolo di chitarra. Nel bridge, Kessel cambia idea a ogni nuovo accordo o lascia correre la frase attraverso i cambi?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Johnny Smith"
+versione = "registrazione del 1967, con Hank Jones al pianoforte, George Duvivier al contrabbasso e Don Lamond alla batteria"
+youtube = "https://www.youtube.com/watch?v=D6-f7W-EzY0"
+compito = "Johnny Smith è famoso per gli accordi a parti strette. Segna i momenti in cui suona il tema ad accordi invece che a note singole: in quali sezioni succede?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Bucky Pizzarelli con Zoot Sims"
+versione = "Elegiac, pubblicato nel 1980"
+youtube = "https://www.youtube.com/watch?v=grfZvTUnO-s"
+compito = "In duo con il sax tenore, la chitarra fa tutto il lavoro dell'accompagnamento. Ascolta Pizzarelli mentre suona Zoot Sims: dove mette il basso e dove gli accordi? Prova ad accompagnare la registrazione con gli shell della scheda."
+
+[[collegati]]
+slug = "blue-bossa"
+motivo = "l'altra bossa del volume, in minore: anche lì la sezione centrale si sposta un semitono sopra la tonalità, a Re♭"
+
+[[collegati]]
+slug = "misty"
+motivo = "un altro AABA il cui bridge si allontana dalla tonalità: confronta come ciascuno dei due brani torna alla tonica"

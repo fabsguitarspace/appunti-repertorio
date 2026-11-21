@@ -18,6 +18,10 @@ Per forma
 - :doc:`brani/oleo`
 - :doc:`brani/so-what`
 
+**AABA 40**
+
+- :doc:`brani/the-girl-from-ipanema`
+
 **AABC 32**
 
 - :doc:`brani/autumn-leaves`
@@ -52,6 +56,7 @@ Per tonalità
 **Fa maggiore**
 
 - :doc:`brani/nows-the-time`
+- :doc:`brani/the-girl-from-ipanema`
 
 **Mi♭ maggiore**
 
@@ -86,6 +91,7 @@ Per tempo e feel
 **bossa**
 
 - :doc:`brani/blue-bossa`
+- :doc:`brani/the-girl-from-ipanema`
 
 **crome dritte**
 
@@ -123,6 +129,7 @@ Per livello
 - :doc:`brani/maiden-voyage`
 - :doc:`brani/misty`
 - :doc:`brani/nows-the-time`
+- :doc:`brani/the-girl-from-ipanema`
 - :doc:`brani/there-will-never-be-another-you`
 
 **Livello 3**

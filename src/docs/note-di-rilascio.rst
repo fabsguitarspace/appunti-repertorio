@@ -17,6 +17,11 @@ Le novità sono raggruppate per MAJOR.MINOR e, all’interno, per data di pubbli
 
 Il volume è in costruzione: le schede crescono un brano alla volta.
 
+21 novembre 2026
+~~~~~~~~~~~~~~~~
+
+- Nuova scheda: *The Girl from Ipanema*, la prima bossa nova in maggiore del volume, con lo spartito del chord melody.
+
 20 novembre 2026
 ~~~~~~~~~~~~~~~~
 
