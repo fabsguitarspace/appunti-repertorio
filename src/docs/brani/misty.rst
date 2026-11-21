@@ -219,5 +219,6 @@ Brani collegati
 .. BEGIN collegati: generato da scripts/generate_standards.py, non modificare a mano
 
 - :doc:`There Will Never Be Another You <there-will-never-be-another-you>`: stessa tonalità di Mi♭ e lo stesso passaggio verso il IV (Abmaj7).
+- :doc:`In a Sentimental Mood <in-a-sentimental-mood>`: l'altra ballad del volume, un AABA di 32 battute che parte da Re minore e ha il bridge in Re♭.
 
 .. END collegati

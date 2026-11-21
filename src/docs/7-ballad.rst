@@ -19,6 +19,10 @@ Brani
      - Forma
      - Tonalità
      - Livello
+   * - :doc:`brani/in-a-sentimental-mood`
+     - AABA 32
+     - Fa maggiore (Re minore)
+     - 2
    * - :doc:`brani/misty`
      - AABA 32
      - Mi♭ maggiore
@@ -27,6 +31,7 @@ Brani
 .. toctree::
    :hidden:
 
+   brani/in-a-sentimental-mood
    brani/misty
 
 .. END brani

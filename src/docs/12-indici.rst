@@ -13,6 +13,7 @@ Per forma
 **AABA 32**
 
 - :doc:`brani/i-got-rhythm`
+- :doc:`brani/in-a-sentimental-mood`
 - :doc:`brani/maiden-voyage`
 - :doc:`brani/misty`
 - :doc:`brani/oleo`
@@ -58,6 +59,10 @@ Per tonalità
 - :doc:`brani/nows-the-time`
 - :doc:`brani/the-girl-from-ipanema`
 
+**Fa maggiore (Re minore)**
+
+- :doc:`brani/in-a-sentimental-mood`
+
 **Mi♭ maggiore**
 
 - :doc:`brani/misty`
@@ -86,6 +91,7 @@ Per tempo e feel
 
 **ballad**
 
+- :doc:`brani/in-a-sentimental-mood`
 - :doc:`brani/misty`
 
 **bossa**
@@ -126,6 +132,7 @@ Per livello
 
 **Livello 2**
 
+- :doc:`brani/in-a-sentimental-mood`
 - :doc:`brani/maiden-voyage`
 - :doc:`brani/misty`
 - :doc:`brani/nows-the-time`

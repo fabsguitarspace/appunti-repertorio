@@ -20,6 +20,7 @@ Il volume è in costruzione: le schede crescono un brano alla volta.
 21 novembre 2026
 ~~~~~~~~~~~~~~~~
 
+- Nuova scheda: *In a Sentimental Mood*, la seconda ballad del volume, fra Re minore e Fa maggiore, con lo spartito del chord melody. La scheda di *Misty* rimanda al nuovo brano.
 - Nuova scheda: *The Girl from Ipanema*, la prima bossa nova in maggiore del volume, con lo spartito del chord melody.
 
 20 novembre 2026

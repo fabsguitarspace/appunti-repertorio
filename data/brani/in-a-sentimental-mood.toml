@@ -1,0 +1,96 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "in-a-sentimental-mood"
+titolo = "In a Sentimental Mood"
+autori = [{ nome = "Duke Ellington", ruolo = "musica" }, { nome = "Manny Kurtz", ruolo = "testo" }, { nome = "Irving Mills", ruolo = "testo" }]
+anno = 1935
+origine = "brano strumentale inciso dall'orchestra di Duke Ellington, poi canzone con il testo"
+famiglia = "7-ballad"
+forma = "AABA 32"
+livello = 2
+tonalita = "Fa maggiore (Re minore)"
+chiave = "f major"
+feel = "ballad"
+bpm_uso = 60
+bpm_studio = 50
+versione = "griglia del lead sheet in Fa: le sezioni A partono da Re minore e chiudono in Fa, il bridge è in Re♭. Le sigle sono semplificate alle forme del catalogo. Nelle prime battute la discesa cromatica Dm–Dm(maj7)–Dm7–Dm6 diventa Dm7–Dm7–Dm6, e Gm–Gm(maj7)–Gm7 diventa Gm7. Alla quarta battuta Gm7–Gm/F–E7(♭9)–A+7(♭9) diventa Gm7–E7; alla quinta Dm–Dm/C–Bm7(♭5)–B♭maj7 diventa Dm7–Bm7♭5. Alla fine della seconda A, F6/9–E♭m7–A♭7 diventa F6–A♭7; alla fine dell'ultima, F6/9–Em7(♭5)–A+7(♭9) diventa F6–A7. Nell'ultima battuta del bridge C7–B+7–B♭maj7–A+7(♭9) diventa C7–A7. Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = true
+
+[[sezioni]]
+nome = "A"
+battute = ["Dm7", "Dm7 Dm6", "Gm7", "Gm7 E7", "Dm7 Bm7b5", "Am7 D7", "Gm7 C7", "F6"]
+canto = ["G5", "G5 F5", "A4", "A4 D5", "D4 D4", "E5 D5", "Bb4 E4", "G4"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Dm7", "Dm7 Dm6", "Gm7", "Gm7 E7", "Dm7 Bm7b5", "Am7 D7", "Gm7 C7", "F6 Ab7"]
+canto = ["G5", "G5 F5", "A4", "A4 D5", "D4 D4", "E5 D5", "Bb4 E4", "F4 F4"]
+
+[[sezioni]]
+nome = "B"
+battute = ["Dbmaj7 Bbm7", "Ebm7 Ab7", "Db6/F E7", "Ebm7 Ab7", "Fm7 Bbm7", "Ebm7 Ab7", "Gm7", "C7 A7"]
+canto = ["C5 Eb5", "F4 Gb4", "Db4 -", "- Bb4", "C5 Eb5", "F4 Gb4", "E4", "F4 A4"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Dm7", "Dm7 Dm6", "Gm7", "Gm7 E7", "Dm7 Bm7b5", "Am7 D7", "Gm7 C7", "F6 A7"]
+canto = ["G5", "G5 F5", "A4", "A4 D5", "D4 D4", "E5 D5", "Bb4 E4", "F4 F4"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Duke Ellington e John Coltrane"
+versione = "Duke Ellington & John Coltrane (Impulse!), registrazione del settembre 1962, con Aaron Bell al contrabbasso ed Elvin Jones alla batteria"
+youtube = "https://www.youtube.com/watch?v=sCQfTNOC5aE"
+compito = "Conta le 32 battute del tema e segna dove inizia il bridge. Ascolta il pianoforte di Ellington all'inizio di ogni sezione A: ripete un accordo fermo o fa scendere una voce interna mentre il basso resta sul Re?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Joe Pass"
+versione = "Summer Nights (Pablo), pubblicato nel 1990"
+youtube = "https://www.youtube.com/watch?v=Hng6_dnjd60"
+compito = "Ascolta come Joe Pass espone il tema: dove suona la melodia ad accordi e dove a note singole? Confronta le sue scelte con lo spartito del chord melody di questa scheda."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Emily Remler"
+versione = "Firefly (Concord), pubblicato nel 1981, il suo primo disco da leader"
+youtube = "https://www.youtube.com/watch?v=OswTjWRPU5M"
+compito = "Segui il bridge: senti il cambio di tonalità verso Re♭ anche nella linea della chitarra? Segna in quale battuta il brano torna in Re minore."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Kenny Burrell"
+versione = "Ellington Is Forever, Vol. 2 (Fantasy), pubblicato nel 1977"
+youtube = "https://www.youtube.com/watch?v=qXDVNabdLZ8"
+compito = "Ascolta il suono di Kenny Burrell sulle note lunghe del tema: le lascia suonare o le riempie con piccoli abbellimenti? Prova a cantare il tema sopra la registrazione e a contare i movimenti delle note tenute."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Django Reinhardt e il Quintette du Hot Club de France"
+versione = "registrazione del 26 aprile 1937 a Parigi"
+youtube = "https://www.youtube.com/watch?v=znbZ1oZ_OrQ"
+compito = "Una ballad suonata dalle chitarre manouche: la ritmica scandisce tutti e quattro i movimenti anche a questo tempo? Confronta il tempo con l'incisione di Ellington e Coltrane."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Mark Whitfield"
+versione = "The Marksman (Warner Bros.), pubblicato nel 1990, il suo primo disco"
+youtube = "https://www.youtube.com/watch?v=0cvDwdv3nDw"
+compito = "Conta i chorus dell'assolo di chitarra e segna ogni volta l'inizio del bridge. Nelle sezioni A, Whitfield resta vicino al tema o se ne allontana?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Jim Hall e Michel Petrucciani con Wayne Shorter"
+versione = "Power of Three (Blue Note), registrazione dal vivo del 1986 a Montreux"
+youtube = "https://www.youtube.com/watch?v=oRhBYohw07A"
+compito = "Senza basso e batteria, chitarra e pianoforte si dividono l'accompagnamento. Ascolta Jim Hall mentre suona Wayne Shorter: accompagna con accordi pieni, con due o tre note o con linee? Segna i momenti in cui la chitarra tace."
+
+[[collegati]]
+slug = "misty"
+motivo = "l'altra ballad del volume, un AABA di 32 battute in maggiore: confronta dove va ciascun bridge"
+
+[[collegati]]
+slug = "autumn-leaves"
+motivo = "lo stesso gioco fra una tonalità minore e la sua relativa maggiore, qui Re minore e Fa"
