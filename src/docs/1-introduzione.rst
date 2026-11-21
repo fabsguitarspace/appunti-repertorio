@@ -132,7 +132,8 @@ Non è soltanto un limite. Il tema di uno standard si impara meglio
 dall'ascolto: dalle registrazioni senti fraseggio, articolazione e respiro,
 che nessuno spartito restituisce davvero. Ogni scheda propone quindi gli
 ascolti, con il collegamento al video su YouTube quando è disponibile, e un
-procedimento per imparare il tema a orecchio.
+procedimento per imparare il tema a orecchio. I motivi per cui questo
+passaggio è così importante sono in :ref:`tema-a-orecchio`.
 Se vuoi confrontarti con uno spartito, usa un'edizione autorizzata.
 
 Gli studi delle schede sono **originali**. Sono costruiti sulle armonie del

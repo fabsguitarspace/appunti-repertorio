@@ -9,6 +9,75 @@ percorso in sette passi. Ogni scheda lo applica al proprio brano.
 Non serve completare un passo alla perfezione prima di passare al
 successivo. Torna spesso indietro: ogni giro rende più solidi i precedenti.
 
+.. _tema-a-orecchio:
+
+Perché il tema si impara a orecchio
+-----------------------------------
+
+Nelle schede non trovi la melodia scritta. È un limite imposto dal diritto
+d'autore, ma è anche la strada migliore: il jazz si è sempre tramandato
+così, dai dischi, dalle jam session e dai musicisti più esperti. Imparare
+il tema a orecchio costa più fatica che leggerlo, e proprio quella fatica
+lo rende tuo. Ecco perché.
+
+**Orecchio e memoria**
+
+- **Impari il brano, non la pagina.** Se leggi il tema ricordi lo
+  spartito; se lo impari a orecchio ricordi la musica.
+- **Lo ricordi più a lungo.** Ascoltare, cantare e cercare le note sulla
+  chitarra fissa il ricordo molto più della lettura.
+- **Ogni brano è un esercizio d'orecchio.** È un dettato melodico sulla
+  musica che vuoi suonare, non su esercizi astratti.
+- **Senti gli intervalli nel loro contesto.** Non riconosci una sesta
+  isolata, ma quella sesta su quell'accordo di quel brano.
+- **Senti dove sei nella forma.** Sai dove inizia il bridge perché lo
+  senti arrivare, non perché lo vedi scritto.
+
+**Fraseggio e linguaggio**
+
+- **Lo spartito non contiene il jazz.** Swing, crome ineguali, anticipi,
+  note fantasma, inflessioni e glissati non stanno in un lead sheet: li
+  prendi solo dal disco.
+- **Impari da un musicista, non da un testo.** Dalla registrazione prendi
+  anche il suono, la dinamica e il respiro di chi suona il tema.
+- **Confronti più versioni.** Ognuno espone il tema a modo suo, e capisci
+  che il tema è un punto di partenza da interpretare, non un testo fisso.
+- **Ti prepari a trascrivere.** Chi impara i temi a orecchio ha già il
+  metodo per prendere frasi dagli assoli dei dischi.
+
+**Chitarra e improvvisazione**
+
+- **Colleghi il suono alla tastiera.** Trovare le note da solo ti obbliga
+  a sapere dove sono, invece di seguire numeri di tasto.
+- **Scegli tu la diteggiatura.** Decidi posizione e corda, e capisci
+  perché una scelta funziona meglio di un'altra. Per il chord melody serve
+  proprio trovare il tema sulle prime tre corde.
+- **Il tema diventa materiale per improvvisare.** Un tema che sai cantare
+  lo puoi variare, abbellire e citare nell'assolo.
+- **Senti la melodia sull'armonia.** Cantando il tema sopra la base capisci
+  se la nota è la terza, la settima o una tensione dell'accordo: è lo
+  stesso ascolto delle guide tones.
+- **Suoni senza leggio.** Puoi guardare e ascoltare gli altri musicisti,
+  e suonare il brano ovunque.
+
+**Autonomia**
+
+- **Puoi imparare qualunque brano.** Ti basta una registrazione, anche
+  quando un lead sheet non esiste.
+- **Impari dalla fonte.** I lead sheet hanno errori e versioni diverse; il
+  disco è l'originale.
+- **Trasporti senza fatica.** Un tema che sai cantare lo suoni in qualsiasi
+  tonalità, senza riscriverlo.
+- **Diventa sempre più rapido.** Il primo tema richiede ore, il decimo
+  molto meno.
+- **Il lavoro resta tuo.** Lo spartito del chord melody dà un accordo per
+  cambio; il ritmo e le note in mezzo li metti tu, partendo da ciò che hai
+  sentito.
+
+I passi 1–3 qui sotto descrivono come farlo in pratica. Gli ascolti guidati
+di ogni scheda ti danno le registrazioni da cui partire e un compito
+preciso per ciascuna.
+
 1. Ascoltare
 ------------
 
