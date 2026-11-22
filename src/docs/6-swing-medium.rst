@@ -27,6 +27,10 @@ Brani
      - AABC 32
      - Sol minore
      - 1
+   * - :doc:`brani/satin-doll`
+     - AABA 32
+     - Do maggiore
+     - 2
    * - :doc:`brani/there-will-never-be-another-you`
      - ABAC 32
      - Mi♭ maggiore
@@ -37,6 +41,7 @@ Brani
 
    brani/all-of-me
    brani/autumn-leaves
+   brani/satin-doll
    brani/there-will-never-be-another-you
 
 .. END brani

@@ -17,6 +17,7 @@ Per forma
 - :doc:`brani/maiden-voyage`
 - :doc:`brani/misty`
 - :doc:`brani/oleo`
+- :doc:`brani/satin-doll`
 - :doc:`brani/so-what`
 
 **AABA 40**
@@ -48,6 +49,7 @@ Per tonalità
 **Do maggiore**
 
 - :doc:`brani/all-of-me`
+- :doc:`brani/satin-doll`
 
 **Do minore**
 
@@ -109,6 +111,7 @@ Per tempo e feel
 - :doc:`brani/autumn-leaves`
 - :doc:`brani/blue-monk`
 - :doc:`brani/nows-the-time`
+- :doc:`brani/satin-doll`
 - :doc:`brani/so-what`
 - :doc:`brani/there-will-never-be-another-you`
 
@@ -136,6 +139,7 @@ Per livello
 - :doc:`brani/maiden-voyage`
 - :doc:`brani/misty`
 - :doc:`brani/nows-the-time`
+- :doc:`brani/satin-doll`
 - :doc:`brani/the-girl-from-ipanema`
 - :doc:`brani/there-will-never-be-another-you`
 

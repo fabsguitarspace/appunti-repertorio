@@ -1,0 +1,93 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "satin-doll"
+titolo = "Satin Doll"
+autori = [{ nome = "Duke Ellington", ruolo = "musica" }, { nome = "Billy Strayhorn", ruolo = "musica" }, { nome = "Johnny Mercer", ruolo = "testo" }]
+anno = 1953
+origine = "brano strumentale inciso dall'orchestra di Duke Ellington, poi canzone con il testo di Johnny Mercer"
+famiglia = "6-swing-medium"
+forma = "AABA 32"
+livello = 2
+tonalita = "Do maggiore"
+chiave = "c major"
+feel = "medium swing"
+bpm_uso = 120
+bpm_studio = 60
+versione = "griglia del lead sheet in Do. Le sigle sono semplificate alle forme del catalogo: A+7(♭9) diventa A7 e B+7 diventa B7. La prima A chiude con il turnaround cromatico C7–B7–B♭7–A7, la seconda su Cmaj7. Nell'ultima A il lead sheet tiene C7 per due battute e passa alla coda; qui, come nella griglia per gli assoli, la settima battuta è C7 e l'ottava A7, che riporta all'inizio. Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = true
+
+[[sezioni]]
+nome = "A"
+battute = ["Dm7 G7", "Dm7 G7", "Em7 A7", "Em7 A7", "Am7 D7", "Abm7 Db7", "C7 B7", "Bb7 A7"]
+canto = ["A4 A4", "A4 G4", "B4 B4", "B4 A4", "D5 C5", "Bb4 Ab4", "G4 G4", "- -"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Dm7 G7", "Dm7 G7", "Em7 A7", "Em7 A7", "Am7 D7", "Abm7 Db7", "Cmaj7", "Cmaj7"]
+canto = ["A4 A4", "A4 G4", "B4 B4", "B4 A4", "D5 C5", "Bb4 Ab4", "G4", "-"]
+
+[[sezioni]]
+nome = "B"
+battute = ["Gm7 C7", "Gm7 C7", "Fmaj7", "Fmaj7", "Am7 D7", "Am7 D7", "G7", "A7"]
+canto = ["C5 G4", "C5 G4", "C5", "-", "D5 A4", "D5 A4", "G4", "Bb4"]
+
+[[sezioni]]
+nome = "A"
+battute = ["Dm7 G7", "Dm7 G7", "Em7 A7", "Em7 A7", "Am7 D7", "Abm7 Db7", "C7", "A7"]
+canto = ["A4 A4", "A4 G4", "B4 B4", "B4 A4", "D5 C5", "Bb4 Ab4", "G4", "-"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Duke Ellington and His Orchestra"
+versione = "incisione per la Capitol del 1953"
+youtube = "https://www.youtube.com/watch?v=wQ-n7jhs_K8"
+compito = "Conta le 32 battute del tema e segna dove inizia il bridge. Ascolta il pianoforte di Ellington: dove suona e dove lascia spazio all'orchestra? Senti i due accordi per battuta delle sezioni A?"
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Ella Fitzgerald"
+versione = "Ella Fitzgerald Sings the Duke Ellington Song Book (Verve), pubblicato nel 1957"
+youtube = "https://www.youtube.com/watch?v=iWTwgFnItBk"
+compito = "Impara il tema dalla voce: canta la prima frase della A insieme a Ella, poi senza il disco. Nota come la stessa frase si ripete un tono sopra, sui due II–V successivi."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Barney Kessel con Ray Brown e Shelly Manne"
+versione = "The Poll Winners (Contemporary), pubblicato nel 1957"
+youtube = "https://www.youtube.com/watch?v=Lbv2nbhUVnY"
+compito = "Un trio di chitarra, contrabbasso e batteria: chi suona gli accordi quando Kessel improvvisa? Segna l'inizio di ogni bridge durante l'assolo."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Wes Montgomery"
+versione = "A Dynamic New Sound: Guitar Organ Drums (Riverside), registrazione del 1959, take 5"
+youtube = "https://www.youtube.com/watch?v=142USwdDalc"
+compito = "Ascolta il suono del pollice sul tema: Wes Montgomery suona la melodia a note singole o in ottave? Nell'assolo, senti dove arriva il bridge in Fa?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Joe Pass"
+versione = "Portraits of Duke Ellington (Pablo), registrazione del 1974"
+youtube = "https://www.youtube.com/watch?v=dZs_34Q6yLE"
+compito = "Confronta l'esposizione del tema di Joe Pass con lo spartito del chord melody di questa scheda: dove mette un accordo sotto la melodia e dove la lascia sola?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Kenny Burrell"
+versione = "Lotus Blossom (Concord), pubblicato nel 1995"
+youtube = "https://www.youtube.com/watch?v=nTinZQVoXyc"
+compito = "Ascolta la fine di ogni sezione A: Kenny Burrell suona il turnaround cromatico verso il Do, o lo sostituisce? Prova a cantare la linea del basso nelle stesse battute."
+
+[[collegati]]
+slug = "in-a-sentimental-mood"
+motivo = "l'altro brano di Duke Ellington del volume, con la stessa forma AABA di 32 battute"
+
+[[collegati]]
+slug = "all-of-me"
+motivo = "un altro swing medium in Do maggiore, costruito su dominanti secondarie"
+
+[[collegati]]
+slug = "there-will-never-be-another-you"
+motivo = "anche qui i II–V puntano a gradi diversi della tonalità"

@@ -251,5 +251,6 @@ Brani collegati
 
 - :doc:`Misty <misty>`: l'altra ballad del volume, un AABA di 32 battute in maggiore: confronta dove va ciascun bridge.
 - :doc:`Autumn Leaves <autumn-leaves>`: lo stesso gioco fra una tonalità minore e la sua relativa maggiore, qui Re minore e Fa.
+- :doc:`Satin Doll <satin-doll>`: un altro brano di Duke Ellington, a tempo medio, con la stessa forma AABA di 32 battute.
 
 .. END collegati

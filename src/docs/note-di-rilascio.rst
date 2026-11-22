@@ -17,6 +17,11 @@ Le novità sono raggruppate per MAJOR.MINOR e, all’interno, per data di pubbli
 
 Il volume è in costruzione: le schede crescono un brano alla volta.
 
+Prossimo aggiornamento
+~~~~~~~~~~~~~~~~~~~~~~
+
+- Nuova scheda: *Satin Doll* di Duke Ellington, uno swing medium in Do maggiore costruito su II–V che si spostano senza risolvere, con lo spartito del chord melody. La scheda di *In a Sentimental Mood* rimanda al nuovo brano.
+
 21 novembre 2026
 ~~~~~~~~~~~~~~~~
 
