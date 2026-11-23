@@ -21,6 +21,8 @@ Prossimo aggiornamento
 ~~~~~~~~~~~~~~~~~~~~~~
 
 - Nuova scheda: *Satin Doll* di Duke Ellington, uno swing medium in Do maggiore costruito su II–V che si spostano senza risolvere, con lo spartito del chord melody. La scheda di *In a Sentimental Mood* rimanda al nuovo brano.
+- **Tema scuro:** gli spartiti ora si leggono anche con il tema scuro, con l'inchiostro chiaro sul fondo scuro.
+- **Menu laterale richiudibile:** su computer e tablet il nuovo pulsante nell'intestazione, accanto a quello del tema, nasconde il menu a sinistra e lascia al contenuto tutta la larghezza; lo stesso pulsante lo riapre. La scelta resta valida passando da una pagina all'altra.
 
 21 novembre 2026
 ~~~~~~~~~~~~~~~~
