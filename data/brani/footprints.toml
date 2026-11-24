@@ -1,0 +1,79 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "footprints"
+titolo = "Footprints"
+autori = [{ nome = "Wayne Shorter", ruolo = "musica" }]
+anno = 1966
+origine = "brano strumentale jazz, inciso per la prima volta nel disco Adam's Apple di Wayne Shorter e pochi mesi dopo in Miles Smiles di Miles Davis"
+famiglia = "10-modale-moderno"
+forma = "blues 24"
+livello = 2
+tonalita = "Do minore"
+chiave = "c minor"
+metro = "3/4"
+feel = "jazz waltz"
+bpm_uso = 160
+bpm_studio = 80
+versione = "blues minore di 24 battute in 3/4, dal lead sheet in Do che scrive la forma in 6/4 (12 battute, qui raddoppiate). Le sigle sono semplificate alle forme del catalogo: Cmi, Fmi, Emi, Dmi e D♭mi diventano accordi minori settima, E♭9 diventa E♭7. Le battute 17–20 seguono il lead sheet (Em7–E♭7–Dm7–D♭m7); molti fake book e la versione di Miles Smiles hanno invece F♯m7♭5–B7–E7–A7 con dominanti alterate. Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+canto_verificato = true
+
+[[sezioni]]
+nome = "A"
+battute = ["Cm7", "Cm7", "Cm7", "Cm7", "Cm7", "Cm7", "Cm7", "Cm7",
+           "Fm7", "Fm7", "Fm7", "Fm7", "Cm7", "Cm7", "Cm7", "Cm7",
+           "Em7", "Em7", "Eb7", "Dm7 Dbm7", "Cm7", "Cm7", "Cm7", "Cm7"]
+canto = ["Bb4", "Bb4", "Bb4", "D4", "-", "-", "-", "-",
+         "Bb4", "Bb4", "Eb5", "G4", "Bb4", "D4", "-", "-",
+         "B4", "B4", "Bb4", "G4 Gb4", "G4", "G4", "G4", "-"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Wayne Shorter"
+versione = "Adam's Apple (Blue Note), registrazione del 1966"
+youtube = "https://www.youtube.com/watch?v=LgaIUqH0w6c"
+compito = "Prima di seguire il sassofono, conta in tre e batti il primo movimento di ogni battuta: il contrabbasso ripete lo stesso disegno per tutto il tema. Poi conta le 24 battute del chorus e segna dove arriva Fa minore."
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Miles Davis"
+versione = "Miles Smiles (Columbia), registrazione del 1966, con Wayne Shorter al sassofono"
+youtube = "https://www.youtube.com/watch?v=O-rrt8IYhe0"
+compito = "Confronta questa versione con quella di Adam's Apple: durante gli assoli la ritmica resta in tre o passa a un tempo in quattro? Prova a seguire la forma lo stesso, e segna ogni volta che torni a Do minore."
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Ahmad Jamal"
+versione = "Digital Works (Atlantic), pubblicato nel 1985"
+youtube = "https://www.youtube.com/watch?v=N7Lp81ahMPM"
+compito = "Un trio con il pianoforte. Ascolta la mano sinistra di Jamal nelle prime otto battute: tiene un solo accordo o lo muove? Riconosci la discesa delle battute 17–20 prima del ritorno a Do minore?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Pat Martino"
+versione = "Footprints (Cobblestone), registrazione del 1972, pubblicata anche come The Visit!"
+youtube = "https://www.youtube.com/watch?v=fXWrVyUoAPA"
+compito = "Durante l'assolo di chitarra conta i chorus. Le frasi di Martino seguono il cambio a Fa minore alla nona battuta o lo attraversano senza fermarsi?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Larry Coryell e Steve Khan"
+versione = "Two for the Road (Arista), duo di chitarre acustiche"
+youtube = "https://www.youtube.com/watch?v=rF5r0QuTa_I"
+compito = "Senza basso né batteria, una chitarra accompagna e l'altra suona il tema. Chi tiene il tre? Ascolta come cambia l'accompagnamento quando le parti si scambiano."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Larry Coryell"
+versione = "Electric"
+youtube = "https://www.youtube.com/watch?v=Dc0tBexp7j8"
+compito = "Confronta il suono elettrico di questa versione con il duo acustico con Steve Khan: il tempo è lo stesso? Durante l'assolo segna l'inizio di ogni chorus."
+
+[[collegati]]
+slug = "mr-pc"
+motivo = "lo stesso blues minore in Do con il passaggio da Cm7 a Fm7, qui allungato a 24 battute in tre"
+
+[[collegati]]
+slug = "so-what"
+motivo = "accordi minori tenuti per molte battute, da suonare come un modo più che come una cadenza"

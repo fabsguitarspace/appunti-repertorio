@@ -43,6 +43,10 @@ Per forma
 - :doc:`brani/mr-pc`
 - :doc:`brani/nows-the-time`
 
+**blues 24**
+
+- :doc:`brani/footprints`
+
 Per tonalità
 ------------
 
@@ -54,6 +58,7 @@ Per tonalità
 **Do minore**
 
 - :doc:`brani/blue-bossa`
+- :doc:`brani/footprints`
 - :doc:`brani/mr-pc`
 
 **Fa maggiore**
@@ -105,6 +110,10 @@ Per tempo e feel
 
 - :doc:`brani/maiden-voyage`
 
+**jazz waltz**
+
+- :doc:`brani/footprints`
+
 **medium swing**
 
 - :doc:`brani/all-of-me`
@@ -135,6 +144,7 @@ Per livello
 
 **Livello 2**
 
+- :doc:`brani/footprints`
 - :doc:`brani/in-a-sentimental-mood`
 - :doc:`brani/maiden-voyage`
 - :doc:`brani/misty`

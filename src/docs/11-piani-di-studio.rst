@@ -25,6 +25,7 @@ Livello 1
 Livello 2
 ---------
 
+- :doc:`brani/footprints` — blues 24, jazz waltz
 - :doc:`brani/in-a-sentimental-mood` — AABA 32, ballad
 - :doc:`brani/maiden-voyage` — AABA 32, crome dritte
 - :doc:`brani/misty` — AABA 32, ballad

@@ -20,6 +20,7 @@ Il volume è in costruzione: le schede crescono un brano alla volta.
 Prossimo aggiornamento
 ~~~~~~~~~~~~~~~~~~~~~~
 
+- Nuova scheda: *Footprints* di Wayne Shorter, un blues minore di 24 battute in 3/4, il primo jazz waltz del volume, con basi audio in tre e lo spartito del chord melody. La scheda di *Mr. P.C.* rimanda al nuovo brano.
 - Nuova scheda: *Satin Doll* di Duke Ellington, uno swing medium in Do maggiore costruito su II–V che si spostano senza risolvere, con lo spartito del chord melody. La scheda di *In a Sentimental Mood* rimanda al nuovo brano.
 - **Tema scuro:** gli spartiti ora si leggono anche con il tema scuro, con l'inchiostro chiaro sul fondo scuro.
 - **Menu laterale richiudibile:** su computer e tablet il nuovo pulsante nell'intestazione, accanto a quello del tema, nasconde il menu a sinistra e lascia al contenuto tutta la larghezza; lo stesso pulsante lo riapre. La scelta resta valida passando da una pagina all'altra.

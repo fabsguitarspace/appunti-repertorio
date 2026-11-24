@@ -211,5 +211,6 @@ Brani collegati
 
 - :doc:`Blue Monk <blue-monk>`: stessa forma di dodici battute, in maggiore: confronta il IV7 di Blue Monk con il IVm7 di Mr. P.C..
 - :doc:`Blue Bossa <blue-bossa>`: stessa tonalità di Do minore e stesso passaggio da Cm7 a Fm7, con crome regolari invece dello swing.
+- :doc:`Footprints <footprints>`: un altro blues minore in Do, di 24 battute in tre, con una discesa di accordi minori prima del ritorno alla tonica.
 
 .. END collegati

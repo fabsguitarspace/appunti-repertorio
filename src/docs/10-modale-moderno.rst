@@ -19,6 +19,10 @@ Brani
      - Forma
      - Tonalità
      - Livello
+   * - :doc:`brani/footprints`
+     - blues 24
+     - Do minore
+     - 2
    * - :doc:`brani/maiden-voyage`
      - AABA 32
      - Re sospeso (modale)
@@ -31,6 +35,7 @@ Brani
 .. toctree::
    :hidden:
 
+   brani/footprints
    brani/maiden-voyage
    brani/so-what
 

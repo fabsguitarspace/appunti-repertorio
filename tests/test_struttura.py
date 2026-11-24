@@ -183,6 +183,27 @@ def test_chord_melody():
     assert g.chord_melody_published(dict(tune, canto_verificato=True))
 
 
+def test_metro():
+    # Campo metro: 3/4 dà battute di tre movimenti (due accordi: 2 + 1) in sigle, basso e batteria.
+    g = generator()
+    tune = {'slug': 'prova', 'metro': '3/4', 'feel': 'jazz waltz', 'sezioni': [{'nome': 'A',
+            'battute': ['Cm7', 'Cm7', 'Cm7', 'Cm7', 'Dm7 G7']}]}
+    bars = g.bars_of(tune)
+    assert all(sum(b for _, b in bar['chords']) == 3 for bar in bars)
+    assert [b for _, b in bars[-1]['chords']] == [2, 1]
+    beats = {'4': 1, '2': 2, '2.': 3}
+    bass = g.bassline(g.flat_chords(bars), tune['feel'], 3)
+    assert sum(beats[d] for _, d in bass) == 3 * len(bars)
+    assert '\\time 3/4' in g.chart_score(dict(tune, chiave='c minor'), bars)
+    assert g.drum_bar('jazz waltz', 3).count('4') == 3
+    assert g.meter({'slug': 'x'}) == 4
+    try:
+        g.meter({'slug': 'x', 'metro': '5/4'})
+    except ValueError:
+        return
+    raise AssertionError('metro 5/4 accettato')
+
+
 def test_generatore_stabile():
     # Rieseguire il generatore non deve cambiare sorgenti né schede.
     g = generator()
@@ -201,4 +222,4 @@ if __name__ == '__main__':
         if name.startswith('test_'):
             test()
     print('PASS: indice, marcatori, nessuna melodia, navigazione e libreria, catalogo e schede, ascolti, '
-          'ordine alfabetico, voicing, chord melody, generatore stabile')
+          'ordine alfabetico, voicing, chord melody, metro, generatore stabile')

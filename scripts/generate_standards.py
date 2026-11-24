@@ -13,7 +13,8 @@ Per ogni brano produce:
     <slug>-base.ly         base a velocità d'uso, due chorus
 
 Le basi hanno basso, batteria e accompagnamento, senza melodia. Il campo ``feel`` sceglie
-il disegno ritmico: ``ballad`` (due movimenti), ``bossa`` o ``crome dritte`` (crome regolari) o swing negli altri casi. I file .ly generati
+il disegno ritmico: ``ballad`` (due movimenti), ``bossa`` o ``crome dritte`` (crome regolari) o swing negli altri casi.
+Il campo facoltativo ``metro`` (``"4/4"`` se assente, oppure ``"3/4"``) dà il numero di movimenti per battuta. I file .ly generati
 non vanno modificati a mano. Nelle schede RST il generatore riscrive solo le parti
 comprese fra i marcatori ``.. BEGIN nome:`` e ``.. END nome``; se una scheda non
 esiste, ne crea lo scheletro con le sezioni del modello (analisi 001).
@@ -131,17 +132,35 @@ class Chord:
         return rf'\markup {{ \concat {{ {self.root.markup()} {quality}{bass} }} }}'
 
 
+METERS = {'4/4': 4, '3/4': 3}
+# Due accordi in una battuta: metà e metà in 4/4, due movimenti e uno in 3/4.
+SPLIT = {4: (2, 2), 3: (2, 1)}
+
+
+def meter(tune):
+    """Movimenti per battuta dal campo ``metro`` (4/4 se assente)."""
+    text = tune.get('metro', '4/4')
+    if text not in METERS:
+        raise ValueError(f"{tune['slug']}: metro non supportato: {text}")
+    return METERS[text]
+
+
+def time_signature(tune):
+    return rf"\time {tune.get('metro', '4/4')}"
+
+
 def bars_of(tune):
     """Elenco delle battute: ogni battuta è una lista di (accordo, movimenti)."""
     out = []
+    full = meter(tune)
     for section in tune['sezioni']:
         for i, bar in enumerate(section['battute']):
             symbols = bar.split()
             if len(symbols) not in (1, 2):
                 raise ValueError(f"{tune['slug']}: battuta con {len(symbols)} accordi: {bar}")
-            beats = 4 // len(symbols)
-            out.append(dict(chords=[(Chord.parse(s), beats) for s in symbols],
-                            section=section['nome'] if i == 0 else None))
+            beats = (full,) if len(symbols) == 1 else SPLIT[full]
+            out.append(dict(chords=[(Chord.parse(s), b) for s, b in zip(symbols, beats)],
+                            section=section['nome'] if i == 0 else None, beats=full))
     return out
 
 
@@ -468,7 +487,7 @@ def chord_melody_voicings(tune, chords, with_kind=False):
 
 # --------------------------------------------------------------------------- LilyPond
 
-DURATION = {4: '1', 2: '2'}
+DURATION = {4: '1', 3: '2.', 2: '2', 1: '4'}
 
 
 def header(title, subtitle, overlay=False):
@@ -517,7 +536,7 @@ def chart_score(tune, bars):
     systems = math.ceil(len(bars) / 4)
     return rf'''\score {{
  \new Staff \with {{ \remove "Clef_engraver" \override TimeSignature.stencil = ##f }} \absolute {{
-  {key_of(tune)} \time 4/4 \omit Accidental
+  {key_of(tune)} {time_signature(tune)} \omit Accidental
   {chart_music(bars)}
  }}
  \layout {{ indent = 0 system-count = #{systems}
@@ -578,8 +597,8 @@ def staff_tab(tune, music_name, systems):
 }}'''
 
 
-def countin_guitar(bpm):
-    return rf"\tempo 4 = {bpm} c'''4\p c''' c''' c''' \mf"
+def countin_guitar(bpm, beats=4):
+    return rf"\tempo 4 = {bpm} c'''4\p" + " c'''" * (beats - 1) + r" \mf"
 
 
 def shell_source(tune, bars, voicings):
@@ -587,9 +606,9 @@ def shell_source(tune, bars, voicings):
     return '\n'.join([
         header(tune['titolo'], 'Accompagnamento con shell'),
         paper(systems, 42),
-        f"comp = \\absolute {{ \\time 4/4\n  {comp_music(bars, voicings)} \\bar \"|.\" }}",
+        f"comp = \\absolute {{ {time_signature(tune)}\n  {comp_music(bars, voicings)} \\bar \"|.\" }}",
         staff_tab(tune, 'comp', systems),
-        rf'\score {{ \new Staff {{ \set Staff.midiInstrument = "acoustic grand" {countin_guitar(tune["bpm_studio"])} \comp }} \midi {{ }} }}',
+        rf'\score {{ \new Staff {{ \set Staff.midiInstrument = "acoustic grand" {countin_guitar(tune["bpm_studio"], meter(tune))} \comp }} \midi {{ }} }}',
         ''])
 
 
@@ -626,12 +645,12 @@ def guide_source(tune, bars, voicings, line):
     return '\n'.join([
         header(tune['titolo'], 'Guide tones: terze e settime'),
         paper(systems, 42),
-        f"guide = \\absolute {{ \\time 4/4\n  {guide_music(bars, line, voicings)} \\bar \"|.\" }}",
-        f"comp = \\absolute {{ \\time 4/4\n  {comp_music(bars, voicings, labels=False)} }}",
+        f"guide = \\absolute {{ {time_signature(tune)}\n  {guide_music(bars, line, voicings)} \\bar \"|.\" }}",
+        f"comp = \\absolute {{ {time_signature(tune)}\n  {comp_music(bars, voicings, labels=False)} }}",
         staff_tab(tune, 'guide', systems),
         rf'''\score {{ <<
-  \new Staff {{ \set Staff.midiInstrument = "acoustic grand" {countin_guitar(tune['bpm_studio'])} \guide }}
-  \new Staff {{ \set Staff.midiInstrument = "acoustic grand" r1 \pp \comp }}
+  \new Staff {{ \set Staff.midiInstrument = "acoustic grand" {countin_guitar(tune['bpm_studio'], meter(tune))} \guide }}
+  \new Staff {{ \set Staff.midiInstrument = "acoustic grand" r{DURATION[meter(tune)]} \pp \comp }}
  >> \midi {{ }} }}''',
         ''])
 
@@ -654,12 +673,12 @@ def bass_root(note):
 LONG_RUN = 4   # battute consecutive sullo stesso accordo oltre le quali il walking varia
 
 
-def run_positions(chords):
+def run_positions(chords, full=4):
     """Per ogni accordo: (posizione nella serie di accordi uguali, lunghezza della serie)."""
     out, i = [], 0
     while i < len(chords):
         j = i
-        while j < len(chords) and chords[j][0].symbol == chords[i][0].symbol and chords[j][1] == 4:
+        while j < len(chords) and chords[j][0].symbol == chords[i][0].symbol and chords[j][1] == full:
             j += 1
         j = max(j, i + 1)
         out += [(k, j - i) for k in range(j - i)]
@@ -667,15 +686,16 @@ def run_positions(chords):
     return out
 
 
-def bassline(chords, feel):
+def bassline(chords, feel, full=4):
     """Linea di basso come elenco di (altezza, durata LilyPond).
 
     Swing: walking con fondamentale, note dell'accordo e approccio cromatico; sulle serie
-    lunghe dello stesso accordo (brani modali) il disegno cambia a ogni battuta.
+    lunghe dello stesso accordo (brani modali) il disegno cambia a ogni battuta. In 3/4 il
+    walking ha tre note per battuta: fondamentale, quinta e approccio.
     Ballad: due movimenti. Bossa: fondamentale e quinta con l'anticipo in levare.
     """
     events = []
-    runs = run_positions(chords)
+    runs = run_positions(chords, full)
     for i, (chord, beats) in enumerate(chords):
         nxt = chords[(i + 1) % len(chords)][0]
         r = bass_root(chord.bass)
@@ -684,36 +704,53 @@ def bassline(chords, feel):
         _, s5 = chord.tone('5')
         _, s7 = chord.tone('7')
         if feel == 'ballad':
-            events += [(r, '2'), (r + s5, '2')] if beats == 4 else [(r, '2')]
+            events += [(r, '2'), (r + s5, '2')] if beats == 4 else [(r, DURATION[beats])]
             continue
         if feel in STRAIGHT:
             fifth = r + s5 - 12 if r + s5 - 12 >= 31 else r + s5
             if beats == 4:
                 events += [(r, '4.'), (fifth, '8'), (fifth, '4.'), (target, '8')]
+            elif beats == 3:
+                events += [(r, '4.'), (fifth, '8'), (target, '4')]
             else:
                 events += [(r, '4.'), (target, '8')]
             continue
         approach = target - 1 if target > r + s5 - 6 else target + 1
         position, length = runs[i]
-        if beats == 4 and length >= LONG_RUN:
+        if beats == full and length >= LONG_RUN:
             last = approach if position == length - 1 else None
-            pattern = [
+            pattern = ([
                 [r, r + s3, r + s5, r + s7],
                 [r + 12, r + s7, r + s5, r + s3],
                 [r, r + s5, r + s7, r + s5],
                 [r + 12, r + s7, r + s5, approach],
-            ][position % 4]
+            ] if full == 4 else [
+                [r, r + s3, r + s5],
+                [r + 12, r + s7, r + s5],
+                [r, r + s5, r + s7],
+                [r + 12, r + s7, approach],
+            ])[position % 4]
             if last is not None:
-                pattern[3] = last
+                pattern[-1] = last
             events += [(p, '4') for p in pattern]
         elif beats == 4:
             events += [(r, '4'), (r + s3, '4'), (r + s5, '4'), (approach, '4')]
-        else:
+        elif beats == 3:
+            events += [(r, '4'), (r + s5, '4'), (approach, '4')]
+        elif beats == 2:
             events += [(r, '4'), (approach, '4')]
+        else:
+            events += [(r, '4')]
     return events
 
 
-def drum_bar(feel):
+def drum_bar(feel, full=4):
+    if full == 3:                       # jazz waltz: ride in tre, charleston sul secondo movimento
+        if feel == 'ballad':
+            return 'cymr4 <cymr hh>4 cymr4'
+        if feel in STRAIGHT:
+            return '<hh bd>8 hh hh <hh bd> hh hh'
+        return r'cymr4 \tuplet 3/2 { <cymr hh>4 cymr8 } cymr4'
     if feel == 'ballad':
         return 'cymr4 <cymr hh>4 cymr4 <cymr hh>4'
     if feel in STRAIGHT:
@@ -723,10 +760,13 @@ def drum_bar(feel):
 
 def base_source(tune, bars, voicings, choruses, bpm, label):
     feel = tune['feel']
+    full = meter(tune)
+    whole = DURATION[full]
     chords = flat_chords(bars)
-    bass = ' '.join(f'{pitch_name(p)}{d}' for p, d in bassline(chords, feel))
+    bass = ' '.join(f'{pitch_name(p)}{d}' for p, d in bassline(chords, feel, full))
     comp = ' '.join(voicing_token(v, DURATION[b]) for v, (c, b) in zip(voicings, chords))
-    drums = ' '.join(drum_bar(feel) for _ in bars)
+    drums = ' '.join(drum_bar(feel, full) for _ in bars)
+    countin = ' '.join(['hh4\\p'] + ['hh'] * (full - 1))
     systems = math.ceil(len(bars) / 4)
     unfold = rf'\repeat unfold {choruses}'
     return '\n'.join([
@@ -734,10 +774,10 @@ def base_source(tune, bars, voicings, choruses, bpm, label):
         paper(systems, 18),
         chart_score(tune, bars),
         rf'''\score {{ <<
-  \new Staff {{ \tempo 4 = {bpm} s1 {unfold} {{ s1*{len(bars)} }} }}
-  \new Staff {{ \set Staff.midiInstrument = "acoustic grand" r1 \pp {unfold} {{ \absolute {{ {comp} }} }} }}
-  \new Staff {{ \set Staff.midiInstrument = "electric bass (finger)" r1 \mf {unfold} {{ \absolute {{ {bass} }} }} }}
-  \new DrumStaff {{ \drummode {{ hh4\p hh hh hh }} {unfold} {{ \drummode {{ {drums} }} }} }}
+  \new Staff {{ {time_signature(tune) + ' ' if full != 4 else ''}\tempo 4 = {bpm} s{whole} {unfold} {{ s{whole}*{len(bars)} }} }}
+  \new Staff {{ \set Staff.midiInstrument = "acoustic grand" r{whole} \pp {unfold} {{ \absolute {{ {comp} }} }} }}
+  \new Staff {{ \set Staff.midiInstrument = "electric bass (finger)" r{whole} \mf {unfold} {{ \absolute {{ {bass} }} }} }}
+  \new DrumStaff {{ \drummode {{ {countin} }} {unfold} {{ \drummode {{ {drums} }} }} }}
  >> \midi {{ }} }}''',
         ''])
 
@@ -790,7 +830,8 @@ def authors(tune):
 def block_identita(t):
     rows = [('Autori', authors(t)), ('Anno', str(t['anno'])), ('Origine', t['origine']),
             ('Forma', t['forma']), ('Tonalità', t['tonalita']),
-            ('Tempo e feel', f"{t['feel']}; base a {t['bpm_studio']} e a {t['bpm_uso']} BPM"),
+            ('Tempo e feel', f"{t['feel']}{' in ' + t['metro'] if t.get('metro', '4/4') != '4/4' else ''}; "
+                             f"base a {t['bpm_studio']} e a {t['bpm_uso']} BPM"),
             ('Livello', str(t['livello'])), ('Famiglia', f":doc:`../{t['famiglia']}`"),
             ('Versione seguita', t['versione'])]
     body = '\n'.join(f'   * - {k}\n     - {v}' for k, v in rows)
@@ -856,6 +897,8 @@ CHORD_MELODY_FEEL = {
              'con le altre dita: è il modo più naturale di suonare il brano da solo.',
     'crome dritte': 'Quando un accordo dura più battute, tieni ferma la forma e muovi solo la voce più '
                     'acuta insieme al tema.',
+    'jazz waltz': 'In tre, metti l\'accordo sul primo movimento della battuta e lascia il tema da solo '
+                  'sul secondo e sul terzo: il primo movimento deve restare chiaro, perché lì si sente il valzer.',
     'up swing': 'Al tempo d\'uso un chord melody non regge: arrangia il brano lento, quasi come una '
                 'ballad, e lascia a note singole i passaggi più veloci.',
 }
@@ -883,7 +926,8 @@ def block_chordmelody(t, bars):
     rhythm = []
     if split:
         where = 'una battuta' if split == 1 else f'{split} battute'
-        rhythm.append(f"In {where} su {len(bars)} gli accordi cambiano a metà battuta: "
+        inside = 'a metà battuta' if meter(t) == 4 else 'dentro la battuta'
+        rhythm.append(f"In {where} su {len(bars)} gli accordi cambiano {inside}: "
                       'lì scegli forme drop 2 o drop 3 vicine fra loro, per non spostare la mano.')
     if run >= 4:
         rhythm.append(f"Dove un accordo dura fino a {run} battute di fila, cambia voicing sotto le note "
