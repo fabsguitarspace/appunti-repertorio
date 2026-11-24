@@ -42,6 +42,7 @@ Layout, stile didattico e pipeline musicale riprendono quelli di Pratica.
 - [ADR 0003 — Struttura per famiglie e schede monografiche](adr/0003-struttura-famiglie-schede-monografiche.md): Accettato, 2026-11-11.
 - [ADR 0004 — Libreria musicale comune ai tre progetti](adr/0004-libreria-musicale-comune.md): Accettato, 2026-11-11. Copia comune ai tre repository.
 - [ADR 0005 — Voicing di chord melody scelti sul tema](adr/0005-voicing-chord-melody-sul-tema.md): Accettato, 2026-11-15; supera in parte lo 0002. Generatore e test attuati; note al canto da trascrivere. Il 2026-11-18 l’utente ha confermato la regola: solo drop 2 e drop 3, con estensioni o alterazioni al canto se necessario. Lo stesso giorno: settima mai al basso e, dove nessun drop lo permette, ripiego su close, rootless, quarte, upper structure e spread.
+- [ADR 0006 — Piano elettrico al posto della chitarra negli esempi audio](adr/0006-piano-elettrico-negli-esempi-audio.md): Accettato, 2026-11-24. Copia comune ai tre volumi: soundfont predefinito `AppuntiEPiano.sf2` (piano elettrico originale in FM, variante morbida) generato dalla libreria appunti-musica; tutti gli MP3 ricompilati.
 
 ## Analisi disponibili
 

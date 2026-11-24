@@ -12,7 +12,8 @@ requirements-music.txt    dipendenze della pipeline musicale locale
 build.sh                  sphinx-build -b html -W --keep-going src/docs out
 build-lilypond.sh         richiama la build di tools/appunti-musica
 data/brani/<slug>.toml    catalogo dati di ogni standard (TOML: letto con tomllib, nessuna dipendenza)
-tools/appunti-musica/     sottomodulo git della libreria comune (ADR 0004): build, macro, soundfont, moduli Python
+tools/appunti-musica/     sottomodulo git della libreria comune (ADR 0004): build, macro, soundfont, moduli Python;
+                          soundfont predefinito AppuntiEPiano.sf2, piano elettrico originale (ADR 0006, dal 24 novembre 2026)
 scripts/
   generate_standards.py   catalogo → sezioni generate delle schede e sorgenti .ly
 tests/test_struttura.py   indice, marcatori, politica melodie, navigazione, sottomodulo (eseguibile senza pytest)

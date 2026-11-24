@@ -147,9 +147,11 @@ Le convenzioni sono quelle degli `Appunti di Pratica <https://appunti-pratica-pe
 - Pentagramma e tablatura sono allineati, in accordatura standard.
 - La TAB indica corde e tasti di una soluzione possibile, non le dita.
 - Gli **shell** hanno tre note, sulle corde 6–4–3 o 5–4–3.
-- Ogni audio inizia con quattro impulsi di conteggio.
+- Ogni audio inizia con una battuta di impulsi di conteggio: quattro, o tre
+  nei brani in 3/4.
 - Le basi hanno basso, batteria e accompagnamento, e lasciano libero lo
   spazio per il tema e per la tua improvvisazione.
 
-Le registrazioni sintetizzate illustrano note e durate. Non sono esempi di
-interpretazione: per quella ci sono gli ascolti.
+Le registrazioni sono sintetizzate: accordi e linee suonano con un piano
+elettrico dal suono morbido, non con una chitarra. Illustrano note e durate,
+non sono esempi di interpretazione: per quella ci sono gli ascolti.
