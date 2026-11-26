@@ -224,5 +224,6 @@ Brani collegati
 - :doc:`Blue Monk <blue-monk>`: jazz blues in Si♭ con lo stesso diminuito di passaggio alla sesta battuta, ma senza la discesa cromatica.
 - :doc:`Mr. P.C. <mr-pc>`: blues di dodici battute in minore: confronta la discesa A♭7–G7 con la discesa E7–E♭7–D7 di Now's the Time.
 - :doc:`I Got Rhythm <i-got-rhythm>`: l'altra forma su cui Charlie Parker scrisse molti temi: stesso linguaggio bebop su una forma AABA di 32 battute.
+- :doc:`Blues for Alice <blues-for-alice>`: il blues di Charlie Parker che sostituisce quasi ogni accordo con un II–V: il passo successivo, al livello 3.
 
 .. END collegati

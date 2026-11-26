@@ -1,0 +1,74 @@
+# Catalogo del brano: fonte unica delle parti generate della scheda (ADR 0003).
+# Nessuna melodia, in alcuna forma (ADR 0002).
+slug = "blues-for-alice"
+titolo = "Blues for Alice"
+autori = [{ nome = "Charlie Parker", ruolo = "musica" }]
+anno = 1951
+origine = "brano strumentale jazz, inciso per la Verve con Red Rodney, John Lewis, Ray Brown e Kenny Clarke e pubblicato nel disco Swedish Schnapps"
+famiglia = "5-blues"
+forma = "blues 12"
+livello = 3
+tonalita = "Fa maggiore"
+chiave = "f major"
+feel = "medium swing"
+bpm_uso = 160
+bpm_studio = 80
+versione = "«Bird blues» in Fa dal lead sheet in Do: il primo accordo è F6 e le battute 2–10 sono una catena di II–V che scende fino a Gm7–C7. Le sigle sono semplificate alle forme del catalogo: A7(♭9) diventa A7; la coda finale su Fmaj9 non è riportata. Molti fake book scrivono Fmaj7 al posto di F6 e D7 al posto di Dm7 nell'undicesima battuta. Da confrontare con la registrazione di riferimento."
+# ADR 0005: note al canto, una per accordo, ad altezza reale (E4 = prima corda a vuoto).
+# "-" = pausa, "?" = da trascrivere. Lo spartito si pubblica solo con canto_verificato = true.
+# Note dal lead sheet fornito dall'utente il 26 novembre 2026, da controllare a orecchio.
+canto_verificato = true
+
+[[sezioni]]
+nome = "A"
+battute = ["F6", "Em7 A7", "Dm7 G7", "Cm7 F7", "Bb7", "Bbm7 Eb7", "Am7 D7", "Abm7 Db7",
+           "Gm7", "C7", "F6 Dm7", "Gm7 C7"]
+canto = ["F5", "D5 C#5", "A4 G4", "Eb4 F4", "C5", "Eb5 C5", "A4 D4", "Db5 Bb4",
+         "G4", "A4", "C5 G4", "D5 A4"]
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Charlie Parker"
+versione = "Swedish Schnapps (Verve), registrazione dell'8 agosto 1951, con Red Rodney, John Lewis, Ray Brown e Kenny Clarke"
+youtube = "https://www.youtube.com/watch?v=0OPv3FbZR4o"
+compito = "Conta i chorus del tema e degli assoli. Dopo il primo accordo la musica non si ferma più: in quali battute senti che l'armonia scende di un gradino? Riconosci il Si♭7 della quinta battuta, l'unico punto fermo prima della fine del chorus?"
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Roland Kirk"
+versione = "We Free Kings (Mercury), registrazione del 1961"
+youtube = "https://www.youtube.com/watch?v=gcP3yF7Fj54"
+compito = "Confronta il tema con quello di Parker: Kirk lo suona allo stesso tempo e con le stesse note? Negli assoli conta i chorus e segna ogni volta che torni alla prima battuta."
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Al Haig e Jimmy Raney"
+versione = "Special Brew, registrazione del 1974"
+youtube = "https://www.youtube.com/watch?v=jlBGGPxbo9c"
+compito = "Segui la chitarra di Jimmy Raney nell'assolo: le sue frasi cambiano a ogni II–V o attraversano più battute senza fermarsi? Ascolta anche come Raney accompagna il pianoforte di Al Haig."
+
+[[ascolti]]
+ruolo = "riferimento"
+artista = "Archie Shepp e Niels-Henning Ørsted Pedersen"
+versione = "Looking at Bird (SteepleChase), registrazione del 1980, in duo sassofono e contrabbasso"
+youtube = "https://www.youtube.com/watch?v=DRtD39HEt0U"
+compito = "Senza pianoforte né chitarra l'armonia la suona solo il contrabbasso. Prova a cantare le fondamentali insieme a Pedersen: riconosci la discesa dei II–V anche senza accordi?"
+
+[[ascolti]]
+ruolo = "chitarra"
+artista = "Mark Whitfield"
+versione = "True Blue (Verve), pubblicato nel 1994"
+youtube = "https://www.youtube.com/watch?v=6Y4XHJ9aiyM"
+compito = "Ascolta come Whitfield suona il tema: a note singole, in ottave o con accordi? Durante l'assolo segna dove usa frasi blues e dove segue da vicino gli accordi della catena."
+
+[[collegati]]
+slug = "nows-the-time"
+motivo = "un altro blues di Charlie Parker in Fa, più semplice: confronta le prime quattro battute, su F7 in Now's the Time, con la catena di II–V di Blues for Alice"
+
+[[collegati]]
+slug = "blue-monk"
+motivo = "il jazz blues di partenza, quasi tutto su accordi di settima: misura quanto cambia la forma di dodici battute"
+
+[[collegati]]
+slug = "satin-doll"
+motivo = "altre catene di II–V che si spostano senza risolvere, su una forma AABA di 32 battute"

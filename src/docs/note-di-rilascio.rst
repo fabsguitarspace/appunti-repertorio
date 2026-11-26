@@ -21,6 +21,7 @@ Prossimo aggiornamento
 ~~~~~~~~~~~~~~~~~~~~~~
 
 - **Audio:** in tutti gli esempi accordi e linee suonano ora con un piano elettrico dal suono morbido al posto della chitarra sintetizzata. Note, tempi, basso e batteria non cambiano.
+- Nuova scheda: *Blues for Alice* di Charlie Parker, il primo blues di livello 3: dodici battute in Fa in cui quasi ogni accordo diventa un II–V. Ci sono cinque ascolti guidati, due con la chitarra, e lo spartito del chord melody. La scheda di *Now's the Time* rimanda al nuovo brano.
 - Nuova scheda: *Footprints* di Wayne Shorter, un blues minore di 24 battute in 3/4, il primo jazz waltz del volume, con basi audio in tre e lo spartito del chord melody. La scheda di *Mr. P.C.* rimanda al nuovo brano.
 - Nuova scheda: *Satin Doll* di Duke Ellington, uno swing medium in Do maggiore costruito su II–V che si spostano senza risolvere, con lo spartito del chord melody. La scheda di *In a Sentimental Mood* rimanda al nuovo brano.
 - **Tema scuro:** gli spartiti ora si leggono anche con il tema scuro, con l'inchiostro chiaro sul fondo scuro.

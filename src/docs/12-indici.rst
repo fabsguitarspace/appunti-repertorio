@@ -40,6 +40,7 @@ Per forma
 **blues 12**
 
 - :doc:`brani/blue-monk`
+- :doc:`brani/blues-for-alice`
 - :doc:`brani/mr-pc`
 - :doc:`brani/nows-the-time`
 
@@ -63,6 +64,7 @@ Per tonalità
 
 **Fa maggiore**
 
+- :doc:`brani/blues-for-alice`
 - :doc:`brani/nows-the-time`
 - :doc:`brani/the-girl-from-ipanema`
 
@@ -119,6 +121,7 @@ Per tempo e feel
 - :doc:`brani/all-of-me`
 - :doc:`brani/autumn-leaves`
 - :doc:`brani/blue-monk`
+- :doc:`brani/blues-for-alice`
 - :doc:`brani/nows-the-time`
 - :doc:`brani/satin-doll`
 - :doc:`brani/so-what`
@@ -155,6 +158,7 @@ Per livello
 
 **Livello 3**
 
+- :doc:`brani/blues-for-alice`
 - :doc:`brani/i-got-rhythm`
 - :doc:`brani/oleo`
 

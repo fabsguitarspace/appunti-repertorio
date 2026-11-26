@@ -23,6 +23,10 @@ Brani
      - blues 12
      - Si♭ maggiore
      - 1
+   * - :doc:`brani/blues-for-alice`
+     - blues 12
+     - Fa maggiore
+     - 3
    * - :doc:`brani/mr-pc`
      - blues 12
      - Do minore
@@ -36,6 +40,7 @@ Brani
    :hidden:
 
    brani/blue-monk
+   brani/blues-for-alice
    brani/mr-pc
    brani/nows-the-time
 
